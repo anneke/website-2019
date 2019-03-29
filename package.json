@@ -1,0 +1,16 @@
+{
+  "name": "annekesinnema",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Anneke Sinnema",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.17.3"
+  }
+}
