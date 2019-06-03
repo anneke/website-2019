@@ -1,0 +1,48 @@
+html, body {
+    font-family: 'effra', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.35rem;
+}
+
+a {
+    color: $purple;
+}
+
+h1, h2, h3 {
+    line-height: 1.1;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.33rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3, 
+.h3 {
+    font-size: 1.33rem;
+    margin-top: .5rem;
+    margin-bottom: 0;
+
+}
+
+h4 {
+    font-size: 1.22rem;
+}
+
+time {
+    font-size: .9rem;
+}
+
+.page-intro {
+    font-size: 22px;
+    line-height: 1.35rem;
+}
+
+.site-intro-p {
+    font-size: 1.33rem;
+}

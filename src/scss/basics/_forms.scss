@@ -1,0 +1,53 @@
+
+input[type="text"],
+input[type="search"],
+input[type="phone"], 
+textarea {
+    background-color: white;
+    width: 100%;
+    padding: 5px 10px;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+input {
+    border-bottom: 0;
+}
+
+form {
+    background: white;
+}
+
+button, .buttonlike, [type="submit"] {
+    color: white;
+    display: block;      
+    width: 100%;
+    margin-top: 0;
+    background-color: #8378c9;  
+    background: linear-gradient(#8378c9 0%, #635b99 100%);
+    text-decoration: none;
+    transform: none;
+    text-align: center; 
+    font-family: inherit;
+    font-weight: normal;
+    font-size: inherit;
+    border: 1px solid white;
+    vertical-align: middle;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button:active, .buttonlike:active, [type="submit"]:active,
+button:hover, .buttonlike:hover, [type="submit"]:hover,
+button:focus, .buttonlike:focus, [type="submit"]:focus {
+    color: white;
+    text-decoration: none;  
+    background-color: #635b99;
+    background: linear-gradient(#635b99 0%, #8378c9 100%);
+}
+
+.button:visited, .buttonlike:visited, [type="submit"]:visited {
+    color: white;
+}

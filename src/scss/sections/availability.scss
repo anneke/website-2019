@@ -1,0 +1,11 @@
+.section-availability {
+    z-index: 1;
+    margin-top: 30px;
+}
+
+.availability__content {
+    background: $white;
+    border: 2px solid $pink;
+    border-bottom: 0;
+    padding: 30px;
+}

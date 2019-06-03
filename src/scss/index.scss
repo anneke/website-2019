@@ -1,9 +1,13 @@
-@import 'basics/colors';
-@import 'basics/typography';
-@import 'basics/variables';
-@import 'basics/mediaqueries';
-@import 'basics/forms';
+@import 
+    'basics/variables', 
+    'basics/mediaqueries',
+    'basics/general',
+    'basics/typography',
+    'basics/forms',
+    'basics/grid';
 
-// @import 'sections/questions';
-// @import 'sections/contactforms';
-// @import 'sections/availability';
+@import 
+    'sections/blog',
+    'sections/services',
+    'sections/footer',
+    'sections/availability';
