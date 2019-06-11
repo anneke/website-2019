@@ -23,7 +23,7 @@
     }
 
     li {
-        list-style-image: $list-svg-purple;
+        list-style-image: $list-svg-white;
     }
 }
 
@@ -66,12 +66,23 @@
             border-bottom: 0;
             display: flex;
             justify-content: flex-start;
-            border-right: 2px solid $pink;
-            border-left: 0;
+            border: 0;
             font-size: .8rem;
 
             &:first-child {
                 border-left: 2px solid $pink;
+            }
+
+            &:last-child {
+                border-right: 2px solid $pink;
+            }
+
+            span {
+                flex-shrink: 1;
+
+                flex-grow: 0;
+
+                flex-basis: auto;
             }
         }
     }
