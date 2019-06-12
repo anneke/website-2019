@@ -41,9 +41,11 @@ li {
 
 .ul-inline {
     list-style-type: none;
+    padding: 0;
 }
 
 .ul-inline li {
     display: inline-block;
+    list-style-type: none;
     padding-left: 30px;
 }

@@ -55,6 +55,7 @@
 
     textarea {
         resize: vertical;
+        vertical-align: top;
     }
 
     .calling-times {
@@ -85,5 +86,9 @@
                 flex-basis: auto;
             }
         }
+    }
+
+    button {
+        border: 2px solid $pink;
     }
 }
