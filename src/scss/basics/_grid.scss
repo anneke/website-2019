@@ -35,12 +35,15 @@ html, body {
         padding-bottom: 50px;
     }
 
-    .section-availability {
-        grid-area: sidebar;
+    .main-content {
+        grid-area: content;
     }
 
-    .grid-content {
-        grid-area: content;
+    .side-content {
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .section-site-intro,
@@ -171,7 +174,7 @@ html, body {
     
         .site-footer__header {
             grid-area: header;
-            padding-right: 60px;
+            padding-right: 90px;
             padding-top: 30px;
         }
 

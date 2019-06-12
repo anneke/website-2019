@@ -11,39 +11,27 @@
         
     <div class="container">
         <header class="site-header">
-            <img alt="logo" width="50" height="50" />
-            <h1>Anneke Sinnema</h1>
+            <div>
+                <img alt="logo" width="50" height="50" />
+                <h1><a href="/">Anneke Sinnema</a></h1>
+            </div>
 
             <nav class="site-navigation" role="navigation">
                 <ul class="ul-inline">
-                    <li>Wat ik doe</li>
-                    <li>blog</li>
-                    <li>Over mij</li>
-                    <li>Contact</li>
+                    <li><a href="#">Wat ik doe</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="#">Over mij</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>   
             </nav>
         </header>
-
-        <main class="site-main" role="main">
-            <section class="section-availability">
-                <div class="availability__content">
-                    <h2 class="availability__title">Beschikbaarheid</h2>
-                    <p>
-                        <span class="a11y">Huidige status:</span>
-                        Beperkt beschikbaar
-                    </p>
-                    <p>
-                        Ik heb op dit moment zeer beperkte beschikbaarheid voor parttime projecten (ongeveer 8 uur per week). Vanaf begin juni ben ik op zoek naar een nieuwe opdracht.
-                    </p>
-                </div>
-                <a class="buttonlike" href="/contact"><span class="a11y">Heb je een leuke opdracht?</span> Neem contact met me op</a>
-                <aside class="availability__psst">
-                    <h3>Heb je er haast bij?</h3>
-                    <a href="#">Stuur me direct je bestanden via WeTransfer!</a>
-                </aside>
-            </section>
-            
-            <div class="grid-content">
+        
+        <div class="site-main">
+            <main class="main-content" role="main">
+                <section class="section-site-intro">
+                    <p class="site-intro-p">Ik bouw websites voor kleine &eacute;n grote bedrijven en help ondernemers bij het onderhoud van hun website.</p>
+                    <p>Iedereen moet fatsoenlijk gebruik kunnen maken van internet(websites). Daarom wil ik als ik iets bouw zoveel mogelijk rekening houden met de eindgebruiker. Hoe dat werkt? Ik vertel je er graag meer over!</p>
+                </section>
 
                 <section class="section-usps">
                     <h2>Dit vind ik belangrijk</h2>
@@ -64,7 +52,8 @@
                             </p>
                     </div>
                 </section> 
-
+    
+                <!-- 
                 <section class="section-blogs" aria-labelledby="blogtitle">
                     <header>
                         <h2 class="blog-title" id="blogtitle">Blog</h2>
@@ -121,16 +110,43 @@
                             </li>
                         </ul> 
                     </section>
-                </section> 
-            </div>
-        </main>
+                </section>  -->
+            </main>
+
+            <aside class="side-content">
+                <section class="section-availability">
+                    <div class="availability__content">
+                        <header>
+                            <h2  class="availability__title">Beschikbaarheid</h2>
+                            <p class="availability__status availability__status--soon">
+                                <span class="a11y">Huidige status:</span>
+                                Beperkt beschikbaar
+                            </p>
+                        </header>
+                        <p>
+                            Ik heb op dit moment zeer beperkte beschikbaarheid voor parttime projecten (ongeveer 8 uur per week). Vanaf begin juni ben ik op zoek naar een nieuwe opdracht.
+                        </p>
+                    </div>
+                    <footer>
+                        <a class="buttonlike" href="/contact"><span class="a11y">Weet je een leuke opdracht?</span> Neem contact met me op</a>
+                    </footer>
+                    <aside class="availability__psst">
+                        <h3>Heb je er haast bij?</h3>
+                        <a href="#">Stuur me direct je bestanden via WeTransfer!</a>
+                    </aside>
+                </section>
+
+                <!-- <section class="section-customers">
+                </section>  -->
+            </aside>
+                
+        </div>
 
         <footer class="site-footer">
-
             <header class="site-footer__header">
                 <h2>Benieuwd? <br />
                     Laten we eens kennismaken!</h2>
-                <p>Heb je een concrete opdracht of vraagstuk waar je hulp bij nodig hebt, of wil je gewoon even kennis maken? Ik ben altijd in voor een kop thee om te kijken of we iets voor elkaar kunnen betekenen!</p>
+                <p>Heb je een concrete opdracht of een vraagstuk waar je hulp bij nodig hnebt, of wil je gewoon een keer kennis maken? Ik ben altijd in voor een kop thee om te kijken of we iets voor elkaar kunnen betekenen!</p>
             </header>
 
             <section class="site-footer__contactform">
@@ -162,19 +178,22 @@
                 <h3>Contactinformatie</h3>
                 <dl>
                     <dt>Mail</dt>
-                    <dd>mail@annekesinnema.nl</dd>
+                    <dd><a href="mailto:mail@annekesinnema.nl">mail@annekesinnema.nl</a></dd>
                     <dt>Telefoon</dt>
-                    <dd>0612345678</dd>
+                    <dd><a href="tel:0644870256">06-44870256</dd>
                 </dl>
 
                 <h3>Volg mij ook op social media</h3>
                 <ul>
-                    <li>Twitter</li>
-                    <li>LinkedIn</li>
+                    <li><a href="https://twitter.com/asinnema">Twitter</a></li>
+                    <li><a href="https://twitter.com/asinnema"></a>LinkedIn</a></li>
                 </ul>
             </section>
 
-            <div class="purplebg">  </div>
+            <div class="site-footer__byline">
+                <span>Content door Anneke Sinnema</span>
+                <span>Design door Adrian Egger</span>
+            </div>
         </footer> 
     </div>
 
