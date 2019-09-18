@@ -12,10 +12,19 @@ h1, h2, h3 {
     line-height: 1.1;
     font-weight: normal;
     margin-top: 0;
+    margin-bottom: 0;
+
+    @media screen and (min-width: $tablet-portrait) {
+        margin-bottom: 1.35rem;
+    }
 }
 
 h1 {
-    font-size: 2.33rem;
+    font-size: 1.33rem;
+
+    @media screen and (min-width: $tablet-portrait) {
+        font-size: 2.33rem;
+    }
 }
 
 h2 {
@@ -43,6 +52,6 @@ time {
     line-height: 1.35rem;
 }
 
-.site-intro-p {
+.section-site-intro p:first-of-type {
     font-size: 1.33rem;
 }

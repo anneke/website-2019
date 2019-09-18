@@ -7,7 +7,12 @@
     'basics/grid';
 
 @import 
-    'sections/blog',
     'sections/services',
     'sections/footer',
     'sections/availability';
+
+
+    :focus {
+        border: 1px solid grey;
+        background: blue;
+    }

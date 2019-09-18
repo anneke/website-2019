@@ -3,17 +3,37 @@ html, body {
     padding: 0;
 }    
 
+$padding-left-and-right: 5vw;
+
 .container {
     max-width: $max-content-width; 
     margin: 0px auto;
     width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
 }
 
-@media screen and (min-width: 880px) {
+.section-site-intro,
+.section-usps,
+.section-blogs,
+.section-services {
+    padding: 20px 0;
+}
+
+.site-header {
+    display: flex; 
+    flex-direction: column;
+}
+
+@media screen and (min-width: $tablet-portrait) {
+
+    .container {
+        padding: 0;
+    }
     
     .site-header {
-        display: flex; 
-        padding: 30px 150px 0;
+        flex-direction: row;
+        padding: 30px $padding-left-and-right 0;
         
         nav {
             margin-left: auto;
@@ -23,7 +43,7 @@ html, body {
     .site-main {
         display: grid; 
         grid-template-columns: 
-                150px
+                $padding-left-and-right
             [main-start content-start] 
                 25fr
             [content-end] 
@@ -31,7 +51,7 @@ html, body {
             [sidebar-start] 
                 11fr 
             [sidebar-end content-end] 
-                150px;
+                $padding-left-and-right;
         padding-bottom: 50px;
     }
 
@@ -46,15 +66,15 @@ html, body {
         justify-content: space-between;
     }
 
+    img {
+        display: none;
+    }
+
     .section-site-intro,
     .section-usps,
     .section-blogs,
     .section-services {
         padding: 30px 0;
-    }
-
-    img {
-        display: none;
     }
 
     .section-services {
@@ -70,7 +90,7 @@ html, body {
             width: calc(100% + 400px);
             height: calc(100%);
             z-index: -1;
-            left: -150px;
+            left: -$padding-left-and-right;
             top: -0px;
         }
         
@@ -132,7 +152,7 @@ html, body {
             width: calc(100% + 200px);
             height: calc(100%);
             z-index: -1;
-            left: -150px;
+            left: -$padding-left-and-right;
             top: -0px;
         }
     }
@@ -141,7 +161,7 @@ html, body {
         position: relative;
         display: grid; 
         grid-template-columns: 
-                    150px
+                    $padding-left-and-right
                 [header-start] 
                     14fr
                 [header-end form-start] 
@@ -152,7 +172,7 @@ html, body {
                 [form-end sidebar-start] 
                     9fr
                 [sidebar-end content-end] 
-                    150px
+                    $padding-left-and-right
                 [purplebg-end];
         grid-template-rows: repeat(2, min-content);
         grid-template-areas: 
