@@ -5,12 +5,24 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build-parcel": "parcel build src/index.html",
+    "dev-storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "convert-scss": "sass src/scss/index.scss dist/styles.css",
+    "convert-scss-watch": "sass --watch src/scss/index.scss .storybook/styles.css",
+    "storybook": "npm run convert-scss && npm run dev-storybook"
   },
   "author": "Anneke Sinnema",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@storybook/html": "^5.2.1",
     "parcel-bundler": "^1.12.3",
-    "sass": "^1.17.3"
+    "sass": "^1.22.12",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@storybook/addon-a11y": "^5.2.1",
+    "babel-loader": "^8.0.6"
   }
 }
