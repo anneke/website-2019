@@ -7,20 +7,18 @@
         <link media="all" rel="stylesheet" href="scss/index.scss">
         <link rel="stylesheet" href="https://use.typekit.net/mmr7vjx.css"> 
     </head>
-    <body class="page-home">
+    <body class="page-about">
         
-    <div class="container" md>
+    <div class="container">
         <include src="src/parts/header.html"></include>
         
         <div class="site-main">
-            <main class="main-content" role="main" >
-                <include src="src/parts/home-intro.html"></include>
+            <main class="main-content" role="main">
+                <section class="section-site-intro" md>
+                    <include src="src/parts/overmij.md"></include>
+                </section>
 
                 <include src="src/parts/availability-summary.html"></include>
-
-                <include src="src/parts/services.html"></include>
-
-                <include src="src/parts/values.html"></include>
             </main>
 
             <aside class="side-content">
@@ -37,3 +35,4 @@
     <!-- <script src="js/index.js"></script> -->
     </body>
 </html>
+        

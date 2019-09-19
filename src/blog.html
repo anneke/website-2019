@@ -7,52 +7,19 @@
         <link media="all" rel="stylesheet" href="scss/index.scss">
         <link rel="stylesheet" href="https://use.typekit.net/mmr7vjx.css"> 
     </head>
-    <body>
+    <body class="page-blog">
         
-    <div class="container">
-        <header class="site-header">
-            <div>
-                <img alt="logo" width="50" height="50" />
-                <h1><a href="/">Anneke Sinnema</a></h1>
-            </div>
-
-            <nav class="site-navigation" role="navigation">
-                <ul class="ul-inline">
-                    <li><a href="#">Wat ik doe</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="#">Over mij</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>   
-            </nav>
-        </header>
+    <div class="container" md>
+        <include src="src/parts/header.html"></include>
         
         <div class="site-main">
-            <main class="main-content" role="main">
-                <section class="section-site-intro">
-                    <p class="site-intro-p">Ik bouw websites voor kleine &eacute;n grote bedrijven en help ondernemers bij het onderhoud van hun website.</p>
-                    <p>Iedereen moet fatsoenlijk gebruik kunnen maken van internet(websites). Daarom wil ik als ik iets bouw zoveel mogelijk rekening houden met de eindgebruiker. Hoe dat werkt? Ik vertel je er graag meer over!</p>
-                </section>
+            <main class="main-content" role="main" >
+                <include src="src/parts/home-intro.html"></include>
 
-                <section class="section-usps">
-                    <h2>Dit vind ik belangrijk</h2>
+                <include src="src/parts/availability-summary.html"></include>
 
-                    <div class="usp usp-1">
-                        <h3>Helder communiceren</h3>
-                        <p>Of ik nu op kantoor naast je zit of <em lang="en">remote</em> aan het werk ben, in interpersoonlijke communicatie gaat het om aanpassen aan de ander zijn/haar golflengte.</p>
-                    </div>
-                    <div class="usp usp-3">
-                        <h3>Toegankelijk bouwen</h3>
-                        <p>Internet heeft de wereld veranderd, en ik maak dagelijks gebruik van de mogelijkheden die dankzij het web zijn ontstaan. 
-                            Maar niet iedereen kan hier even gemakkelijk gebruik van maken. Ik vind dat iedereen een gelijke kans verdient en met toegankelijk bouwen probeer ik dat te garanderen.
-                        </p>
-                    </div>
-                    <div class="usp usp-4">
-                        <h3>Constructief samenwerken</h3>
-                        <p>Websites bouwen doe je samen. Ik vind het dan ook belangrijk dat de sfeer waarin dat gebeurt open, constructief en divers is.
-                            </p>
-                    </div>
-                </section> 
-    
+                <include src="src/parts/services.html"></include>
+
                 <!-- 
                 <section class="section-blogs" aria-labelledby="blogtitle">
                     <header>
@@ -114,89 +81,17 @@
             </main>
 
             <aside class="side-content">
-                <section class="section-availability">
-                    <div class="availability__content">
-                        <header>
-                            <h2  class="availability__title">Beschikbaarheid</h2>
-                            <p class="availability__status availability__status--soon">
-                                <span class="a11y">Huidige status:</span>
-                                Beperkt beschikbaar
-                            </p>
-                        </header>
-                        <p>
-                            Ik heb op dit moment zeer beperkte beschikbaarheid voor parttime projecten (ongeveer 8 uur per week). Vanaf begin juni ben ik op zoek naar een nieuwe opdracht.
-                        </p>
-                    </div>
-                    <footer>
-                        <a class="buttonlike" href="/contact"><span class="a11y">Weet je een leuke opdracht?</span> Neem contact met me op</a>
-                    </footer>
-                    <aside class="availability__psst">
-                        <h3>Heb je er haast bij?</h3>
-                        <a href="#">Stuur me direct je bestanden via WeTransfer!</a>
-                    </aside>
-                </section>
-
-                <!-- <section class="section-customers">
-                </section>  -->
+                <include src="src/parts/availability.html"></include> 
             </aside>
                 
         </div>
 
         <footer class="site-footer">
-            <header class="site-footer__header">
-                <h2>Benieuwd? <br />
-                    Laten we eens kennismaken!</h2>
-                <p>Heb je een concrete opdracht of een vraagstuk waar je hulp bij nodig hnebt, of wil je gewoon een keer kennis maken? Ik ben altijd in voor een kop thee om te kijken of we iets voor elkaar kunnen betekenen!</p>
-            </header>
-
-            <section class="site-footer__contactform">
-                <h3>Wil je teruggebeld worden?</h3>
-                <p>
-                    Neem gerust contact op met het onderstaande formulier, of stuur me een SMS, een mail, een Tweet, LinkedIn-bericht, Facebook-bericht, of een postduif.
-                </p> 
-
-                <form class="form-contact">
-                    <input type="text" placeholder="Jouw naam" />
-                    <input type="text" placeholder="Jouw telefoonnummer" />
-                    <textarea>Het gaat over...</textarea>
-                    <div class="calling-times">
-                        <label>
-                            <input type="checkbox" /> <span>9.00 - 12.00</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" /> <span>12.00 - 17.00</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" /> <span>19.00 - 21.00</span>
-                        </label>
-                    </div>
-                    <button type="submit">Verstuur</button>
-                </form>
-            </section>
-
-            <section class="site-footer__contact"> 
-                <h3>Contactinformatie</h3>
-                <dl>
-                    <dt>Mail</dt>
-                    <dd><a href="mailto:mail@annekesinnema.nl">mail@annekesinnema.nl</a></dd>
-                    <dt>Telefoon</dt>
-                    <dd><a href="tel:0644870256">06-44870256</dd>
-                </dl>
-
-                <h3>Volg mij ook op social media</h3>
-                <ul>
-                    <li><a href="https://twitter.com/asinnema">Twitter</a></li>
-                    <li><a href="https://twitter.com/asinnema"></a>LinkedIn</a></li>
-                </ul>
-            </section>
-
-            <div class="site-footer__byline">
-                <span>Content door Anneke Sinnema</span>
-                <span>Design door Adrian Egger</span>
-            </div>
+            <include src="src/parts/footer.html"></include>
         </footer> 
     </div>
 
     <!-- <script src="js/index.js"></script> -->
     </body>
 </html>
+        
