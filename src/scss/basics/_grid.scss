@@ -14,7 +14,7 @@ $padding-left-and-right: 5vw;
 }
 
 .section-site-intro,
-.section-usps,
+.section-values,
 .section-blogs,
 .section-services {
     padding: 20px 0;
@@ -71,7 +71,7 @@ $padding-left-and-right: 5vw;
     }
 
     .section-site-intro,
-    .section-usps,
+    .section-values,
     .section-blogs,
     .section-services {
         padding: 30px 0;
@@ -135,8 +135,12 @@ $padding-left-and-right: 5vw;
             grid-area: service-6;
         }
 
-    .section-usps {
+    .section-values {
         grid-area: content; 
+    }
+
+    .list-values  {
+        padding-left: 0px;
     }
 
     .section-blogs {

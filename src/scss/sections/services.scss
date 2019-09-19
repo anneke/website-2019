@@ -48,16 +48,16 @@
     padding: 0px;
     margin-bottom: 0;
 
+    p:last-child {
+        margin-top: 0;
+    }
+
     @media screen and (min-width: $tablet-portrait) {
         padding: 30px;
     }
 }
 
-.service p:last-child {
+.service:not(.service-6) p:last-child {
     margin-top: auto;
     margin-bottom: 0;
-
-    @media screen and (min-width: $tablet-portrait) {
-        padding-top: 30px;
-    }
 }
