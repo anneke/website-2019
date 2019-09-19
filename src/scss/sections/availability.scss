@@ -13,8 +13,16 @@
     border-radius: 50%;
 }
 
+.availability__status--available::before {
+    background: $status-green;
+}
+
 .availability__status--soon::before {
-    background: orange;
+    background: $status-orange;
+}
+
+.availability__status--unavailable::before {
+    background: $status-red;
 }
 
 .availability__content {
@@ -25,8 +33,9 @@
 }
 
 .availability__psst {
+    font-size: .9rem;
     line-height: inherit;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 @media screen and (min-width: $tablet-portrait) {
