@@ -1,0 +1,25 @@
+:root {
+    color-scheme: light dark;
+}
+
+@Media (prefers-color-scheme: dark) {
+    img {
+        filter: brightness(.8) contrast(1.2);
+    }
+}
+
+body {
+    --primaryColor: #d452f2;
+    background-color: var(--primaryColor);
+}
+
+button {
+    background-color: var(--primaryColor);
+}
+
+.my-element {
+    --primaryColor: #1d00ff; // the button inside `.my-element` will be blue
+}
+.my-element:nth-child(2n) {
+    --primaryColor: #82f263; // the button inside the second child will be green
+}
