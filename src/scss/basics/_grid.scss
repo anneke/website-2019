@@ -13,11 +13,12 @@ $padding-left-and-right: 5vw;
     padding: 20px;
 }
 
-.section-site-intro,
-.section-values,
-.section-blogs,
-.section-services {
+main > section {
     padding: 20px 0;
+
+    &:first-child {
+        padding-top: 0;
+    }
 }
 
 .site-header {
@@ -70,10 +71,7 @@ $padding-left-and-right: 5vw;
         display: none;
     }
 
-    .section-site-intro,
-    .section-values,
-    .section-blogs,
-    .section-services {
+    main > section {
         padding: 30px 0;
     }
 
