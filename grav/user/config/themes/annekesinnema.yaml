@@ -1,0 +1,8 @@
+enabled: true
+author: 'Anneke Sinnema'
+title_header: false
+home_profile: true
+infinite_scroll: false
+analytics: UA-YOURCODE
+social:
+  twitter: '@asinnema'
