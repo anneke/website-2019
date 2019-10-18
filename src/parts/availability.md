@@ -1,1 +1,1 @@
-Ik ben vanaf 8 oktober beschikbaar voor een nieuwe opdracht!
+Ik ben per direct beschikbaar voor een nieuwe opdracht! (32-40 uur per week)
