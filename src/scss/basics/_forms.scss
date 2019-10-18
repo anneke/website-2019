@@ -4,12 +4,13 @@ input[type="search"],
 input[type="phone"], 
 textarea {
     background-color: white;
-    width: 100%;
-    padding: 5px 10px;
+    border: 1px solid #ccc;
     font-family: inherit;
     font-size: inherit;
-    border: 1px solid #ccc;
+    padding: 5px 10px;
+    position: relative;
     resize: none;
+    width: 100%;
 }
 
 input {
@@ -21,22 +22,21 @@ form {
 }
 
 button, .buttonlike, [type="submit"] {
-    color: white;
-    display: block;      
-    width: 100%;
-    margin-top: 0;
     background-color: #8378c9;  
     background: linear-gradient(#8378c9 0%, #635b99 100%);
+    border: 1px solid white;
+    color: white;
+    display: block;      
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+    margin-top: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center; 
     text-decoration: none;
     transform: none;
-    text-align: center; 
-    font-family: inherit;
-    font-weight: normal;
-    font-size: inherit;
-    border: 1px solid white;
-    vertical-align: middle;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 100%;
 }
 
 button:active, .buttonlike:active, [type="submit"]:active,
@@ -50,4 +50,66 @@ button:focus, .buttonlike:focus, [type="submit"]:focus {
 
 .button:visited, .buttonlike:visited, [type="submit"]:visited {
     color: white;
+}
+
+input[type="text"], textarea, label {
+    border-top: 0;
+    border-left: 2px solid $pink;
+    border-right: 2px solid $pink;
+    border-bottom: 2px solid $pink;
+    padding: .675rem;
+    height: 2.7rem;
+    line-height: 1.35rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+textarea {
+    resize: vertical;
+    vertical-align: top;
+    height: auto;
+}
+
+button {
+    border: 2px solid $purple;
+}
+
+.calling-times {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid $pink;
+    border-right: 2px solid $pink;
+
+    @media screen and (min-width: $tablet-portrait) {
+        flex-direction: row;
+    }
+    
+    label {
+        align-content: center;
+        border-bottom: 0;
+        border: 0;
+        display: flex;
+        font-size: .8rem;
+        height: auto;
+        justify-content: flex-start;
+        padding: .675rem;
+
+        @media screen and (min-width: $tablet-portrait) {
+            height: 2.7rem;
+        }
+
+        span {
+            flex-shrink: 1; 
+            flex-grow: 0; 
+            flex-basis: auto;
+        }
+    }
+
+    input[type="checkbox"] {
+        height: 15px;
+        width: 15px;
+    }
 }
