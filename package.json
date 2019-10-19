@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "npm run build-storybook && npm run build-scss",
-    "build-scss": "sass src/scss/index.scss grav/user/themes/annekesinnema/css/styles.css",
+    "build-scss": "sass --watch src/scss/index.scss grav/user/themes/annekesinnema/css/styles.css",
     "dev-storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "convert-scss": "sass src/scss/index.scss dist/styles.css",
