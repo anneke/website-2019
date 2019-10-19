@@ -1,13 +1,24 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block header %}
-    {% if page.header.profile %}
-        {% include 'partials/profile.html.twig' %}
-    {% else %}
-        {{ parent() }}
-    {% endif %}
 {% endblock %}
 
+{% set collection = page.collection() %} 
 {% block content %}
     {{ page.content }}
+
+    {% if config.plugins.breadcrumbs.enabled %}
+        {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
+
+    {% if config.plugins.pagination.enabled and collection.params.pagination %}
+        {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+    {% endif %}  
 {% endblock %}
+
+{#     
+    {% block aside %}
+        {% include 'partials/sidebar.html.twig' with {'blog':page} %} 
+    {% endblock %} #}
+
+{# {% endembed %} #}

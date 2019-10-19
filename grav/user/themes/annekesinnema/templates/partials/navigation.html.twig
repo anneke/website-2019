@@ -1,19 +1,17 @@
-<section id="navigation">
-
-    <nav class="main-nav">
-        {% for page in pages.children.visible %}
-            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+<nav class="site-navigation" role="navigation">
+    <ul class="ul-inline">
+    {% for page in pages.children.visible %}
+        {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+        <li>
             <a class="{{ current_page }}" href="{{ page.url }}">
-                {% if page.home %}<span class="arrow">←</span> {% endif %}
-                {% if page.header.icon %}<i class="fa fa-{{ page.header.icon }}"></i>{% endif %}
-                {{ page.menu }}
+            {{ page.menu }}
             </a>
-        {% endfor %}
-        {% if config.plugins.feed.enabled %}
-            <a class="cta" href="{{ base_url }}{{ pages.find('/blog').rawRoute }}.rss">{{ 'SUBSCRIBE'|t }}</a>
-        {% endif %}
-    </nav>
+        </li>
+    {% endfor %}
+    </ul>
+
     {% if config.plugins.langswitcher.enabled %}
         {% include 'partials/langswitcher.html.twig' %}
     {% endif %}
-</section>
+</nav>
+

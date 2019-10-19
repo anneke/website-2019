@@ -1,7 +1,13 @@
 html, body {
     font-family: 'effra', Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 1.35rem;
+
+
+    @media screen and (min-width: $desktop-large) {
+        font-size: 2rem;
+        line-height: 1.35rem;
+    }
 }
 
 a {
@@ -16,6 +22,10 @@ h1, h2, h3 {
 
     @media screen and (min-width: $tablet-portrait) {
         margin-bottom: 1.35rem;
+    }
+
+    &:not(:first-child) {
+        margin-top: 1.35rem;
     }
 }
 

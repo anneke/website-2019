@@ -1,0 +1,11 @@
+{% embed 'partials/base.html.twig' %}
+
+	{% block content %}
+		{% if config.plugins.breadcrumbs.enabled %}
+			{% include 'partials/breadcrumbs.html.twig' %}
+		{% endif %}  
+		
+        {% include 'partials/faq_item.html.twig' with {'faq':page.parent, 'truncate':false} %}  
+    {% endblock %} 
+
+{% endembed %}

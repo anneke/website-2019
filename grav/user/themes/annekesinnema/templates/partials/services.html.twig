@@ -1,0 +1,8 @@
+<section class="section-services" md>
+<h2 class="services-title">Waar kan ik je mee helpen?</h2>
+    <div class="grid">
+        {% for service in collection %}
+            {% include 'partials/service-item.html.twig' with {'number': loop.index} %}
+        {% endfor %}
+    </div>
+</section>

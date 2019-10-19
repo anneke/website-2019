@@ -1,20 +1,48 @@
+.form-input-wrapper   {
+    position: relative;
+    display: flex;
+    border-top: 0;
+    border-left: 2px solid $pink;
+    border-right: 2px solid $pink;
+    border-bottom: 2px solid $pink;
+
+    input {
+        flex: 2 1 0;
+        padding: .675rem;
+    }
+
+    label {
+        flex: 1 1 10px;
+        padding: .675rem;
+
+    }
+}
+
 
 input[type="text"],
 input[type="search"],
+input[type="tel"],
 input[type="phone"], 
 textarea {
     background-color: white;
-    border: 1px solid #ccc;
+    border: 0 solid #ccc;
     font-family: inherit;
     font-size: inherit;
-    padding: 5px 10px;
     position: relative;
     resize: none;
-    width: 100%;
+
+    padding: .675rem;
+    height: 2.7rem;
+    line-height: 1.35rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
 }
 
-input {
-    border-bottom: 0;
+textarea {
+    resize: vertical;
+    vertical-align: top;
+    height: auto;
 }
 
 form {
@@ -24,7 +52,7 @@ form {
 button, .buttonlike, [type="submit"] {
     background-color: #8378c9;  
     background: linear-gradient(#8378c9 0%, #635b99 100%);
-    border: 1px solid white;
+    border: 2px solid $purple;
     color: white;
     display: block;      
     font-family: inherit;
@@ -52,54 +80,31 @@ button:focus, .buttonlike:focus, [type="submit"]:focus {
     color: white;
 }
 
-input[type="text"], textarea, label {
-    border-top: 0;
-    border-left: 2px solid $pink;
-    border-right: 2px solid $pink;
-    border-bottom: 2px solid $pink;
-    padding: .675rem;
-    height: 2.7rem;
-    line-height: 1.35rem;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: inherit;
-    font-size: inherit;
-}
+.form-field--checkboxes {
 
-textarea {
-    resize: vertical;
-    vertical-align: top;
-    height: auto;
-}
+    .form-input-wrapper {
+        border: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-left: 2px solid $pink;
+        border-right: 2px solid $pink;
 
-button {
-    border: 2px solid $purple;
-}
-
-.calling-times {
-    border: 0;
-    display: flex;
-    flex-direction: column;
-    border-left: 2px solid $pink;
-    border-right: 2px solid $pink;
-
-    @media screen and (min-width: $tablet-portrait) {
-        flex-direction: row;
+        @media screen and (min-width: $tablet-portrait) {
+            flex-direction: row;
+        }
     }
-    
+
     label {
         align-content: center;
         border-bottom: 0;
         border: 0;
         display: flex;
-        font-size: .8rem;
+        flex: 1 0 auto;
+        font-size: 1rem;
         height: auto;
         justify-content: flex-start;
         padding: .675rem;
-
-        @media screen and (min-width: $tablet-portrait) {
-            height: 2.7rem;
-        }
 
         span {
             flex-shrink: 1; 
@@ -111,5 +116,14 @@ button {
     input[type="checkbox"] {
         height: 15px;
         width: 15px;
+    }
+
+    .checkboxes {
+        display: block  ;
+        flex: 1 1 auto;
+
+        &:hover {
+            background: #ccc;
+        }
     }
 }

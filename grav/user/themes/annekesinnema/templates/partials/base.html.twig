@@ -1,48 +1,65 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {% set avatar_url = pages.find('/about').media.images|first.url ?: url('theme://images/avatar.png') %}
 {% import 'macros/dates.twig' as dates %}
+
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
-  <title>{% if header.title %}{{ header.title|e('html') }} - {% endif %}{{ 'SITE.TITLE'|t|e('html') }}</title>
+  <title>{% if header.title %}{{ header.title|e('html') }} - {% endif %}{{ site.title }}</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% include 'partials/metadata.html.twig' %}
   <link rel="shortcut icon" href="{{ url('theme://images/favicon.ico') }}" />
-  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}'s blog" href="/rss.xml">
 
   {% block stylesheets %}
     {% do assets.addCss('theme://css/styles.css',100) %}
+    {% do assets.addCss('https://use.typekit.net/mmr7vjx.css',100) %}
   {% endblock %}
   
   {% block assets deferred %}
     {{ assets.css()|raw }}    
   {% endblock %}
 </head>
-<body>
+<body class="{% if page.home %}page-home{% else %}page-{{ page.slug }}{% endif %}">
 
-    {% include 'partials/navigation.html.twig' %}
+  {# {% include 'partials/navigation.html.twig' %} #}
 
-    <section id="wrapper">
-        {% block header %}
-            {% if page.header.header is not same as(false) and theme_config.title_header %}
-                {% include 'partials/header.html.twig' %}
+  <div class="container">
+    {% include 'partials/header.html.twig' %}
+
+    <div class="site-main {{ page.header.class }}">
+        <main class="main-content" role="main">
+
+            <section class="section-site-intro">
+              {% block content %}{% endblock %}
+            </section>
+
+            {% include 'partials/availability.html.twig' with {'truncate': true} %}
+
+            {% if page.home %}
+              {% include 'partials/services.html.twig' %}
             {% endif %}
-        {% endblock %}
 
-        <div class="{{ page.header.class }}">
-        {% block content %}{% endblock %}
-        </div>
+            {% if config.plugins.feed.enabled %}
+                <a class="cta" href="{{ base_url }}{{ pages.find('/blog').rawRoute }}.rss">{{ 'SUBSCRIBE'|t }}</a>
+            {% endif %}
+        </main>
 
-        {% block footer %}
-        {% include 'partials/footer.html.twig' %}
-        {% endblock %}
-    </section>
+        <aside class="side-content">
+            {% include 'partials/availability.html.twig' with {'truncate': false} %}
+        </aside>
+    </div>
 
-    {% if site.analytics %}
+    {% block footer %}
+    {% include 'partials/footer.html.twig' %}
+    {% endblock %}
+  </div>
+
+  {% if site.analytics %}
     {% include 'partials/analytics.html.twig' %}
-    {% endif %}
+  {% endif %}
     
   {# block javascripts %}
       {% do assets.addJs('jquery',101) %}
@@ -50,9 +67,9 @@
       {% do assets.addJs('theme://js/jquery.jscroll.min.js') %}
   {% endblock #}
 
-  {% block bottom %}
+  {# {% block bottom %}
     {{ assets.js()|raw }}
     {{ assets.js('bottom')|raw }}
-  {% endblock %}
+  {% endblock %} #}
 </body>
 </html>

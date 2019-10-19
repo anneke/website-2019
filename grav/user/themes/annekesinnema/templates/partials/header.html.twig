@@ -1,3 +1,11 @@
-    <header id="header">
-        <a id="title" href="{{ base_url == '' ? '/' : base_url }}">{{ 'SITE.TITLE'|t }}</a>
-    </header>
+<header class="site-header">
+    <div>
+        <img alt="logo" width="50" height="50" />
+        <h1>
+            <a id="title" href="{{ base_url == '' ? '/' : base_url }}">
+                {{ site.title }}
+            </a>
+        </h1>
+    </div>
+    {% include 'partials/navigation.html.twig' %}
+</header>

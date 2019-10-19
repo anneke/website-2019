@@ -29,11 +29,13 @@ $padding-left-and-right: 5vw;
     }
     
     .site-header {
+        justify-items: flex-end;
         flex-direction: row;
         padding: 30px $padding-left-and-right 0;
         
         nav {
             margin-left: auto;
+            text-align: right;
         }
     }
 
@@ -208,33 +210,34 @@ $padding-left-and-right: 5vw;
             width: 50vw;
             z-index: -1;
         }
+    }
     
-        .site-footer__header {
-            grid-area: header;
-            padding-right: 90px;
-            padding-top: 30px;
-        }
+    .site-footer__header {
+        grid-area: header;
+        padding-right: 90px;
+        padding-top: 30px;
+    }
 
-        .site-footer__contactform {
-            grid-area: form;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            padding-left: 30px;
-        }
+    .site-footer__contactform {
+        grid-area: form;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+    }
 
-        .form-contact {
-            margin-left: -60px;
-        }
+    .site-footer form {
+        margin-left: -60px;
+        color: black;
+    }
 
-        .site-footer__contact {
-            grid-area: summary;
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
+    .site-footer__contact {
+        grid-area: summary;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 
-        .site-footer__byline {
-            grid-column: footer-start / footer-end;
-            grid-row: 2;
-        }
+    .site-footer__byline {
+        grid-column: footer-start / footer-end;
+        grid-row: 2;
     }
 }
