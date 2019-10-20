@@ -27,10 +27,13 @@
 }
 
 .site-footer__byline {
-    display: flex;
-    justify-content: space-between;
     padding: 15px $padding-left-and-right;
     font-size: .8rem;
+
+    @media screen and (min-width: $tablet-portrait) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .site-footer form {
@@ -38,7 +41,6 @@
     color: black;
     margin-top: 1.35rem;
 }
-
 
 dt, dd {
     margin: 0;

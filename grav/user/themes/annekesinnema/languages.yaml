@@ -3,7 +3,7 @@ en:
     DESCRIPTION: Blogging about stuff
     COPYRIGHT: © Copyright %s Your Company
     availabilitystatus: available
-  SUBSCRIBE: Subscribe
+  SUBSCRIBE: Blog RSS feed
   TWEET: Tweet
   SHARE: Share
   MONTHS_OF_THE_YEAR: [January, February, March, April, May, June, July, August, September, October, November, December]
@@ -14,7 +14,7 @@ nl:
       DESCRIPTION: Bloggen over vanalles en nog wat
       COPYRIGHT: Copyright © %s Uw Bedrijf
       availabilitystatus: beschikbaar
-  SUBSCRIBE: Abonneren
+  SUBSCRIBE: Blog RSS feed
   TWEET: Tweet
   SHARE: Delen
   MONTHS_OF_THE_YEAR: [Januari, Februari, Maart, April, Mei Juni, Juli, Augustus, September, Oktober, November, December]

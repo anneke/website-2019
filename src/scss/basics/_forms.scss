@@ -1,23 +1,34 @@
-.form-input-wrapper   {
+.form-input-wrapper {
     position: relative;
-    display: flex;
     border-top: 0;
     border-left: 2px solid $pink;
     border-right: 2px solid $pink;
     border-bottom: 2px solid $pink;
+    padding: .675rem;
 
     input {
-        flex: 2 1 0;
-        padding: .675rem;
-    }
-
-    label {
-        flex: 1 1 10px;
-        padding: .675rem;
-
+        padding: 0;
     }
 }
 
+@media screen and (min-width: $tablet-portrait) {
+    .form-input-wrapper {
+        display: flex;
+        padding: 0;
+
+        input, label, textarea {
+            padding: .675rem;
+        }
+
+        input {
+            flex: 2 1 0;
+        }
+
+        label {
+            flex: 1 1 10px;
+        }
+    }
+}
 
 input[type="text"],
 input[type="search"],
@@ -30,9 +41,6 @@ textarea {
     font-size: inherit;
     position: relative;
     resize: none;
-
-    padding: .675rem;
-    height: 2.7rem;
     line-height: 1.35rem;
     box-sizing: border-box;
     font-family: inherit;
@@ -81,7 +89,6 @@ button:focus, .buttonlike:focus, [type="submit"]:focus {
 }
 
 .form-field--checkboxes {
-
     .form-input-wrapper {
         border: 0;
         display: flex;
@@ -92,19 +99,23 @@ button:focus, .buttonlike:focus, [type="submit"]:focus {
 
         @media screen and (min-width: $tablet-portrait) {
             flex-direction: row;
+
+            label:first-child {
+                width: 100%;
+            }
         }
     }
 
     label {
         align-content: center;
-        border-bottom: 0;
-        border: 0;
         display: flex;
         flex: 1 0 auto;
         font-size: 1rem;
-        height: auto;
         justify-content: flex-start;
-        padding: .675rem;
+
+        @media screen and (min-width: $tablet-portrait) {
+            padding: .675rem;
+        }
 
         span {
             flex-shrink: 1; 
@@ -116,10 +127,11 @@ button:focus, .buttonlike:focus, [type="submit"]:focus {
     input[type="checkbox"] {
         height: 15px;
         width: 15px;
+        flex: 0;
+        margin-right: 15px;
     }
 
     .checkboxes {
-        display: block  ;
         flex: 1 1 auto;
 
         &:hover {

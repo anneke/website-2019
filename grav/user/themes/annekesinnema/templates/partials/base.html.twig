@@ -41,10 +41,6 @@
             {% if page.home %}
               {% include 'partials/services.html.twig' %}
             {% endif %}
-
-            {% if config.plugins.feed.enabled %}
-                <a class="cta" href="{{ base_url }}{{ pages.find('/blog').rawRoute }}.rss">{{ 'SUBSCRIBE'|t }}</a>
-            {% endif %}
         </main>
 
         <aside class="side-content">

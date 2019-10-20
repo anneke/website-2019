@@ -3,10 +3,12 @@
     <p class="service__sub">
         {{ service.summary|striptags }}
     </p> 
+    {% set content = service.content|slice(service.summary|length) %}
+    {% if content != '' %}
     <p class="mobile-only">
-        {% set content = service.content|slice(service.summary|length) %}
         {{ content|striptags }}
     </p>
+    {% endif %}
     <p>
         <a href="{{ service.url }}">
             {{ service.header.linkshort }}

@@ -29,24 +29,6 @@
         </p> 
 
         {% include "forms/form.html.twig" with { form: forms('callmeplease') } %}
-{#         
-        <form class="form-contact">
-            <input type="text" placeholder="Jouw naam" />
-            <input type="text" placeholder="Jouw telefoonnummer" />
-            <textarea rows="2">Het gaat over...</textarea>
-            <div class="calling-times">
-                <label>
-                    <input type="checkbox" /> <span>9.00 - 12.00</span>
-                </label>
-                <label>
-                    <input type="checkbox" /> <span>12.00 - 17.00</span>
-                </label>
-                <label>
-                    <input type="checkbox" /> <span>19.00 - 21.00</span>
-                </label>
-            </div>
-            <button type="submit">Verstuur</button>
-        </form> #}
     </section>
 
     <section class="site-footer__contact"> 
@@ -65,12 +47,16 @@
             <li><a href="https://twitter.com/asinnema">Twitter</a></li>
             <li><a href="https://www.linkedin.com/in/annekesinnema/">LinkedIn</a></li>
         </ul>
+
+        {% if config.plugins.feed.enabled %}
+            <a class="cta" href="{{ base_url }}{{ pages.find('/blog').rawRoute }}.rss">{{ 'SUBSCRIBE'|t }}</a>
+        {% endif %}
     </section>
 </footer> 
 
 <footer class="site-byline">
     <div class="site-footer__byline">
-        <span>Content door Anneke Sinnema</span>
-        <span>Design door Adrian Egger</span>
+        <div>Content door Anneke Sinnema</div>
+        <div>Design door Adrian Egger</div>
     </div>
 </footer>
