@@ -301,6 +301,16 @@ button:focus, .buttonlike:focus, [type=submit]:focus {
 }
 #fullcontactform .form-input-wrapper input,
 #fullcontactform .form-input-wrapper textarea,
+#fullcontactform .form-input-wrapper label,
+#fullcontactform .form-textarea-wrapper input,
+#fullcontactform .form-textarea-wrapper textarea,
+#fullcontactform .form-textarea-wrapper label {
+  display: block;
+  padding: 0.675rem;
+  width: 100%;
+}
+#fullcontactform .form-input-wrapper input,
+#fullcontactform .form-input-wrapper textarea,
 #fullcontactform .form-textarea-wrapper input,
 #fullcontactform .form-textarea-wrapper textarea {
   border: 1px solid #F2DAEE;
