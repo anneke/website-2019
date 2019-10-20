@@ -1,17 +1,18 @@
 ---
 published: true
 visible: false
+published: false
 cache_enabled: false
 title: 'Wil je teruggebeld worden?'
 form:
     name: callmeplease
     action: /thanks
     description: 'Snel contact opnemen'
-    classes: calltoaction
+    classes: 
     fields:
         -
             name: name
-            label: 'Jouw naam'
+            label: 'Naam'
             placeholder: 'Jouw naam'
             autofocus: 'off'
             autocomplete: 'on'

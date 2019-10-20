@@ -16,13 +16,17 @@
         </header>
         {{ site.availability }}
     </div>
-    <footer>
-        <a class="buttonlike" href="#contactform"><span class="a11y">Weet je een leuke opdracht?</span> Neem contact met me op</a>
-        <br />
-        <h3>Spoedklus?</h3>
-        <a href="https://www.wetransfer.com/?to=mail@annekesinnema.nl&msg=Bij%20vragen%20kun%20je%20me%20bereiken%20op%20telefoonnummer%20...%20.%20Mijn%20naam%20is%20..." data-text="Op naar WeTransfer!">Stuur me je bestanden via WeTransfer!</a> 
-        <br />
-        Ik e-mail je terug met een offerte.
-    </footer>
+    {% if page.template != 'contact' %}
+        <footer>
+            <a class="buttonlike" href="#contactform">
+                <span class="a11y">Weet je een leuke opdracht?</span> 
+                Neem contact met me op
+            </a>
+            <h3>Spoedklus?</h3>
+            <a href="https://www.wetransfer.com/?to=mail@annekesinnema.nl&msg=Bij%20vragen%20kun%20je%20me%20bereiken%20op%20telefoonnummer%20...%20.%20Mijn%20naam%20is%20..." data-text="Op naar WeTransfer!">Stuur me je bestanden via WeTransfer!</a> 
+            <br />
+            Ik e-mail je terug met een offerte.
+        </footer>
+    {% endif %}
 </section>
 {% endif %}

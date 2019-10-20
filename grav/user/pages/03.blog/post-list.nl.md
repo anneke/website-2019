@@ -1,6 +1,7 @@
 ---
 title: Blog
 class: blog
+published: false
 
 sitemap:
     changefreq: monthly

@@ -6,6 +6,10 @@
                 {{ site.title }}
             </a>
         </h1>
+
+        {% if config.plugins.langswitcher.enabled %}
+            {% include 'partials/langswitcher.html.twig' %}
+        {% endif %}
     </div>
     {% include 'partials/navigation.html.twig' %}
 </header>

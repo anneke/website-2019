@@ -10,10 +10,3 @@ summary:
 Heb je een ander project waar je een front-end ontwikkelaar voor kunt gebruiken?
 
 ===
-
-
-Heb je een ander project waar je een front-end ontwikkelaar voor kunt gebruiken?
-
-Heb je een ander project waar je een front-end ontwikkelaar voor kunt gebruiken?
-
-Heb je een ander project waar je een front-end ontwikkelaar voor kunt gebruiken?

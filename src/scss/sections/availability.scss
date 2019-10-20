@@ -28,8 +28,12 @@
 .availability__content {
     background: $white;
     border: 2px solid $pink;
-    border-bottom: 0;
+    border-bottom: none;
     padding: 30px;
+
+    &:last-child {
+        border-bottom: 2px solid $pink;
+    }
 }
 
 .availability__psst {

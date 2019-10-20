@@ -1,4 +1,5 @@
-.form-input-wrapper {
+.form-input-wrapper,
+.form-textarea-wrapper  {
     position: relative;
     border-top: 0;
     border-left: 2px solid $pink;
@@ -6,13 +7,15 @@
     border-bottom: 2px solid $pink;
     padding: .675rem;
 
-    input {
+    input,
+    textarea {
         padding: 0;
     }
 }
 
 @media screen and (min-width: $tablet-portrait) {
-    .form-input-wrapper {
+    .form-input-wrapper,
+    .form-textarea-wrapper  {
         display: flex;
         padding: 0;
 
@@ -20,7 +23,7 @@
             padding: .675rem;
         }
 
-        input {
+        input, textarea {
             flex: 2 1 0;
         }
 
@@ -33,10 +36,10 @@
 input[type="text"],
 input[type="search"],
 input[type="tel"],
-input[type="phone"], 
+input[type="email"], 
 textarea {
     background-color: white;
-    border: 0 solid #ccc;
+    border: 0;
     font-family: inherit;
     font-size: inherit;
     position: relative;
@@ -73,6 +76,10 @@ button, .buttonlike, [type="submit"] {
     text-decoration: none;
     transform: none;
     width: 100%;
+}
+
+.buttonlike {
+    width: inherit;
 }
 
 button:active, .buttonlike:active, [type="submit"]:active,
@@ -136,6 +143,32 @@ button:focus, .buttonlike:focus, [type="submit"]:focus {
 
         &:hover {
             background: #ccc;
+        }
+    }
+}
+
+#fullcontactform {
+    .form-input-wrapper,
+    .form-textarea-wrapper  {
+        margin-bottom: .5rem;
+        border: 0;
+        padding: 0;
+
+        input,
+        textarea {
+            border: 1px solid $pink;
+
+            &:hover {
+                border: 1px solid rgba($purple, .3);
+            }
+
+            &:focus {
+                border: 1px solid $purple;
+            }
+        }
+
+        label {
+            padding-left: 0;
         }
     }
 }
