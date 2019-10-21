@@ -42,9 +42,8 @@ textarea {
     border: 0;
     font-family: inherit;
     font-size: inherit;
+    line-height: inherit;
     position: relative;
-    resize: none;
-    line-height: 1.35rem;
     box-sizing: border-box;
     font-family: inherit;
     font-size: inherit;
@@ -53,14 +52,9 @@ textarea {
 textarea {
     resize: vertical;
     vertical-align: top;
-    height: auto;
 }
 
-form {
-    background: white;
-}
-
-button, .buttonlike, [type="submit"] {
+button, [type="submit"], .hitarea {
     background-color: #8378c9;  
     background: linear-gradient(#8378c9 0%, #635b99 100%);
     border: 2px solid $purple;
@@ -76,76 +70,88 @@ button, .buttonlike, [type="submit"] {
     text-decoration: none;
     transform: none;
     width: 100%;
+
+    &:active,
+    &:hover,
+    &:focus {
+        color: white;
+        text-decoration: none;  
+        background-color: #635b99;
+        background: linear-gradient(#635b99 0%, #8378c9 100%);
+    }
+
+    &:visited {
+        color: white;
+
+        span:last-child::after {
+            content: ' yes';
+        }
+    }
 }
 
-.buttonlike {
+.hitarea {
     width: inherit;
+
+    span:last-child {
+        text-decoration: underline;
+    }
 }
 
-button:active, .buttonlike:active, [type="submit"]:active,
-button:hover, .buttonlike:hover, [type="submit"]:hover,
-button:focus, .buttonlike:focus, [type="submit"]:focus {
-    color: white;
-    text-decoration: none;  
-    background-color: #635b99;
-    background: linear-gradient(#635b99 0%, #8378c9 100%);
+#callmeplease {
+    background: white;
 }
 
-.button:visited, .buttonlike:visited, [type="submit"]:visited {
-    color: white;
-}
+    .form-field--checkboxes {
+        .form-input-wrapper {
+            border: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border-left: 2px solid $pink;
+            border-right: 2px solid $pink;
 
-.form-field--checkboxes {
-    .form-input-wrapper {
-        border: 0;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        border-left: 2px solid $pink;
-        border-right: 2px solid $pink;
+            @media screen and (min-width: $tablet-portrait) {
+                flex-direction: row;
 
-        @media screen and (min-width: $tablet-portrait) {
-            flex-direction: row;
+                label:first-child {
+                    width: 100%;
+                }
+            }
+        }
 
-            label:first-child {
-                width: 100%;
+        label {
+            align-content: center;
+            display: flex;
+            flex: 1 0 auto;
+            font-size: 1rem;
+            justify-content: flex-start;
+
+            @media screen and (min-width: $tablet-portrait) {
+                padding: .675rem;
+            }
+
+            span {
+                flex-shrink: 1; 
+                flex-grow: 0; 
+                flex-basis: auto;
+            }
+        }
+
+        input[type="checkbox"] {
+            height: 15px;
+            width: 15px;
+            flex: 0;
+            margin-right: 15px;
+        }
+
+        .checkboxes {
+            flex: 1 1 auto;
+
+            &:hover {
+                background: #ccc;
             }
         }
     }
-
-    label {
-        align-content: center;
-        display: flex;
-        flex: 1 0 auto;
-        font-size: 1rem;
-        justify-content: flex-start;
-
-        @media screen and (min-width: $tablet-portrait) {
-            padding: .675rem;
-        }
-
-        span {
-            flex-shrink: 1; 
-            flex-grow: 0; 
-            flex-basis: auto;
-        }
-    }
-
-    input[type="checkbox"] {
-        height: 15px;
-        width: 15px;
-        flex: 0;
-        margin-right: 15px;
-    }
-
-    .checkboxes {
-        flex: 1 1 auto;
-
-        &:hover {
-            background: #ccc;
-        }
-    }
-}
 
 #fullcontactform {
     .form-input-wrapper,
@@ -161,7 +167,7 @@ button:focus, .buttonlike:focus, [type="submit"]:focus {
             padding: .675rem;
             width: 100%;
         }
-        
+
         input,
         textarea {
             border: 1px solid $pink;

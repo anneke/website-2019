@@ -12,6 +12,12 @@ html, body {
 
 a {
     color: $purple;
+
+    &:hover,
+    &:focus {
+        color: $status-green;
+        text-decoration-style: double;
+    }
 }
 
 h1, h2, h3 {

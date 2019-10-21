@@ -13,7 +13,8 @@
     border-radius: 50%;
 }
 
-.availability__status--available::before {
+.availability__status--available::before,
+.availability__status--beschikbaar::before {
     background: $status-green;
 }
 
@@ -21,7 +22,8 @@
     background: $status-orange;
 }
 
-.availability__status--unavailable::before {
+.availability__status--unavailable::before
+.availability__status--druk::before {
     background: $status-red;
 }
 

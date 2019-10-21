@@ -3,6 +3,8 @@ en:
     DESCRIPTION: Blogging about stuff
     COPYRIGHT: © Copyright %s Your Company
     availabilitystatus: available
+    availabilitytitle: Availability
+    availabilitysubtitle: Current status
   SUBSCRIBE: Blog RSS feed
   TWEET: Tweet
   SHARE: Share
@@ -11,9 +13,11 @@ en:
  
 nl:
   SITE:
-      DESCRIPTION: Bloggen over vanalles en nog wat
-      COPYRIGHT: Copyright © %s Uw Bedrijf
-      availabilitystatus: beschikbaar
+    DESCRIPTION: Bloggen over vanalles en nog wat
+    COPYRIGHT: Copyright © %s Uw Bedrijf
+    availabilitystatus: beschikbaar
+    availabilitytitle: Beschikbaarheid
+    availabilitysubtitle: Huidige status
   SUBSCRIBE: Blog RSS feed
   TWEET: Tweet
   SHARE: Delen
