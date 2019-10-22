@@ -39,17 +39,3 @@ ul {
 li {
     list-style-image: $list-svg-purple;
 }
-
-.ul-inline {
-    list-style-type: none;
-    padding: 0;
-}
-
-.ul-inline li {
-    list-style-type: none;
-
-    @media screen and (min-width: $tablet-portrait) {
-        display: inline-block;
-        padding-left: 30px;
-    }
-}

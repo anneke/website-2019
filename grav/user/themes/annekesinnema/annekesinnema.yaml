@@ -2,7 +2,7 @@ enabled: true
 author: Wilberforce Humphries
 title_header: false
 home_profile: true
-infinite_scroll: true
+showchildpages: true
 analytics: UA-YOURCODE
 social:
     twitter: @getgrav

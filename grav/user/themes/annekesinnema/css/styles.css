@@ -44,21 +44,6 @@ li {
   list-style-image: url("./../img/bullet-purple.svg");
 }
 
-.ul-inline {
-  list-style-type: none;
-  padding: 0;
-}
-
-.ul-inline li {
-  list-style-type: none;
-}
-@media screen and (min-width: 40em) {
-  .ul-inline li {
-    display: inline-block;
-    padding-left: 30px;
-  }
-}
-
 html, body {
   font-family: "effra", Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -653,6 +638,47 @@ dt, dd {
 dt {
   font-size: 0.8rem;
   margin-top: 1.35rem;
+}
+
+.ul-sub {
+  background: white;
+  border: 1px solid grey;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 2.025rem;
+  z-index: 2;
+  text-align: left;
+}
+.ul-sub li {
+  padding: 0.625rem;
+  list-style-type: none;
+  border-bottom: 1px solid grey;
+}
+.ul-sub li:last-child {
+  border: 0;
+}
+
+.ul-inline {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ul-inline > li {
+  list-style-type: none;
+  position: relative;
+}
+@media screen and (min-width: 40em) {
+  .ul-inline > li {
+    display: inline-block;
+    margin-left: 30px;
+  }
+}
+.ul-inline > li:hover .ul-sub, .ul-inline > li:focus .ul-sub {
+  display: block;
+}
+.ul-inline > li:focus-within .ul-sub {
+  display: block;
 }
 
 .section-availability {

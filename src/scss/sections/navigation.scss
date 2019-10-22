@@ -1,0 +1,49 @@
+.ul-sub {
+    background: white;
+    border: 1px solid grey;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: (1.35rem * 1.5);
+    z-index: 2;
+    text-align: left;
+
+    li {
+        padding: .625rem;
+        list-style-type: none;
+        border-bottom: 1px solid grey;
+
+        &:last-child  {
+            border: 0;
+        }
+    }
+}
+
+.ul-inline {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ul-inline > li {
+    list-style-type: none;
+    position: relative;
+
+    @media screen and (min-width: $tablet-portrait) {
+        display: inline-block;
+        margin-left: 30px;
+    }
+
+    &:hover,
+    &:focus {
+        .ul-sub {
+            display: block;
+        }
+    }
+
+    &:focus-within {
+        .ul-sub {
+            display: block;
+        }
+    }
+}
+
