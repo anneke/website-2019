@@ -4,7 +4,7 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "npm run build-scss",
     "build": "npm run build-storybook && npm run build-scss",
     "build-scss": "sass --watch src/scss/index.scss grav/user/themes/annekesinnema/css/styles.css",
     "dev-storybook": "start-storybook -p 6006",
