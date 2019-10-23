@@ -25,6 +25,8 @@
 <body class="{% if page.home %}page-home{% else %}page-{{ page.slug }}{% endif %}">
 
   {# {% include 'partials/navigation.html.twig' %} #}
+  
+  {% do track_views(page.route) %}
 
   <div class="container">
     {% include 'partials/header.html.twig' %}
