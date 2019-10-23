@@ -1,7 +1,6 @@
 ---
 published: true
 visible: false
-published: false
 cache_enabled: false
 title: 'Wil je teruggebeld worden?'
 form:

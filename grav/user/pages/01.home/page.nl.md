@@ -4,7 +4,7 @@ class: home
 profile: true
 
 content:
-    items: @self.children
+    items: self.children
 ---
 
 <p>Ik bouw websites voor kleine én grote bedrijven en help ondernemers bij het onderhoud van hun website.</p>
