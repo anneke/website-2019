@@ -58,10 +58,10 @@ html, body {
 
 a {
   color: #6F66AB;
+  text-decoration-skip: ink;
 }
 a:hover, a:focus {
-  color: green;
-  text-decoration-style: double;
+  text-decoration: underline red;
 }
 
 h1, h2, h3 {
@@ -673,6 +673,9 @@ dt {
     display: inline-block;
     margin-left: 30px;
   }
+}
+.ul-inline > li a {
+  padding-bottom: 1rem;
 }
 .ul-inline > li:hover .ul-sub, .ul-inline > li:focus .ul-sub {
   display: block;
