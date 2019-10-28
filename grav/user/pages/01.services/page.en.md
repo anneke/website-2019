@@ -1,6 +1,5 @@
 ---
-title: About me
-class: about
+title: What I do
 
 content:
     items: @self.children

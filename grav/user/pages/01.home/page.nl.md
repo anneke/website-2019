@@ -1,12 +1,10 @@
 ---
 title: Home
-class: home
-profile: true
-
-content:
-    items: self.children
+a11ytitle: Welkom op mijn website
 ---
 
-<p>Ik bouw websites voor kleine én grote bedrijven en help ondernemers bij het onderhoud van hun website.</p>
+Ik ben een front-end developer met een hart voor een fijne gebruikerservaring en een oog voor detail.
 
-<p>Ik ben gespecialiseerd in robuuste en helder geschreven HTML en CSS, met een sterke focus op toegankelijkheid en UX, en (Vanilla) Javascript of Typescript waarmee de gebruikerservaring extra wordt ondersteund.</p>
+Dit uit zich in een specialisatie in robuuste en helder geschreven HTML en CSS, met een sterke focus op toegankelijkheid en UX. (Vanilla) Javascript of Typescript zet ik in om de gebruikerservaring een extra <em lang="en">push</em> te geven. 
+
+Naast mijn werk als front-end developer ben ik ook betrokken bij [Fronteers, de vakvereniging voor Front-end developers](https://fronteers.nl). 

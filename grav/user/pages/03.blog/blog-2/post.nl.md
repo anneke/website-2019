@@ -1,12 +1,10 @@
 ---
-title: Welkom bij Grav!
+title: Welkom bij Grav! yes
 date: 16:00 10-07-2015
 headline: Get ready to fall in love :)
 taxonomy:
     category: blog
     tag: [grav]
-imagename: toet.png
-imagealt: a picture of a post
 ---
 
 U zal deze post in uw `user/pages/01.blog/welcome-to-grav` map vinden - Wijzig deze post en herlaad de browser om uw veranderingen te zien.

@@ -1,22 +1,19 @@
 ---
 title: Blog
-class: blog
-published: false
-
+published: true
 sitemap:
     changefreq: monthly
-    priority: 1.03
-
+class: blog
 content:
-    items: self.children
+    items: @self.children
     order:
         by: date
         dir: desc
     limit: 5
     pagination: true
-
 feed:
-    description: Feed Title
+    description: 'Feed Title'
     limit: 10
 ---
 
+Testerdetest

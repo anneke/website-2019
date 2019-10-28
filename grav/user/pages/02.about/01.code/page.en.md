@@ -1,6 +1,7 @@
 ---
 title: Code
 class: code
+published: false
 ---
 
 <!-- http://localhost/annekesinnema/grav/nl/about/code -->

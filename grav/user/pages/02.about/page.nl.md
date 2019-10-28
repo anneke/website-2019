@@ -1,11 +1,20 @@
 ---
 title: Over mij 
 class: about
+
+content:
+    items: @self.children
 ---
+<!-- 
+Initiatief: Signaleert kansen. Handelt ernaar en durft daarbij risico’s te nemen om uiteindelijk een bepaald herkenbaar voordeel voor de organisatie te behalen. Begint liever uit zichzelf dan passief af te wachten.
+Netwerkvaardigheid: Ontwikkelt en onderhoudt relaties, allianties en coalities buiten de eigen organisatie en benut deze voor het verkrijgen van informatie, steun en medewerking.
+Mondelinge uitdrukkingsvaardigheid: Maakt feiten, meningen en ideeën aan anderen in begrijpelijke taal mondeling duidelijk.
+Samenwerken: Heeft oog voor het groepsbelang en draagt actief bij aan het gemeenschappelijke resultaat.
+Betrokkenheid: Identificeert zich met en voelt zich nauw betrokken. -->
 
 <h2>Hoi! Ik ben Anneke.</h2>
 
-<p>Ik ben gespecialiseerd in robuuste en helder geschreven HTML en CSS, met daarin een sterke focus op toegankelijkheid en UX. Daarnaast zie ik (Vanilla) Javascript of Typescript als middelen om de gebruikerservaring extra te ondersteunen. Ik geloof dat als je de basis goed onder de knie hebt, dat dan de frameworks of tools die er bij horen eigenlijk iets minder uitmaken.</p>
+<p>Ik geloof dat als je de basis goed onder de knie hebt, dat dan de frameworks of tools die er bij horen eigenlijk iets minder uitmaken. Daarom wil ik heel graag mijn kennis van Vanilla Javascript nog beter onder de knie krijgen.</p>
 
 <p>Het liefst werk ik gedurende minimaal 3 maanden of langer aan een vast project waarbij ik me kan ingraven in de materie op basis van een hechte samenwerking binnen een gemengd team specialisten. Helder communiceren vind ik belangrijk en ik neem graag het initiatief om samen met UX en visual designers op te trekken richting een goed gedocumenteerd eindproduct.</p>
 
