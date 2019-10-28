@@ -1,25 +1,23 @@
 en:
   SITE:
     DESCRIPTION: Blogging about stuff
-    COPYRIGHT: © Copyright %s Your Company
-    availabilitystatus: available
-    availabilitytitle: Availability
-    availabilitysubtitle: Current status
+    LATEST_BLOG: Latest blog
   SUBSCRIBE: Blog RSS feed
   TWEET: Tweet
   SHARE: Share
   MONTHS_OF_THE_YEAR: [January, February, March, April, May, June, July, August, September, October, November, December]
   DAYS_OF_THE_WEEK: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+  servicesheader: What can I help you with?
+  valuesheader: What is important to me?
  
 nl:
   SITE:
     DESCRIPTION: Bloggen over vanalles en nog wat
-    COPYRIGHT: Copyright © %s Uw Bedrijf
-    availabilitystatus: beschikbaar
-    availabilitytitle: Beschikbaarheid
-    availabilitysubtitle: Huidige status
+    LATEST_BLOG: Laatste blog
   SUBSCRIBE: Blog RSS feed
   TWEET: Tweet
-  SHARE: Delen
-  MONTHS_OF_THE_YEAR: [Januari, Februari, Maart, April, Mei Juni, Juli, Augustus, September, Oktober, November, December]
-  DAYS_OF_THE_WEEK: [Maandag, Dinsdag, Woensdag, Donderdag, Vrijdag, Zaterdag, Zondag]
+  SHARE: Deel
+  MONTHS_OF_THE_YEAR: [januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december]
+  DAYS_OF_THE_WEEK: [maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag]
+  servicesheader: Waar kan ik je mee helpen?
+  valuesheader: Wat vind ik belangrijk?

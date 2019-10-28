@@ -1,0 +1,14 @@
+
+.section-values .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.value {
+    padding-top: $whitespace-small;
+    padding-right: $whitespace-medium;
+
+    &:nth-child(3n + 3) {
+        padding-right: 0;
+    }
+}
