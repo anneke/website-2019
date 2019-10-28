@@ -1,62 +1,64 @@
-<footer class="site-footer">
-    <header class="site-footer__header">
-        {% if page.slug == 'contact' %}
+<footer>
+    <section class="site-footer">
+        <section class="site-footer__header">
+            {% if page.slug == 'contact' %}
+                <dl>
+                    <dt>adres</dt>
+                    <dd>Oostveenweg 28<br />
+                        7533VV Enschede</dd>
+                
+                    <dt>Kamer van Koophandel</dt>
+                    <dd>61518328</dd>
+
+                    <dt>BTW nummer:</dt>
+                    <dd>op aanvraag</dd>
+
+                    <dt>Bank</dt>
+                    <dd></dd>
+                </dl>
+            {% else %}
+                <h2>Benieuwd? <br />
+                    Laten we eens kennismaken!</h2>
+                <p>Heb je een concrete opdracht of een vraagstuk waar je hulp bij nodig hnebt, of wil je gewoon een keer kennis maken? Ik ben altijd in voor een kop thee om te kijken of we iets voor elkaar kunnen betekenen!</p>
+            {% endif %}
+        </section>
+
+        <section class="site-footer__contactform" id="contactform">
+            <h3>Wil je teruggebeld worden?</h3>
+            <p>
+                Neem gerust contact op met het onderstaande formulier! Een sms, whatsapp-bericht of een <i>direct message</i> op social media bereikt me ook!
+            </p> 
+
+            {% include "forms/form.html.twig" with { form: forms('callmeplease') } %}
+        </section>
+
+        <section class="site-footer__contact"> 
+            <h3>Contactinformatie</h3>
             <dl>
-                <dt>adres</dt>
-                <dd>Oostveenweg 28<br />
-                    7533VV Enschede</dd>
-            
-                <dt>Kamer van Koophandel</dt>
-                <dd>61518328</dd>
-
-                <dt>BTW nummer:</dt>
-                <dd>op aanvraag</dd>
-
-                <dt>Bank</dt>
-                <dd></dd>
+                <dt>Mail</dt>
+                <dd><a href="mailto:{{'mail@annekesinnema.nl'|safe_email}}">{{'mail@annekesinnema.nl'|safe_email}}</a></dd>
+                <dt>Grote bestanden?</dt>
+                <dd><a href="https://www.wetransfer.com/?to=mail@annekesinnema.nl&msg=Bij%20vragen%20kun%20je%20me%20bereiken%20op%20telefoonnummer%20...%20.%20Mijn%20naam%20is%20..." data-text="Op naar WeTransfer!">Stuur me direct je bestanden via WeTransfer!</a></dd>
+                <dt>Telefoon</dt>
+                <dd><a href="tel:0644870256">06-44870256</a> of <a href="tel:0534321728">053-4321728</a> (ook voicemail)</dd>
             </dl>
-        {% else %}
-            <h2>Benieuwd? <br />
-                Laten we eens kennismaken!</h2>
-            <p>Heb je een concrete opdracht of een vraagstuk waar je hulp bij nodig hnebt, of wil je gewoon een keer kennis maken? Ik ben altijd in voor een kop thee om te kijken of we iets voor elkaar kunnen betekenen!</p>
-        {% endif %}
-    </header>
 
-    <section class="site-footer__contactform" id="contactform">
-        <h3>Wil je teruggebeld worden?</h3>
-        <p>
-            Neem gerust contact op met het onderstaande formulier! Een sms, whatsapp-bericht of een <i>direct message</i> op social media bereikt me ook!
-        </p> 
+            <h3>Volg mij ook op social media</h3>
+            <ul>
+                <li><a href="https://twitter.com/asinnema">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/annekesinnema/">LinkedIn</a></li>
+            </ul>
 
-        {% include "forms/form.html.twig" with { form: forms('callmeplease') } %}
+            {% if config.plugins.feed.enabled %}
+                <a class="cta" href="{{ base_url }}{{ pages.find('/blog').rawRoute }}.rss">{{ 'SUBSCRIBE'|t }}</a>
+            {% endif %}
+        </section>
+    </section> 
+
+    <section class="site-byline">
+        <div class="site-footer__byline">
+            <div>Content door Anneke Sinnema</div>
+            <div>Design door Adrian Egger</div>
+        </div>
     </section>
-
-    <section class="site-footer__contact"> 
-        <h3>Contactinformatie</h3>
-        <dl>
-            <dt>Mail</dt>
-            <dd><a href="mailto:mail@annekesinnema.nl">mail@annekesinnema.nl</a></dd>
-            <dt>Grote bestanden?</dt>
-            <dd><a href="https://www.wetransfer.com/?to=mail@annekesinnema.nl&msg=Bij%20vragen%20kun%20je%20me%20bereiken%20op%20telefoonnummer%20...%20.%20Mijn%20naam%20is%20..." data-text="Op naar WeTransfer!">Stuur me direct je bestanden via WeTransfer!</a></dd>
-            <dt>Telefoon</dt>
-            <dd><a href="tel:0644870256">06-44870256</a> of <a href="tel:0534321728">053-4321728</a> (ook voicemail)</dd>
-        </dl>
-
-        <h3>Volg mij ook op social media</h3>
-        <ul>
-            <li><a href="https://twitter.com/asinnema">Twitter</a></li>
-            <li><a href="https://www.linkedin.com/in/annekesinnema/">LinkedIn</a></li>
-        </ul>
-
-        {% if config.plugins.feed.enabled %}
-            <a class="cta" href="{{ base_url }}{{ pages.find('/blog').rawRoute }}.rss">{{ 'SUBSCRIBE'|t }}</a>
-        {% endif %}
-    </section>
-</footer> 
-
-<footer class="site-byline">
-    <div class="site-footer__byline">
-        <div>Content door Anneke Sinnema</div>
-        <div>Design door Adrian Egger</div>
-    </div>
 </footer>

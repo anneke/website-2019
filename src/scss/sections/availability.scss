@@ -1,6 +1,6 @@
 .section-availability {
     z-index: 1;
-    margin: 30px 0;
+    margin: $whitespace-medium 0;
 }
 
 .availability__status::before {
@@ -13,8 +13,7 @@
     border-radius: 50%;
 }
 
-.availability__status--available::before,
-.availability__status--beschikbaar::before {
+.availability__status--available::before {
     background: $status-green;
 }
 
@@ -22,26 +21,24 @@
     background: $status-orange;
 }
 
-.availability__status--unavailable::before
-.availability__status--druk::before {
+.availability__status--unavailable::before {
     background: $status-red;
 }
 
-.availability__content {
+.section-availability {
     background: $white;
     border: 2px solid $pink;
-    border-bottom: none;
-    padding: 30px;
+    padding: 1.5rem;
 
-    &:last-child {
-        border-bottom: 2px solid $pink;
+    footer {
+        margin-top: 1rem;
     }
 }
 
 .availability__psst {
     font-size: .9rem;
     line-height: inherit;
-    margin-top: 20px;
+    margin-top: 1rem;
 }
 
 @media screen and (min-width: $tablet-portrait) {

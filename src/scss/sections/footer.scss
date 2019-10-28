@@ -1,6 +1,6 @@
 .site-footer__contactform,
 .site-footer__contact {
-    margin-bottom: 20px;
+    margin-bottom: $whitespace-small;
 
     @media screen and (min-width: $tablet-portrait) {
         color: $white;

@@ -3,23 +3,26 @@ html, body {
     padding: 0;
 }    
 
-$padding-left-and-right: 5vw;
-
 .container {
-    max-width: $max-content-width; 
+    max-width: $max-content-width;
+    max-width: 90vw; 
     margin: 0px auto;
     width: 100%;
     box-sizing: border-box;
-    padding: 20px;
+    padding: $whitespace-small;
 }
 
 .main-content > section {
-    padding: 20px 0;
+    padding: $whitespace-small 0;
 }
 
 .site-header {
     display: flex; 
     flex-direction: column;
+}
+
+.logo {
+    margin-right: $whitespace-small;       
 }
 
 @media screen and (min-width: $tablet-portrait) {
@@ -31,7 +34,7 @@ $padding-left-and-right: 5vw;
     .site-header {
         justify-items: flex-end;
         flex-direction: row;
-        padding: 30px $padding-left-and-right 0;
+        padding: $whitespace-medium $padding-left-and-right 0;
         
         nav {
             margin-left: auto;
@@ -52,7 +55,7 @@ $padding-left-and-right: 5vw;
             [sidebar-end main-end] 
                 $padding-left-and-right;
         grid-template-rows: auto;
-        padding-bottom: 50px;
+        padding-bottom: ($whitespace-medium * 2);
     }
 
     .main-content {
@@ -72,15 +75,11 @@ $padding-left-and-right: 5vw;
         grid-row: 1;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-    }
-
-    img {
-        display: none;
+        // justify-content: space-between;
     }
 
     .main-content > section {
-        padding: 30px 0;
+        padding: $whitespace-medium 0;
     }
 
     .section-services {
@@ -91,7 +90,7 @@ $padding-left-and-right: 5vw;
             content: " ";
             display: block;
             background-color: #F2F9FF;
-            border-bottom-right-radius: 40% 30%;
+            border-bottom-right-radius: 40%;
             position: absolute;
 
             width: calc(100% + 400px);
@@ -110,7 +109,7 @@ $padding-left-and-right: 5vw;
         .grid {
             display: grid;
             grid-template-columns: 14fr 1fr 14fr;
-            grid-template-rows: repeat(2, min-content 30px 30px 30px) min-content;
+            grid-template-rows: repeat(2, min-content $whitespace-medium $whitespace-medium $whitespace-medium) min-content;
             grid-template-areas: 
                 "service-1 . service-2"
                 " .        . service-2"
@@ -156,24 +155,6 @@ $padding-left-and-right: 5vw;
         padding-left: 0px;
     }
 
-    .section-blogs {
-        position: relative;
-
-        &::before {
-            content: " ";
-            display: block;
-            background-color: #F2F9FF;
-            border-bottom-left-radius: 40% 30%;
-            position: absolute;
-
-            width: calc(100% + 200px);
-            height: calc(100%);
-            z-index: -1;
-            left: -$padding-left-and-right;
-            top: -0px;
-        }
-    }
-
     .site-footer {
         position: relative;
         display: grid; 
@@ -214,26 +195,26 @@ $padding-left-and-right: 5vw;
     
     .site-footer__header {
         grid-area: header;
-        padding-right: 90px;
-        padding-top: 30px;
+        padding-right: ($whitespace-medium * 3);
+        padding-top: $whitespace-medium;
     }
 
     .site-footer__contactform {
         grid-area: form;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-left: 30px;
+        padding-top: $whitespace-medium;
+        padding-bottom: $whitespace-medium;
+        padding-left: $whitespace-medium;
     }
 
     .site-footer form {
-        margin-left: -60px;
+        margin-left: -($whitespace-medium * 2);
         color: black;
     }
 
     .site-footer__contact {
         grid-area: summary;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: $whitespace-medium;
+        padding-bottom: $whitespace-medium;
     }
 
     .site-footer__byline {

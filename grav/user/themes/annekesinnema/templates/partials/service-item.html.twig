@@ -1,14 +1,16 @@
 <article class="service service-{{ number }}">
-    <h3 class="service__title">{{ service.title }}</h3>    
-    <p class="service__sub">
-        {{ service.summary|striptags }}
+    <h3 class="service__title">
+        {{ service.title }}
+    </h3>    
+    <p class="service__summary">
+        {{ service.summary }}
     </p> 
-    {% set content = service.content|slice(service.summary|length) %}
+    {# {% set content = service.content|slice(service.summary|length) %}
     {% if content != '' %}
-    <p class="mobile-only">
-        {{ content|striptags }}
-    </p>
-    {% endif %}
+        <p class="{% if truncate %}mobile-only{% endif %}">
+            {{ content|striptags }}
+        </p>
+    {% endif %} #}
     <p>
         <a href="{{ service.url }}">
             {{ service.header.linkshort }}

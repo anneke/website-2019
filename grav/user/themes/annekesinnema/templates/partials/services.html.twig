@@ -1,7 +1,8 @@
-<section class="section-services" md>
-<h2 class="services-title">Waar kan ik je mee helpen?</h2>
+<section class="section-services">
+<h2 class="services-title">{{ 'servicesheader'|t }}</h2>
     <div class="grid">
-        {% for service in collection %}
+        {% set services_collection = page.find('/services').children.published %}
+        {% for service in services_collection %}
             {% include 'partials/service-item.html.twig' with {'number': loop.index} %}
         {% endfor %}
     </div>

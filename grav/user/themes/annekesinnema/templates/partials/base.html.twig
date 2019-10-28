@@ -15,7 +15,7 @@
 
   {% block stylesheets %}
     {% do assets.addCss('theme://css/styles.css',100) %}
-    {# {% do assets.addCss('https://use.typekit.net/mmr7vjx.css',100) %} #}
+    {% do assets.addCss('https://use.typekit.net/mmr7vjx.css',100) %}
   {% endblock %}
   
   {% block assets deferred %}
@@ -31,7 +31,7 @@
   <div class="container">
     {% include 'partials/header.html.twig' %}
 
-    <div class="site-main {{ page.header.class }}">
+    <div class="site-main">
         <main class="main-content" role="main">
 
             <section class="section-site-intro">
@@ -41,7 +41,12 @@
             {% include 'partials/availability.html.twig' with {'truncate': true} %}
 
             {% if page.home %}
+              {% include 'partials/services.html.twig' with {'truncate': true} %}
+              {% include 'partials/values.html.twig' with {'truncate': true} %}
+            {% elseif page.slug == 'services' %}
               {% include 'partials/services.html.twig' %}
+            {% elseif page.slug == 'about' %}
+              {% include 'partials/values.html.twig' with {'truncate': true} %}
             {% endif %}
         </main>
 

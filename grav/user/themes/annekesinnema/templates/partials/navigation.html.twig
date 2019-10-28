@@ -19,9 +19,6 @@
                 </a>
             </li>
         {% endfor %}
-        {% if config.plugins.login.enabled and grav.user.username %}
-            <li>{% include 'partials/login-status.html.twig' %}</li>
-        {% endif %}
     </ul>
 </nav>
 

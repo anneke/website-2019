@@ -54,7 +54,7 @@ textarea {
     vertical-align: top;
 }
 
-button, [type="submit"], .hitarea {
+button, [type="submit"] {
     background-color: #8378c9;  
     background: linear-gradient(#8378c9 0%, #635b99 100%);
     border: 2px solid $purple;
@@ -153,7 +153,7 @@ button, [type="submit"], .hitarea {
         }
     }
 
-#fullcontactform {
+#contact {
     .form-input-wrapper,
     .form-textarea-wrapper  {
         margin-bottom: .5rem;
