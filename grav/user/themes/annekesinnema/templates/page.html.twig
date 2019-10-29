@@ -5,7 +5,10 @@
 
 {% set collection = page.collection() %} 
 {% block content %}
-    <h2>{{ page.header.a11ytitle }}</h2>
+    {% if page.header.a11ytitle %}
+        <h2>{{ page.header.a11ytitle }}</h2>
+    {% endif %}
+    
     {{ page.content }}
 
     {% if config.plugins.breadcrumbs.enabled %}

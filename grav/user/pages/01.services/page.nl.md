@@ -1,5 +1,6 @@
 ---
 title: Wat ik doe
+a11ytitle: Wat ik doe
 
 content:
     items: @self.children

@@ -1,5 +1,7 @@
 ---
 title: Blog
+a11ytitle: Blog
+
 published: true
 sitemap:
     changefreq: monthly
@@ -12,8 +14,6 @@ content:
     limit: 5
     pagination: true
 feed:
-    description: 'Feed Title'
+    description: Anneke Sinnema's blog
     limit: 10
 ---
-
-Testerdetest

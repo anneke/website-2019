@@ -1,6 +1,6 @@
 ---
 title: Over mij 
-class: about
+a11ytitle: Hoi! Ik ben Anneke.
 
 content:
     items: @self.children
@@ -11,8 +11,6 @@ Netwerkvaardigheid: Ontwikkelt en onderhoudt relaties, allianties en coalities b
 Mondelinge uitdrukkingsvaardigheid: Maakt feiten, meningen en ideeën aan anderen in begrijpelijke taal mondeling duidelijk.
 Samenwerken: Heeft oog voor het groepsbelang en draagt actief bij aan het gemeenschappelijke resultaat.
 Betrokkenheid: Identificeert zich met en voelt zich nauw betrokken. -->
-
-<h2>Hoi! Ik ben Anneke.</h2>
 
 <p>Ik geloof dat als je de basis goed onder de knie hebt, dat dan de frameworks of tools die er bij horen eigenlijk iets minder uitmaken. Daarom wil ik heel graag mijn kennis van Vanilla Javascript nog beter onder de knie krijgen.</p>
 

@@ -1,6 +1,6 @@
 ---
 title: Blog
-class: blog
+a11ytitle: Blog
 
 sitemap:
     changefreq: monthly
@@ -15,8 +15,6 @@ content:
     pagination: false
 
 feed:
-    description: Feed Titel
+    description: Anneke Sinnema's blog
     limit: 10
 ---
-
-Test test

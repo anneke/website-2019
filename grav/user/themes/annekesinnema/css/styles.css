@@ -120,11 +120,11 @@ h2 {
 h3 {
   font-size: 1.33rem;
   margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 @media screen and (min-width: 40em) {
   h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
   }
 }
 
@@ -655,11 +655,12 @@ dt {
   top: 2.025rem;
   z-index: 2;
   text-align: left;
-  width: 230px;
+  width: 250px;
 }
 .ul-sub li {
   padding: 0.625rem;
   list-style-type: none;
+  list-style-position: inside;
   border-bottom: 1px solid grey;
 }
 .ul-sub li:last-child {

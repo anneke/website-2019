@@ -7,11 +7,12 @@
     top: (1.35rem * 1.5);
     z-index: 2;
     text-align: left;
-    width: 230px;
+    width: 250px;
 
     li {
         padding: .625rem;
         list-style-type: none;
+        list-style-position: inside;
         border-bottom: 1px solid grey;
 
         &:last-child  {

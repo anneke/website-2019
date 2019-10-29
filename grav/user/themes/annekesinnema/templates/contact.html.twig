@@ -1,6 +1,10 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
+    {% if page.header.a11ytitle %}
+        <h2>{{ page.header.a11ytitle }}</h2>
+    {% endif %}
+
     {{ page.content }}
 
     {% include "forms/form.html.twig" with { form: forms('contact') } %}

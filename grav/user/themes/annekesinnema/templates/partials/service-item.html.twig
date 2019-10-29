@@ -5,12 +5,12 @@
     <p class="service__summary">
         {{ service.summary }}
     </p> 
-    {# {% set content = service.content|slice(service.summary|length) %}
+    {% set content = service.content|slice(service.summary|length) %}
     {% if content != '' %}
         <p class="{% if truncate %}mobile-only{% endif %}">
             {{ content|striptags }}
         </p>
-    {% endif %} #}
+    {% endif %}
     <p>
         <a href="{{ service.url }}">
             {{ service.header.linkshort }}
