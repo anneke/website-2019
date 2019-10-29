@@ -378,13 +378,13 @@ html, body {
 
   .site-main {
     display: grid;
-    grid-template-columns: 5vw [main-start content-start] 25fr [content-end] 4fr [sidebar-start] 11fr [sidebar-end main-end] 5vw;
+    grid-template-columns: 5vw [main-start] 27fr [main-end] 2fr [sidebar-start] 11fr [sidebar-end main-end] 5vw;
     grid-template-rows: auto;
     padding-bottom: 3.33rem;
   }
 
   .main-content {
-    grid-area: content;
+    grid-area: main;
   }
   .main-content:first-child {
     grid-row: 1;
@@ -392,15 +392,21 @@ html, body {
   .main-content:nth-child(2) {
     grid-row: 2;
   }
+  .main-content .joehoe {
+    display: grid;
+    grid-template-columns: [main-start content-start values-start] 25fr [content-end] 2fr [values-end];
+    grid-template-rows: auto;
+  }
 
   .side-content {
     grid-area: sidebar;
     grid-row: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 
-  .main-content > section {
+  .joehoe > section {
     padding: 1.665rem 0;
   }
 
@@ -456,7 +462,7 @@ html, body {
   }
 
   .section-values {
-    grid-area: content;
+    grid-column: values;
   }
 
   .list-values {
@@ -697,7 +703,8 @@ dt {
 
 .value {
   padding-top: 1.11rem;
-  padding-right: 1.665rem;
+  padding-right: 2.22rem;
+  font-size: 0.9rem;
 }
 .value:nth-child(3n+3) {
   padding-right: 0;

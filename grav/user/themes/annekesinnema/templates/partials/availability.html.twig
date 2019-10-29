@@ -1,41 +1,42 @@
 {% set availability = page.find('/availability') %}
 
-{% if truncate %}
-    <section class="section-availability--mobile">
-        <h2>{{ availability.header.title }}</h2>
-        {{ availability.content }}
-    </section>
-{% else %}
-    <section class="section-availability">
-        <header>
-            <h2 class="availability__title">
-                {{ availability.header.title }}
-            </h2>
-            <p class="availability__status availability__status--{{ availability.header.statuscode }}">
-                <span class="a11y">{{ availability.header.label }}:</span> 
-                {{ availability.header.status }}
-            </p>
-        </header>
+<div>
+    {% if truncate %}
+        <section class="section-availability--mobile">
+            <h2>{{ availability.header.title }}</h2>
+            {{ availability.content }}
+        </section>
+    {% else %}
+        <section class="section-availability">
+            <header>
+                <h2 class="availability__title">
+                    {{ availability.header.title }}
+                </h2>
+                <p class="availability__status availability__status--{{ availability.header.statuscode }}">
+                    <span class="a11y">{{ availability.header.label }}:</span> 
+                    {{ availability.header.status }}
+                </p>
+            </header>
 
-        {{ availability.content|striptags }}
+            {{ availability.content|striptags }}
+
+            {% if page.template != 'contact' %}
+                <footer>
+                    <a href="#callmeplease">
+                        <span class="a11y">{{ availability.header.pre_cta }}</span> 
+                        <span>{{ availability.header.cta }}</span>
+                    </a>
+                </footer>
+            {% endif %}
+        </section>
 
         {% if page.template != 'contact' %}
-            <footer>
-                <a href="#callmeplease">
-                    <span class="a11y">{{ availability.header.pre_cta }}</span> 
-                    <span>{{ availability.header.cta }}</span>
-                </a>
-            </footer>
+        <section class="section-wetransfer">
+            <h3>{{ availability.header.wetransfer_title }}</h3>
+            <a href="https://www.wetransfer.com/?to=mail@annekesinnema.nl&msg=Bij%20vragen%20kun%20je%20me%20bereiken%20op%20telefoonnummer%20...%20.%20Mijn%20naam%20is%20...">{{ availability.header.wetransfer }}</a> 
+            <br />
+            {{ availability.header.wetransfer_footer }}
+        </section>
         {% endif %}
-    </section>
-
-    {% if page.template != 'contact' %}
-    <section class="section-wetransfer">
-        <h3>{{ availability.header.wetransfer_title }}</h3>
-        <a href="https://www.wetransfer.com/?to=mail@annekesinnema.nl&msg=Bij%20vragen%20kun%20je%20me%20bereiken%20op%20telefoonnummer%20...%20.%20Mijn%20naam%20is%20...">{{ availability.header.wetransfer }}</a> 
-        <br />
-        {{ availability.header.wetransfer_footer }}
-    </section>
     {% endif %}
-
-{% endif %}
+</div>

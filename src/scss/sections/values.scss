@@ -1,4 +1,3 @@
-
 .section-values .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -6,7 +5,8 @@
 
 .value {
     padding-top: $whitespace-small;
-    padding-right: $whitespace-medium;
+    padding-right: $whitespace-large;
+    font-size: .9rem;
 
     &:nth-child(3n + 3) {
         padding-right: 0;

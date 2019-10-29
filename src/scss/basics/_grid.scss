@@ -46,10 +46,10 @@ html, body {
         display: grid; 
         grid-template-columns: 
                 $padding-left-and-right
-            [main-start content-start] 
-                25fr
-            [content-end] 
-                4fr 
+            [main-start] 
+                27fr
+            [main-end]
+                2fr 
             [sidebar-start] 
                 11fr 
             [sidebar-end main-end] 
@@ -59,7 +59,7 @@ html, body {
     }
 
     .main-content {
-        grid-area: content;
+        grid-area: main;
 
         &:first-child {
             grid-row: 1;
@@ -68,6 +68,17 @@ html, body {
         &:nth-child(2) {
             grid-row: 2;
         }
+
+        .joehoe {
+            display: grid; 
+            grid-template-columns: 
+                [main-start content-start values-start] 
+                    25fr
+                [content-end] 
+                    2fr 
+                [values-end];
+            grid-template-rows: auto;
+        }
     }
 
     .side-content {
@@ -75,10 +86,10 @@ html, body {
         grid-row: 1;
         display: flex;
         flex-direction: column;
-        // justify-content: space-between;
+        justify-content: space-between;
     }
 
-    .main-content > section {
+    .joehoe > section {
         padding: $whitespace-medium 0;
     }
 
@@ -148,7 +159,7 @@ html, body {
         }
 
     .section-values {
-        grid-area: content; 
+        grid-column: values;
     }
 
     .list-values  {

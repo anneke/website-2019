@@ -1,5 +1,5 @@
 <section class="section-values">
-<h2 class="values-title">{{ 'valuesheader'|t }}</h2>
+    <h2 class="values-title">{{ 'valuesheader'|t }}</h2>
     <div class="grid">
         {% set values_collection = page.find('/about').children.published %}
         {% for value in values_collection %}
