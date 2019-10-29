@@ -36,7 +36,7 @@ ul {
 }
 
 li {
-  list-style-image: url("./../img/bullet-purple.svg");
+  list-style-image: url("../images/bullet-purple.svg");
 }
 
 html {
@@ -602,7 +602,7 @@ html, body {
   }
   .site-footer__contactform li,
 .site-footer__contact li {
-    list-style-image: url("./../img/bullet-white.svg");
+    list-style-image: url("../images/bullet-white.svg");
   }
 }
 .site-footer__contactform ul,
@@ -611,7 +611,7 @@ html, body {
 }
 .site-footer__contactform li,
 .site-footer__contact li {
-  list-style-image: url("./../img/bullet-white.svg");
+  list-style-image: url("../images/bullet-white.svg");
 }
 
 .site-footer__byline {
