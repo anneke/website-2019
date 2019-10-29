@@ -170,6 +170,7 @@ p:empty {
   .form-input-wrapper,
 .form-textarea-wrapper {
     display: flex;
+    align-items: flex-start;
     padding: 0;
   }
   .form-input-wrapper input, .form-input-wrapper label, .form-input-wrapper textarea,
@@ -182,10 +183,6 @@ p:empty {
 .form-textarea-wrapper input,
 .form-textarea-wrapper textarea {
     flex: 2 1 0;
-  }
-  .form-input-wrapper label,
-.form-textarea-wrapper label {
-    flex: 1 1 10px;
   }
 }
 input[type=text],
@@ -262,37 +259,36 @@ button:visited span:last-child::after, [type=submit]:visited span:last-child::af
   .form-field--checkboxes .form-input-wrapper {
     flex-direction: row;
   }
-  .form-field--checkboxes .form-input-wrapper label:first-child {
-    width: 100%;
-  }
 }
-.form-field--checkboxes label {
-  align-content: center;
-  display: flex;
-  flex: 1 0 auto;
-  font-size: 1rem;
-  justify-content: flex-start;
+
+.checkbox-grouplabel {
+  flex-basis: 100%;
 }
 @media screen and (min-width: 40em) {
-  .form-field--checkboxes label {
+  .checkbox-grouplabel {
     padding: 0.675rem;
+    padding-bottom: 0;
   }
 }
-.form-field--checkboxes label span {
+
+.checkbox-label {
   flex-shrink: 1;
   flex-grow: 0;
   flex-basis: auto;
+  font-size: 0.9rem;
 }
-.form-field--checkboxes input[type=checkbox] {
+
+input[type=checkbox] {
   height: 15px;
   width: 15px;
   flex: 0;
-  margin-right: 15px;
+  margin-right: 5px;
 }
-.form-field--checkboxes .checkboxes {
-  flex: 1 1 auto;
+
+.checkboxes {
+  flex: 1 1 10px;
 }
-.form-field--checkboxes .checkboxes:hover {
+.checkboxes:hover {
   background: #ccc;
 }
 
@@ -302,6 +298,10 @@ button:visited span:last-child::after, [type=submit]:visited span:last-child::af
   border: 0;
   padding: 0;
 }
+#contact .form-input-wrapper label,
+#contact .form-textarea-wrapper label {
+  flex: 0 1 170px;
+}
 #contact .form-input-wrapper input,
 #contact .form-input-wrapper textarea,
 #contact .form-input-wrapper label,
@@ -310,7 +310,6 @@ button:visited span:last-child::after, [type=submit]:visited span:last-child::af
 #contact .form-textarea-wrapper label {
   display: block;
   padding: 0.675rem;
-  width: 100%;
 }
 #contact .form-input-wrapper input,
 #contact .form-input-wrapper textarea,

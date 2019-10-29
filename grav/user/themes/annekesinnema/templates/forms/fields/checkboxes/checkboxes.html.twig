@@ -14,7 +14,7 @@
 
 {% block input %}
 <div class="form-input-wrapper">
-    <label for="{{ (scope ~ field.name)|fieldName }}">
+    <label for="{{ (scope ~ field.name)|fieldName }}" class="checkbox-grouplabel">
         {% block label %}
             {% if field.help %}
             <span class="tooltip" data-asTooltip-position="w" title="{{ field.help|t|e }}">{{ field.label|default(field.name|capitalize)|t }}</span>
@@ -45,7 +45,7 @@
                 {% if help %}
                     <span class="hint--bottom" data-hint="{{ help|t|e('html_attr') }}">{{ text|t|e }}</span>
                 {% else %}
-                    {{ text|t|e }}
+                    <span class="checkbox-label">{{ text|t|e }}</span>
                 {% endif %}
         </label>
     {% endfor %}

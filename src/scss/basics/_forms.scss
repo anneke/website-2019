@@ -17,6 +17,7 @@
     .form-input-wrapper,
     .form-textarea-wrapper  {
         display: flex;
+        align-items: flex-start;
         padding: 0;
 
         input, label, textarea {
@@ -25,10 +26,6 @@
 
         input, textarea {
             flex: 2 1 0;
-        }
-
-        label {
-            flex: 1 1 10px;
         }
     }
 }
@@ -112,44 +109,38 @@ button, [type="submit"] {
 
             @media screen and (min-width: $tablet-portrait) {
                 flex-direction: row;
-
-                label:first-child {
-                    width: 100%;
-                }
             }
         }
+    }
 
-        label {
-            align-content: center;
-            display: flex;
-            flex: 1 0 auto;
-            font-size: 1rem;
-            justify-content: flex-start;
+    .checkbox-grouplabel {
+        flex-basis: 100%;
 
-            @media screen and (min-width: $tablet-portrait) {
-                padding: .675rem;
-            }
-
-            span {
-                flex-shrink: 1; 
-                flex-grow: 0; 
-                flex-basis: auto;
-            }
+        @media screen and (min-width: $tablet-portrait) {
+            padding: .675rem;
+            padding-bottom: 0;
         }
+    }
 
-        input[type="checkbox"] {
-            height: 15px;
-            width: 15px;
-            flex: 0;
-            margin-right: 15px;
-        }
+    .checkbox-label {
+        flex-shrink: 1; 
+        flex-grow: 0; 
+        flex-basis: auto;
+        font-size: .9rem;
+    }
 
-        .checkboxes {
-            flex: 1 1 auto;
+    input[type="checkbox"] {
+        height: 15px;
+        width: 15px;
+        flex: 0;
+        margin-right:   5px;
+    }
 
-            &:hover {
-                background: #ccc;
-            }
+    .checkboxes {
+        flex: 1 1 10px;
+
+        &:hover {
+            background: #ccc;
         }
     }
 
@@ -160,12 +151,15 @@ button, [type="submit"] {
         border: 0;
         padding: 0;
 
+        label {
+            flex: 0 1 170px;
+        }
+
         input,
         textarea,
         label {
             display: block;
             padding: .675rem;
-            width: 100%;
         }
 
         input,
