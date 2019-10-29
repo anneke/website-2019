@@ -1,14 +1,15 @@
 .section-values .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 $whitespace-large;
 }
 
 .value {
     padding-top: $whitespace-small;
-    padding-right: $whitespace-large;
     font-size: .9rem;
+}
 
-    &:nth-child(3n + 3) {
-        padding-right: 0;
-    }
+.value__title {
+    font-size: 1.22rem;
+    margin-top: 0;
 }

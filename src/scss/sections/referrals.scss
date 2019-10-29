@@ -1,0 +1,19 @@
+.reference {
+    margin-bottom: $whitespace-large;
+
+    &:last-child {
+        margin-bottom: none;
+    } 
+}
+
+.reference__quote {
+    font-size: 1.85rem;
+    line-height: 1.2;
+}
+
+@media screen and (min-width: $tablet-portrait) {
+    .reference__quote {
+        font-size: 1.78rem;
+        line-height: 1.2;
+    }
+}

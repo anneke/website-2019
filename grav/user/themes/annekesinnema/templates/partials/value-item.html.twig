@@ -1,10 +1,10 @@
-<article class="value value-{{ number }}">
+<article class="value value--{{ number }}">
     {% if value.header.icon %}
         <img src="{{ url('theme://images/') }}/icon-{{ value.header.icon }}.png" 
             class="value__icon" width="auto" height="45" alt="" />
     {% endif %}
     <h3 class="value__title">
-        <span aria-hidden="true">+</span> {{ value.title }}
+        {{ value.title }}
     </h3>    
     <p class="value__summary">
         {{ value.summary }}

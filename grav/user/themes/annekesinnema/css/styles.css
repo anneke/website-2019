@@ -699,17 +699,37 @@ dt {
 .section-values .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0 2.22rem;
 }
 
 .value {
   padding-top: 1.11rem;
-  padding-right: 2.22rem;
   font-size: 0.9rem;
 }
-.value:nth-child(3n+3) {
-  padding-right: 0;
+
+.value__title {
+  font-size: 1.22rem;
+  margin-top: 0;
 }
 
+.reference {
+  margin-bottom: 2.22rem;
+}
+.reference:last-child {
+  margin-bottom: none;
+}
+
+.reference__quote {
+  font-size: 1.7777777778rem;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 40em) {
+  .reference__quote {
+    font-size: 1.7777777778rem;
+    line-height: 1.2;
+  }
+}
 .section-availability {
   z-index: 1;
   margin: 1.665rem 0;
