@@ -58,7 +58,7 @@ html, body {
         padding-bottom: ($whitespace-medium * 2);
     }
 
-    .main-content {
+    .main-area {
         grid-area: main;
 
         &:first-child {
@@ -69,7 +69,7 @@ html, body {
             grid-row: 2;
         }
 
-        .joehoe {
+        .main-content {
             display: grid; 
             grid-template-columns: 
                 [main-start content-start values-start] 
@@ -87,9 +87,17 @@ html, body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        .widget__title {
+            margin-top: $whitespace-small;
+        }
     }
 
-    .joehoe > section {
+    .side-content--blog {
+        justify-content: flex-start;
+    }
+
+    .main-content > section {
         padding: $whitespace-medium 0;
     }
 

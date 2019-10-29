@@ -32,9 +32,9 @@
     {% include 'partials/header.html.twig' %}
 
     <div class="site-main">
-        <main class="main-content" role="main">
+        <main class="main-area" role="main">
 
-            <div class="joehoe">
+            <div class="main-content">
               <section class="section-site-intro">
                 {% block content %}{% endblock %}
               </section>
@@ -52,12 +52,15 @@
             </div>
         </main>
 
-        <aside class="side-content">
+        <aside class="side-content side-content--{{ page.slug }}">
             {% include 'partials/availability.html.twig' with {
               'truncate': false, 
             } %}
 
+            {% block sidebar %}{% endblock %}
+
             {# {% include 'partials/referrals.html.twig' %} #}
+            
         </aside>
     </div>
 

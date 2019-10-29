@@ -3,7 +3,8 @@ title: Welkom bij Grav!
 date: 16:00 10-07-2015
 headline: Get ready to fall in love :)
 taxonomy:
-    category: blog
+    category:
+        - Toegankelijkheid 
     tag: [grav]
 imagename: toet.png
 imagealt: a picture of a post

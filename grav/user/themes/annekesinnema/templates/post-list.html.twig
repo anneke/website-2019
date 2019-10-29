@@ -8,6 +8,7 @@
         {% endif %}
 
         {{ page.content }}
+        
 
         {% for post in collection|slice(0, 1) %}
             <article class="post">
@@ -26,22 +27,18 @@
                     {% endif %}
                 </header>
                 <section id="post-body">
-                    {{ post.summary }}
+                    {{ post.content }}
                 </section>
             </article>
         {% endfor %}
 
-        <hr />
-
-        <ul class="post-list">
-            {% for post in collection|slice(1) %}
-                <li>
-                    {{ post.date|date('d') }}
-                    {{ 'MONTHS_OF_THE_YEAR'|ta(post.date|date('n') - 1) }} 
-                    <a href="{{ post.url }}">{{ post.title }} - {{ post.header.headline }}</a>
-                </li>
-            {% endfor %} 
-        </ul>
     {% endblock %}
+
+    {% block sidebar %}
+        {% 
+            include 'partials/blogsidebar.html.twig' 
+        %}
+    {% endblock %}
+
 
 {% endembed %}

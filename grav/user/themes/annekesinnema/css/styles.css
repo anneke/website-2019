@@ -130,6 +130,7 @@ h3 {
 
 h4 {
   font-size: 1.22rem;
+  font-weight: normal;
 }
 
 time {
@@ -383,16 +384,16 @@ html, body {
     padding-bottom: 3.33rem;
   }
 
-  .main-content {
+  .main-area {
     grid-area: main;
   }
-  .main-content:first-child {
+  .main-area:first-child {
     grid-row: 1;
   }
-  .main-content:nth-child(2) {
+  .main-area:nth-child(2) {
     grid-row: 2;
   }
-  .main-content .joehoe {
+  .main-area .main-content {
     display: grid;
     grid-template-columns: [main-start content-start values-start] 25fr [content-end] 2fr [values-end];
     grid-template-rows: auto;
@@ -405,8 +406,15 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
   }
+  .side-content .widget__title {
+    margin-top: 1.11rem;
+  }
 
-  .joehoe > section {
+  .side-content--blog {
+    justify-content: flex-start;
+  }
+
+  .main-content > section {
     padding: 1.665rem 0;
   }
 
