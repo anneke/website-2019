@@ -20,6 +20,7 @@ form:
             arialabel: ctaname
             validate:
                 required: true
+                pattern: ^[a-zA-Z]*$
         -
             name: phone
             label: 'Phone number'

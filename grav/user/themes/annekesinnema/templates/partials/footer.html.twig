@@ -1,49 +1,50 @@
+{% set footer = page.find('/widgets/footer') %}
+
 <footer>
     <section class="site-footer">
         <section class="site-footer__header">
             {% if page.slug == 'contact' %}
                 <dl>
-                    <dt>adres</dt>
+                    <dt>{{ footer.header.adresLabel }}</dt>
                     <dd>Oostveenweg 28<br />
                         7533VV Enschede</dd>
                 
-                    <dt>Kamer van Koophandel</dt>
+                    <dt>{{ footer.header.kvkLabel }}</dt>
                     <dd>61518328</dd>
 
-                    <dt>BTW nummer:</dt>
+                    <dt>{{ footer.header.btwLabel }}</dt>
                     <dd>op aanvraag</dd>
 
-                    <dt>Bank</dt>
+                    <dt>{{ footer.header.bankLabel }}</dt>
                     <dd></dd>
                 </dl>
             {% else %}
-                <h2>Benieuwd? <br />
-                    Laten we eens kennismaken!</h2>
-                <p>Heb je een concrete opdracht of een vraagstuk waar je hulp bij nodig hnebt, of wil je gewoon een keer kennis maken? Ik ben altijd in voor een kop thee om te kijken of we iets voor elkaar kunnen betekenen!</p>
+                <h2>{{ footer.header.title }}<br />
+                    {{ footer.header.subtitle }}</h2>
+                <p>{{ footer.header.intro }}</p>
             {% endif %}
         </section>
 
         <section class="site-footer__contactform" id="contactform">
-            <h3>Wil je teruggebeld worden?</h3>
+            <h3>{{ footer.header.callbackLabel }}</h3>
             <p>
-                Neem gerust contact op met het onderstaande formulier! Een sms, whatsapp-bericht of een <i>direct message</i> op social media bereikt me ook!
+                {{ footer.header.callback }}
             </p> 
-
             {% include "forms/form.html.twig" with { form: forms('callmeplease') } %}
         </section>
 
         <section class="site-footer__contact"> 
-            <h3>Contactinformatie</h3>
+            <h3>{{ footer.header.contactLabel }}</h3>
             <dl>
-                <dt>Mail</dt>
+                <dt>{{ footer.header.emailLabel }}</dt>
                 <dd><a href="mailto:{{'mail@annekesinnema.nl'|safe_email}}">{{'mail@annekesinnema.nl'|safe_email}}</a></dd>
-                <dt>Grote bestanden?</dt>
-                <dd><a href="https://www.wetransfer.com/?to=mail@annekesinnema.nl&msg=Bij%20vragen%20kun%20je%20me%20bereiken%20op%20telefoonnummer%20...%20.%20Mijn%20naam%20is%20..." data-text="Op naar WeTransfer!">Stuur me direct je bestanden via WeTransfer!</a></dd>
-                <dt>Telefoon</dt>
-                <dd><a href="tel:0644870256">06-44870256</a> of <a href="tel:0534321728">053-4321728</a> (ook voicemail)</dd>
+                <dt>{{ footer.header.wetransferLabel }}</dt>
+                <dd><a href="https://www.wetransfer.com/?to=mail@annekesinnema.nl&msg={{ footer.header.wetransfermessage }}">{{ footer.header.wetransfer }}</a></dd>
+                <dt>{{ footer.header.phoneLabel }}</dt>
+                <dd><a href="tel:0644870256">06-44870256</a> / <a href="tel:0534321728">053-4321728</a></dd>
             </dl>
 
-            <h3>Volg mij ook op social media</h3>
+            <h3>{{ footer.header.socialLabel }}</h3>
             <ul>
                 <li><a href="https://twitter.com/asinnema">Twitter</a></li>
                 <li><a href="https://www.linkedin.com/in/annekesinnema/">LinkedIn</a></li>
@@ -57,8 +58,8 @@
 
     <section class="site-byline">
         <div class="site-footer__byline">
-            <div>Content door Anneke Sinnema</div>
-            <div>Design door Adrian Egger</div>
+            <div>Content {{ footer.header.by }} Anneke Sinnema</div>
+            <div>Design {{ footer.header.by }} Adrian Egger</div>
         </div>
     </section>
 </footer>

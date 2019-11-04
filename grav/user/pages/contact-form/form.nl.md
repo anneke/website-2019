@@ -20,6 +20,7 @@ form:
             arialabel: ctaname
             validate:
                 required: true
+                pattern: ^[a-zA-Z]*$
         -
             name: business
             label: 'Bedrijf'
@@ -30,7 +31,7 @@ form:
             id: name
             arialabel: ctabusiness
             validate:
-            required: false
+                required: false
         -
             name: email
             label: 'E-mailadres'
@@ -41,7 +42,7 @@ form:
             id: name
             arialabel: ctamail
             validate:
-            required: true
+                required: true
         -
             name: phone
             label: 'Telefoonnummer'
@@ -52,7 +53,7 @@ form:
             id: phonenr
             arialabel: ctaphone
             validate:
-            required: false
+                required: false
         -
             name: whatabout
             label: 'Waar gaat het over?'

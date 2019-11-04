@@ -155,11 +155,6 @@ h3 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-@media screen and (min-width: 40em) {
-  h3 {
-    margin-bottom: 0rem;
-  }
-}
 
 h4 {
   font-size: 1.22rem;
@@ -529,6 +524,7 @@ html, body {
   .site-footer::after {
     width: 50vw;
     z-index: -1;
+    right: -50vw;
   }
 
   .site-footer__header {
@@ -762,13 +758,13 @@ dt {
 }
 
 .reference__quote {
-  font-size: 1.7777777778rem;
+  font-size: 1.85rem;
   line-height: 1.2;
 }
 
 @media screen and (min-width: 40em) {
   .reference__quote {
-    font-size: 1.7777777778rem;
+    font-size: 1.78rem;
     line-height: 1.2;
   }
 }
