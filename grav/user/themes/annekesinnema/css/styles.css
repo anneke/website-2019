@@ -59,12 +59,45 @@ html {
 }
 @media screen and (min-width: 100em) {
   html {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
-@media screen and (min-width: 125em) {
+@media screen and (min-width: 120em) {
   html {
-    font-size: 22px;
+    font-size: 30px;
+  }
+}
+html::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: black;
+  padding: 10px;
+  color: white;
+}
+@media screen and (min-width: 40em) {
+  html::after {
+    content: "tablet-portrait";
+  }
+}
+@media screen and (min-width: 75em) {
+  html::after {
+    content: "tablet-landscape";
+  }
+}
+@media screen and (min-width: 87.5em) {
+  html::after {
+    content: "desktop-small";
+  }
+}
+@media screen and (min-width: 100em) {
+  html::after {
+    content: "desktop";
+  }
+}
+@media screen and (min-width: 120em) {
+  html::after {
+    content: "desktop-large";
   }
 }
 
