@@ -10,7 +10,7 @@ html, body {
     padding: $whitespace-small;
 
     > * {
-        padding: $padding-left-and-right;
+        padding: $whitespace-small;        
     }
 
     @media screen and (min-width: $tablet-portrait) {

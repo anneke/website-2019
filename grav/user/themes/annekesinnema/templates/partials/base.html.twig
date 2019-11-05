@@ -22,7 +22,7 @@
     {{ assets.css()|raw }}    
   {% endblock %}
 </head>
-<body class="{% if page.home %}page-home{% else %}page-{{ page.slug }}{% endif %}">
+<body class="{% if page.home %}page-home{% else %}page-{{ page.slug }}{% endif %}" id="menu-open">
 
   {% do track_views(page.route) %}
 
@@ -51,7 +51,7 @@
         </main>
 
         <aside class="side-content side-content--{{ page.slug }}">
-            {% if page.slug = 'blog' %}
+            {% if page.slug != 'blog' %}
               {% include 'partials/availability.html.twig' with {
                 'truncate': false, 
               } %}

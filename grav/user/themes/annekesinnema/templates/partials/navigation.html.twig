@@ -1,40 +1,50 @@
 <nav class="site-navigation" role="navigation">
-    <ul class="ul-inline">
-        {% if theme_config.showchildpages %}
-            {{ _self.loop(pages) }}
-        {% else %} 
-            {% for page in pages.children.visible %}
-                {% set current_page = (page.active or page.activeChild) ? 'current-menu-item current_page_item' : '' %}
-                <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-{{ loop.index }} {{ current_page }}">
-                    <a href="{{ page.url }}">
-                        {{ page.menu }}
+    <a href="#menu-open" class="navigation__ontoggle mobile-only">
+        <div>Menu</div>
+    </a>
+
+    <div class="mobile__navigation">
+        <a href="#menu-closed" class="navigation__offtoggle mobile-only">
+            <div>Close</div>
+        </a>
+
+        <ul class="ul-inline navigation__list">
+            {% if theme_config.showchildpages %}
+                {{ _self.loop(pages) }}
+            {% else %} 
+                {% for page in pages.children.visible %}
+                    {% set current_page = (page.active or page.activeChild) ? 'current-menu-item current_page_item' : '' %}
+                    <li class="menu-item menu-item-{{ loop.index }} {{ current_page }}">
+                        <a href="{{ page.url }}">
+                            {{ page.menu }}
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endif %} 
+            {% for mitem in site.menu %}
+                <li class="menu-item menu-item-{{ loop.index }}">
+                    <a href="{{ mitem.url }}">
+                    {{ mitem.text }}
                     </a>
                 </li>
             {% endfor %}
-        {% endif %} 
-        {% for mitem in site.menu %}
-            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-{{ loop.index }}">
-                <a href="{{ mitem.url }}">
-                {{ mitem.text }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+        </ul>
+    </div>
 </nav>
 
 {% macro loop(page) %}
     {% for p in page.children.visible %}
         {% set current_page = (p.active or p.activeChild) ? 'current-menu-item current_page_item' : '' %}
-        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-{{ loop.index }} {{ current_page }}">
+        <li class="menu-item menu-item-{{ loop.index }} {{ current_page }}">
             <a href="{{ p.url }}">
                 {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
                 {{ p.menu }}
             </a>
-            {% if p.children.visible.count > 0 %}
+            {# {% if p.children.visible.count > 0 %}
                 <ul class="ul-sub">
                     {{ _self.loop(p) }}
                 </ul>
-            {% endif %}
+            {% endif %} #}
         </li>
     {% endfor %}
 {% endmacro %}
