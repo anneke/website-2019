@@ -120,9 +120,16 @@ h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
   margin-top: 1.35rem;
 }
 
-h1 {
+.site-header__title {
   display: flex;
   align-items: center;
+}
+.site-header__title .langswitcher {
+  top: 0;
+  transform: none;
+}
+
+h1 {
   font-size: 2.1rem;
 }
 
