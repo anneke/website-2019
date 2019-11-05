@@ -1,5 +1,5 @@
 ---
-title: Beschikbaarheid
+title: Mijn beschikbaarheid
 statuscode: available
 label: Huidige status
 status: Beschikbaar

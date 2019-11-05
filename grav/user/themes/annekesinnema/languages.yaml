@@ -9,6 +9,10 @@ en:
   DAYS_OF_THE_WEEK: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
   servicesheader: What can I help you with?
   valuesheader: What is important to me?
+  latest_blogs: Latest blogs
+  tags: Tags
+  blogs_per_category: Blogs per category
+  category: Category
  
 nl:
   SITE:
@@ -21,3 +25,7 @@ nl:
   DAYS_OF_THE_WEEK: [maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag]
   servicesheader: Waar kan ik je mee helpen?
   valuesheader: Wat vind ik belangrijk?
+  latest_blogs: Laatste blogs
+  tags: Tags
+  blogs_per_category: Blogs per categorie
+  category: Categorie

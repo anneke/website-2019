@@ -2,10 +2,24 @@
 title: Welkom bij Grav!
 date: 16:00 10-07-2015
 headline: Get ready to fall in love :)
+metadata:
+    'og:title': Blog Post Title
+    'og:type': article
+    'og:description': Description of what your blog post is covering.  This will be visible when people share your post on social media.
+    'og:url': The URL of the blog post
+    'og:site_name': The name of the overall site the blog post belongs to. 
+    'og:locale': The language your blog post is written in
+    'og:image': The image you reference here will be visible when shared on social media. 
+    'twitter:card' : The type of Twitter card that should be used. 
+    'twitter:site' : Your Twitter handle
+    'twitter:title' : Blog Post Title
+    'twitter:description' : Description of what your blog post is covering.  This will be visible when people share your post on social media.
+    'twitter:image' : The image you reference here will be visible when shared on social media. 
+    'twitter:creator': The twitter handle of the blog post author. 
 taxonomy:
     category:
         - Toegankelijkheid 
-    tag: [grav]
+    tag: [grav, toetje, hopsakee]
 imagename: toet.png
 imagealt: a picture of a post
 ---

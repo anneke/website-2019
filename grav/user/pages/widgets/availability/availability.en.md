@@ -1,5 +1,5 @@
 ---
-title: Availability
+title: My availability
 statuscode: available
 label: Current status
 status: Available
