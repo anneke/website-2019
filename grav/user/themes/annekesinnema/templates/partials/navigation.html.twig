@@ -9,13 +9,13 @@
         </a>
 
         <ul class="ul-inline navigation__list">
+            {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}
             {% if theme_config.showchildpages %}
                 {{ _self.loop(pages) }}
             {% else %} 
                 {% for page in pages.children.visible %}
-                    {% set current_page = (page.active or page.activeChild) ? 'current-menu-item current_page_item' : '' %}
-                    <li class="menu-item menu-item-{{ loop.index }} {{ current_page }}">
-                        <a href="{{ page.url }}">
+                    <li class="menu-item menu-item-{{ loop.index }}">
+                        <a href="{{ page.url }}" class="{{ current_page }}">
                             {{ page.menu }}
                         </a>
                     </li>
@@ -23,8 +23,8 @@
             {% endif %} 
             {% for mitem in site.menu %}
                 <li class="menu-item menu-item-{{ loop.index }}">
-                    <a href="{{ mitem.url }}">
-                    {{ mitem.text }}
+                    <a href="{{ mitem.url }}" class="{{ current_page }}">
+                        {{ mitem.text }}
                     </a>
                 </li>
             {% endfor %}
@@ -34,10 +34,9 @@
 
 {% macro loop(page) %}
     {% for p in page.children.visible %}
-        {% set current_page = (p.active or p.activeChild) ? 'current-menu-item current_page_item' : '' %}
-        <li class="menu-item menu-item-{{ loop.index }} {{ current_page }}">
-            <a href="{{ p.url }}">
-                {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
+        {% set current_page = (p.active or p.activeChild) ? 'current' : '' %}
+        <li>
+            <a href="{{ p.url }}" class="{{ current_page }}">
                 {{ p.menu }}
             </a>
             {# {% if p.children.visible.count > 0 %}

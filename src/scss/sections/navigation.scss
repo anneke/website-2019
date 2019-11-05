@@ -34,12 +34,13 @@
         }   
     }
 
-    #html:target {
-        //toediedoe
+    #menu-open:target .container,
+    #menu-open:target .site-header {
+        padding: 0;
     }
 
     #menu-open:target .mobile__navigation {
-        margin-top: 0;
+        margin-top: calc(50px + 4.44rem);
         z-index: 3;
 
         &::before {
@@ -70,6 +71,24 @@
             text-align: center;
             font-size: 1.8rem;
             padding: $whitespace-small;
+            position: relative;
+            width: 100%;
+
+            &.current {
+                background-color: $white;
+                padding-bottom: $whitespace-medium;
+                color: black;
+            
+                &::after {
+                    content: ' ';
+                    width: 20%;
+                    bottom: $whitespace-small;
+                    background: black;
+                    position: absolute;
+                    left: 40%;
+                    height: 2px;
+                }
+            }
         }
     }
 }

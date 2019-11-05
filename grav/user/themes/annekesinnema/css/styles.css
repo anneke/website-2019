@@ -757,8 +757,13 @@ dt {
     color: #6F66AB;
   }
 
+  #menu-open:target .container,
+#menu-open:target .site-header {
+    padding: 0;
+  }
+
   #menu-open:target .mobile__navigation {
-    margin-top: 0;
+    margin-top: calc(50px + 4.44rem);
     z-index: 3;
   }
   #menu-open:target .mobile__navigation::before {
@@ -786,6 +791,22 @@ dt {
     text-align: center;
     font-size: 1.8rem;
     padding: 1.11rem;
+    position: relative;
+    width: 100%;
+  }
+  #menu-open:target .mobile__navigation a:only-child.current {
+    background-color: #fff;
+    padding-bottom: 1.665rem;
+    color: black;
+  }
+  #menu-open:target .mobile__navigation a:only-child.current::after {
+    content: " ";
+    width: 20%;
+    bottom: 1.11rem;
+    background: black;
+    position: absolute;
+    left: 40%;
+    height: 2px;
   }
 }
 .ul-sub {
