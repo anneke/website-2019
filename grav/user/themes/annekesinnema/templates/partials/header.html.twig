@@ -1,11 +1,10 @@
 <header class="site-header">
     <div>
-        <h1>
-            <img src="{{ url('theme://images/logo.png') }}" class="logo" width="50" height="50" alt="" />
-            <a id="title" href="{{ base_url == '' ? '/' : base_url }}">
-                {{ site.title }}
-            </a>
-        </h1>
+        <img src="{{ url('theme://images/logo.png') }}" class="logo" width="50" height="50" alt="" />
+        <a id="title" href="{{ base_url == '' ? '/' : base_url }}">
+            {{ site.title }}
+        </a>
+        
         {% if config.plugins.langswitcher.enabled %}
             {% include 'partials/langswitcher.html.twig' %}
         {% endif %}

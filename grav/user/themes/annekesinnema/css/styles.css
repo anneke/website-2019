@@ -79,19 +79,14 @@ li {
 }
 
 html {
-  font-size: 13px;
+  font-size: 14px;
 }
 @media screen and (min-width: 40em) {
-  html {
-    font-size: 14px;
-  }
-}
-@media screen and (min-width: 75em) {
   html {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 87.5em) {
+@media screen and (min-width: 75em) {
   html {
     font-size: 18px;
   }
@@ -109,7 +104,7 @@ html {
 
 body {
   font-family: "effra", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1rem !important;
   line-height: 1.35rem;
 }
 
@@ -122,7 +117,7 @@ a:hover, a:focus {
 }
 
 h1, h2, h3 {
-  line-height: 1.1;
+  line-height: 1.3;
   font-weight: normal;
   margin-top: 0;
 }
@@ -138,42 +133,34 @@ h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
 h1 {
   display: flex;
   align-items: center;
-  font-size: 1.33rem;
-}
-@media screen and (min-width: 40em) {
-  h1 {
-    font-size: 2.33rem;
-  }
+  font-size: 2.1rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 40em) {
-  h2 {
-    margin-bottom: 1rem;
-  }
+
+h3,
+.side-content h2,
+.section-site-intro > p:first-of-type {
+  font-size: 1.2rem;
 }
 
 h3 {
-  font-size: 1.33rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-h4 {
-  font-size: 1.22rem;
+h4,
+.side-content h3 {
+  font-size: 1.1rem;
   font-weight: normal;
+  line-height: 1.35;
 }
 
 time {
   font-size: 0.9rem;
-}
-
-.section-site-intro > p:first-of-type {
-  font-size: 1.33rem;
-  line-height: 1.3;
 }
 
 p {
@@ -810,7 +797,7 @@ dt {
   margin-top: 1rem;
 }
 
-.availability__psst {
+.section-wetransfer {
   font-size: 0.9rem;
   line-height: inherit;
   margin-top: 1rem;

@@ -4,18 +4,17 @@
 
     {% block content %}
         {% if page.header.a11ytitle %}
-            <h2>{{ page.header.a11ytitle }}</h2>
+            <h1>{{ page.header.a11ytitle }}</h1>
         {% endif %}
 
         {{ page.content }}
-        
 
         {% for post in collection|slice(0, 1) %}
             <article class="post">
                 <header>
-                    <h3>
+                    <h2>
                         {{ 'SITE.LATEST_BLOG'|t }}: <a href="{{ post.url }}">{{ post.title }}</a>
-                    </h3>
+                    </h2>
                     <time timestamp="{{ post.date|date("d-n-Y") }}">
                         {{ post.date|date("d") }}
                         {{ 'MONTHS_OF_THE_YEAR'|ta(post.date|date('n') - 1) }} 
