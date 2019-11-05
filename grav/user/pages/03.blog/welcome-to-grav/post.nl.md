@@ -19,7 +19,7 @@ metadata:
 taxonomy:
     category:
         - Toegankelijkheid 
-    tag: [grav, toetje, hopsakee]
+    tag: []
 imagename: toet.png
 imagealt: a picture of a post
 ---

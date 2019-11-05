@@ -8,7 +8,7 @@ en:
   MONTHS_OF_THE_YEAR: [January, February, March, April, May, June, July, August, September, October, November, December]
   DAYS_OF_THE_WEEK: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
   servicesheader: What can I help you with?
-  valuesheader: What is important to me?
+  valuesheader: Why work with me?
   latest_blogs: Latest blogs
   tags: Tags
   blogs_per_category: Blogs per category
@@ -24,7 +24,7 @@ nl:
   MONTHS_OF_THE_YEAR: [januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december]
   DAYS_OF_THE_WEEK: [maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag]
   servicesheader: Waar kan ik je mee helpen?
-  valuesheader: Wat vind ik belangrijk?
+  valuesheader: Waarom moet je mij hebbben?
   latest_blogs: Laatste blogs
   tags: Tags
   blogs_per_category: Blogs per categorie

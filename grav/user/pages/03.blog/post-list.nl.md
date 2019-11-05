@@ -2,6 +2,9 @@
 title: Blog
 a11ytitle: Blog
 
+visible: false
+published: false
+
 sitemap:
     changefreq: monthly
     priority: 1.03

@@ -1,6 +1,28 @@
 .section-availability {
     z-index: 1;
     margin: $whitespace-medium 0;
+    background: $white;
+    border: 2px solid $pink;
+    padding: 1.5rem;
+
+    footer {
+        margin-top: 1rem;
+    }
+
+    @media screen and (min-width: $tablet-portrait) {
+        padding: 1rem;
+    }
+}
+
+.section-availability--mobile {
+    margin-bottom: 0;
+    margin-left: -$padding-left-and-right;
+    margin-right: -$padding-left-and-right;
+    margin-top: 0;
+
+    @media screen and (min-width: $tablet-portrait) {
+        display: none;
+    }
 }
 
 .availability__status::before {
@@ -25,24 +47,10 @@
     background: $status-red;
 }
 
-.section-availability {
-    background: $white;
-    border: 2px solid $pink;
-    padding: 1.5rem;
-
-    footer {
-        margin-top: 1rem;
-    }
-}
-
-.section-wetransfer {
-    font-size: .9rem;
-    line-height: inherit;
-    margin-top: 1rem;
-}
-
 @media screen and (min-width: $tablet-portrait) {
-    .section-availability--mobile {
-        display: none;
+    .section-wetransfer {
+        font-size: .9rem;
+        line-height: inherit;
+        margin-top: 1rem;
     }
 }

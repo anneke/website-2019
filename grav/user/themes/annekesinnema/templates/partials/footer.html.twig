@@ -50,7 +50,8 @@
                 <li><a href="https://www.linkedin.com/in/annekesinnema/">LinkedIn</a></li>
             </ul>
 
-            {% if config.plugins.feed.enabled %}
+            {% set blogArticles = page.evaluate([{'@page.children':'/blog'}]) %}
+            {% if config.plugins.feed.enabled and blogArticles|length > 1 %}
                 <a class="cta" href="{{ base_url }}{{ pages.find('/blog').rawRoute }}.rss">{{ 'SUBSCRIBE'|t }}</a>
             {% endif %}
         </section>

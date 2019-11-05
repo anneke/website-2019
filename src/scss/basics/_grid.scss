@@ -4,12 +4,23 @@ html, body {
 }    
 
 .container {
-    max-width: $max-content-width;
-    max-width: 90vw; 
     margin: 0px auto;
     width: 100%;
     box-sizing: border-box;
     padding: $whitespace-small;
+
+    > * {
+        padding: $padding-left-and-right;
+    }
+
+    @media screen and (min-width: $tablet-portrait) {
+        max-width: $max-content-width;
+        max-width: 90vw; 
+
+        > * {
+            padding: 0;
+        }
+    }
 }
 
 .main-content > section {
@@ -24,6 +35,49 @@ html, body {
 .logo {
     margin-right: $whitespace-small;       
 }
+
+
+.section-services {
+    position: relative;
+
+    &::before {
+        content: " ";
+        display: block;
+        background-color: $light-blue;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 50% 10%;
+        position: absolute;
+        width: calc(100% + 20vw);
+        height: calc(100% + 10vw);
+        z-index: -1;
+        left: -10vw;
+        top: -5vw;
+    }
+}
+
+.site-footer__contactform,
+.site-footer__contact {
+    color: white;
+    position: relative;
+    padding-top: $whitespace-medium;
+
+    &::before {
+        background: $purple;
+        content: ' ';
+        width: calc(100% + 20vw);
+        height: 100%;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        left: -10vw;
+        top: 0;
+    }
+}
+
+.site-footer__contact {
+    padding-top: 0;
+}
+ 
 
 @media screen and (min-width: $tablet-portrait) {
 
@@ -108,10 +162,10 @@ html, body {
         &::after {
             content: " ";
             display: block;
-            background-color: #F2F9FF;
+            background-color: $light-blue;
             border-bottom-right-radius: 40%;
+            border-bottom-left-radius: 0;
             position: absolute;
-
             width: calc(100% + 400px);
             height: calc(100%);
             z-index: -1;
@@ -212,7 +266,14 @@ html, body {
             right: -50vw;
         }
     }
-    
+
+    .site-footer__contactform,
+    .site-footer__contact {
+        &::before {
+            content: none;
+        }
+    }
+
     .site-footer__header {
         grid-area: header;
         padding-right: ($whitespace-medium * 3);

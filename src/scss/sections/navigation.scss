@@ -33,23 +33,23 @@
     @media screen and (min-width: $tablet-portrait) {
         display: inline-block;
         margin-left: $whitespace-medium;
-    }
 
-    a {
-        padding-bottom: 1rem;
-    }
-
-    &:hover,
-    &:focus {
-        .ul-sub {
-            display: block;
+        a {
+            padding-bottom: 1rem;
         }
-    }
 
-    &:focus-within {
-        .ul-sub {
-            display: block;
-        }
+        // &:hover,
+        // &:focus {
+        //     .ul-sub {
+        //         display: block;
+        //     }
+        // }
+
+        // &:focus-within {
+        //     .ul-sub {
+        //         display: block;
+        //     }
+        // }
     }
 }
 

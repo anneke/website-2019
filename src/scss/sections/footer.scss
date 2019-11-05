@@ -1,24 +1,12 @@
 .site-footer__contactform,
 .site-footer__contact {
-    margin-bottom: $whitespace-small;
+    padding-bottom: $whitespace-medium;
+    color: $white;
 
-    @media screen and (min-width: $tablet-portrait) {
+    a,
+    a:hover,
+    a:focus {
         color: $white;
-
-        a,
-        a:hover,
-        a:focus {
-            color: $white;
-        }
-
-        li {
-            list-style-image: $list-svg-white;
-        }
-    }
-
-
-    ul {
-        padding: 0 8%;
     }
 
     li {

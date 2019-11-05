@@ -51,7 +51,7 @@
         </main>
 
         <aside class="side-content side-content--{{ page.slug }}">
-            {% if page.slug != 'blog' %}
+            {% if page.slug = 'blog' %}
               {% include 'partials/availability.html.twig' with {
                 'truncate': false, 
               } %}
@@ -65,7 +65,7 @@
     </div>
 
     {% block footer %}
-    {% include 'partials/footer.html.twig' %}
+      {% include 'partials/footer.html.twig' %}
     {% endblock %}
   </div>
 

@@ -50,6 +50,7 @@
     background-color: transparent;
     padding: 0px;
     margin-bottom: 0;
+    margin-top: $whitespace-medium;
 
     p:last-child {
         margin-top: 0;
@@ -57,6 +58,7 @@
 
     @media screen and (min-width: $tablet-portrait) {
         padding: $whitespace-medium;
+        margin-top: 0;
     }
 }
 

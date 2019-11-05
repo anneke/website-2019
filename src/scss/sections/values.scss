@@ -1,15 +1,29 @@
-.section-values .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0 $whitespace-large;
+.section-values h2 {
+    text-align: center;
+
+    @media screen and (min-width: $tablet-portrait) {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: $tablet-portrait) {
+    .section-values .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0 $whitespace-large;
+    }
 }
 
 .value {
     padding-top: $whitespace-small;
-    font-size: .9rem;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-portrait) {
+        font-size: .9rem;
+        text-align: left;
+    }
 }
 
 .value__title {
-    font-size: 1.22rem;
     margin-top: 0;
 }
