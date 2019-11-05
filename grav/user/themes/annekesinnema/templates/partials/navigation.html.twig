@@ -10,12 +10,13 @@
 
         <ul class="ul-inline navigation__list">
             {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}
+            {% set current_main = (page.active or page.activeChild) ? '#main' : '' %}
             {% if theme_config.showchildpages %}
                 {{ _self.loop(pages) }}
             {% else %} 
                 {% for page in pages.children.visible %}
                     <li class="menu-item menu-item-{{ loop.index }}">
-                        <a href="{{ page.url }}" class="{{ current_page }}">
+                        <a href="{{ page.url }}{{ current_main }}" class="{{ current_page }}">
                             {{ page.menu }}
                         </a>
                     </li>
@@ -23,7 +24,7 @@
             {% endif %} 
             {% for mitem in site.menu %}
                 <li class="menu-item menu-item-{{ loop.index }}">
-                    <a href="{{ mitem.url }}" class="{{ current_page }}">
+                    <a href="{{ mitem.url }}{{ current_main }}" class="{{ current_page }}">
                         {{ mitem.text }}
                     </a>
                 </li>
@@ -35,8 +36,9 @@
 {% macro loop(page) %}
     {% for p in page.children.visible %}
         {% set current_page = (p.active or p.activeChild) ? 'current' : '' %}
+        {% set current_main = (p.active or p.activeChild) ? '#main' : '' %}
         <li>
-            <a href="{{ p.url }}" class="{{ current_page }}">
+            <a href="{{ p.url }}{{ current_main }}" class="{{ current_page }}">
                 {{ p.menu }}
             </a>
             {# {% if p.children.visible.count > 0 %}

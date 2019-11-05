@@ -23,6 +23,8 @@
   {% endblock %}
 </head>
 <body class="{% if page.home %}page-home{% else %}page-{{ page.slug }}{% endif %}" id="menu-open">
+            
+  <a class="skip-main" href="#main">Skip to main content</a>
 
   {% do track_views(page.route) %}
 
@@ -30,7 +32,7 @@
     {% include 'partials/header.html.twig' %}
 
     <div class="site-main">
-        <main class="main-area" role="main">
+        <main class="main-area" role="main" id="main">
 
             <div class="main-content">
               <section class="section-site-intro">
