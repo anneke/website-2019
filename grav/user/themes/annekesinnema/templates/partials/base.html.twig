@@ -51,14 +51,16 @@
         </main>
 
         <aside class="side-content side-content--{{ page.slug }}">
-            {% include 'partials/availability.html.twig' with {
-              'truncate': false, 
-            } %}
+            {% if page.slug != 'blog' %}
+              {% include 'partials/availability.html.twig' with {
+                'truncate': false, 
+              } %}
+            {% endif %}
 
-            {% block sidebar %}{% endblock %}
+            {% block sidebar %}
+            {% endblock %}
 
             {# {% include 'partials/referrals.html.twig' %} #}
-            
         </aside>
     </div>
 

@@ -1,71 +1,67 @@
-<section class="widget">
-    <h3 class="widget__title">Latest blogs</h3>
-    
-    {% set collection = page.collection %} 
-    <ul class="post-list">
-        {% for post in collection %}
-            <li>
-                {{ post.date|date('d') }}
-                {{ 'MONTHS_OF_THE_YEAR'|ta(post.date|date('n') - 1) }} 
-                <a href="{{ post.url }}">{{ post.title }} - {{ post.header.headline }}</a>
-            </li>
-        {% endfor %} 
-    </ul>
-</section>
+{% set collection = page.collection %} 
+{% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
+{% set categorylist = taxonomylist.get() %}   
 
-<section class="widget">
-    <h3 class="widget__title">View blogs by tag</h3>
+{% if collection|length > 1 %}
 
-    {% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
-
-    {% if taxlist %}
-    <ul class="post-list">
-        {% for tax,value in taxlist['tag'] %}
-            <li>
-                {% set active = uri.param('tag') == tax? 'active' : '' %}
-                <a class="{{ active }}" href="{{ base_url }}/{{ 'tag' }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+    {% if collection|length > 1 %}
+        <section class="widget">
+            <h3 class="widget__title">{{ 'latest_blogs'|t }}</h3>
+            <ul class="post-list">
+                {% for post in collection %}
+                    <li>
+                        {{ post.date|date('d') }}
+                        {{ 'MONTHS_OF_THE_YEAR'|ta(post.date|date('n') - 1) }} 
+                        <a href="{{ post.url }}">{{ post.title }} - {{ post.header.headline }}</a>
+                    </li>
+                {% endfor %} 
+            </ul>
+        </section>
     {% endif %}
 
+    {% if taxlist and taxlist['tag']|length > 3 %}
+        <section class="widget">
+            <h3 class="widget__title">{{ 'tags'|t }}</h3>
+            <ul class="post-list ul-inline">
+                {% for tax,value in taxlist['tag'] %}
+                    <li>
+                        {% set active = uri.param('tag') == tax? 'active' : '' %}
+                        <a class="{{ active }}" href="{{ base_url }}/{{ 'tag' }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+    
+    {% if categorylist and categorylist['tag']|length > 3 %}  
+        <section class="widget">
+            <h3 class="widget__title">{{ 'blogs_per_category'|t }}</h3>
 
-
-
-    <h3>All posts tagged grav</h3>
-    <ul class="post-list">
-        {% for post in taxonomy.findTaxonomy({'tag':'grav'}) %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a>
-            <br /><time timestamp="{{ post.date }}">{{ post.date|date('m/d/Y g:ia') }}</time></li>
-        {% endfor %}
-    </ul> 
-</section>
- 
-<section class="widget">
-    <h3 class="widget__title">Posts sorted by category</h3>
-
-    {% set taxlist = taxonomylist.get() %}   
-    {% if taxlist %}  
-        {% for letter in 'A'..'Z' %}   
-            {% for tax,value in taxlist['category'] %} 
+            {% for letter in 'A'..'Z' %}   
+            {% for tax,value in categorylist['category'] %} 
                 {% if tax starts with letter %}   
-                    <div class="column">  
-                        <div class="column__content">  
-                            <h4 class="column__title">
-                                {{ tax }}
-                            </h4>  
-                            <ul>
-                                {% for child in collection %}   
-                                    {% if child in taxonomy.findTaxonomy({'category':tax}) %}
-                                    <li><a href="{{ child.url }}" class="column__title">"{{ child.title }}"</a></li> 
-                                    {% endif %}
-                                {% endfor %} 
-                            </ul> 
-                        </div>
-                    </div>  
+                    <h4 class="tax__title">
+                        {{ 'category'|t }}: {{ tax }}
+                    </h4>  
+                    <ul class="post-list">
+                        {% for child in collection %}   
+                            {% if child in taxonomy.findTaxonomy({'category':tax}) %}
+                            <li><a href="{{ child.url }}" class="column__title">"{{ child.title }}"</a></li> 
+                            {% endif %}
+                        {% endfor %} 
+                    </ul> 
                 {% endif %}  
             {% endfor %}
-        {% endfor %} 
-    </section>  
-{% endif %} 
-</section>
+            {% endfor %} 
+        </section>
+    {% endif %} 
+
+{% endif %}
+
+{% if 
+    collection|length <= 1 
+%}
+    {% include 'partials/availability.html.twig' with {
+        'truncate': false, 
+    } %}
+{% endif %}
