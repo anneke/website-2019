@@ -7,18 +7,19 @@
     .navigation__offtoggle {
         background: $purple;
         border-radius: 50% 0 0 50%;
-        display: block;
-        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        height: 56px;
         position: absolute;
-        right: -$whitespace-small;
+        right: 0;
         top: $whitespace-large;
-        width: 50px;
+        width: 40px;
         padding: 5px;
-
+        
         div {
             color: white;
-            margin-top: 15px;
-            margin-right: 10px;
+            text-transform: uppercase;
             -webkit-transform: rotate(-90deg);  /* Chrome, Opera 15+, Safari 3.1+ */
             -ms-transform: rotate(-90deg);  /* IE 9 */
                 transform: rotate(-90deg);  /* Firefox 16+, IE 10+, Opera */
@@ -34,13 +35,8 @@
         }   
     }
 
-    #menu-open:target .container,
-    #menu-open:target .site-header {
-        padding: 0;
-    }
-
     #menu-open:target .mobile__navigation {
-        margin-top: calc(50px + 4.44rem);
+        // margin-top: calc(50px + 4.44rem);
         z-index: 3;
 
         &::before {
@@ -54,7 +50,11 @@
             z-index: 3;
         }
 
-        .navigation__offtoggle,
+        .navigation__offtoggle {
+            display: flex;
+            z-index: 4;
+        }
+
         .navigation__list,
         .navigation__list li {
             display: block;
@@ -63,6 +63,7 @@
 
         a {
             text-decoration: none;
+            text-transform: uppercase;
         }
 
         a:only-child {
@@ -72,7 +73,7 @@
             font-size: 1.8rem;
             padding: $whitespace-small;
             position: relative;
-            width: 100%;
+            text-decoration: none;
 
             &.current {
                 background-color: $white;

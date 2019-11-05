@@ -149,10 +149,13 @@ h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
 .site-header__title {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .site-header__title .langswitcher {
   top: 0;
   transform: none;
+  margin: 0;
+  text-transform: none;
 }
 
 h1 {
@@ -393,6 +396,7 @@ html, body {
 }
 .container > * {
   padding: 1.11rem;
+  overflow-x: hidden;
 }
 @media screen and (min-width: 40em) {
   .container {
@@ -411,6 +415,7 @@ html, body {
 .site-header {
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
 }
 
 .logo {
@@ -444,7 +449,7 @@ html, body {
 .site-footer__contact::before {
   background: #6F66AB;
   content: " ";
-  width: calc(100% + 20vw);
+  width: calc(100% + 15vw);
   height: 100%;
   display: block;
   position: absolute;
@@ -754,19 +759,20 @@ dt {
 .navigation__offtoggle {
     background: #6F66AB;
     border-radius: 50% 0 0 50%;
-    display: block;
-    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 56px;
     position: absolute;
-    right: -1.11rem;
+    right: 0;
     top: 2.22rem;
-    width: 50px;
+    width: 40px;
     padding: 5px;
   }
   .navigation__ontoggle div,
 .navigation__offtoggle div {
     color: white;
-    margin-top: 15px;
-    margin-right: 10px;
+    text-transform: uppercase;
     -webkit-transform: rotate(-90deg);
     /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: rotate(-90deg);
@@ -783,13 +789,7 @@ dt {
     color: #6F66AB;
   }
 
-  #menu-open:target .container,
-#menu-open:target .site-header {
-    padding: 0;
-  }
-
   #menu-open:target .mobile__navigation {
-    margin-top: calc(50px + 4.44rem);
     z-index: 3;
   }
   #menu-open:target .mobile__navigation::before {
@@ -802,14 +802,18 @@ dt {
     background: rgba(111, 102, 171, 0.95);
     z-index: 3;
   }
-  #menu-open:target .mobile__navigation .navigation__offtoggle,
-#menu-open:target .mobile__navigation .navigation__list,
+  #menu-open:target .mobile__navigation .navigation__offtoggle {
+    display: flex;
+    z-index: 4;
+  }
+  #menu-open:target .mobile__navigation .navigation__list,
 #menu-open:target .mobile__navigation .navigation__list li {
     display: block;
     z-index: 4;
   }
   #menu-open:target .mobile__navigation a {
     text-decoration: none;
+    text-transform: uppercase;
   }
   #menu-open:target .mobile__navigation a:only-child {
     color: white;
@@ -818,7 +822,7 @@ dt {
     font-size: 1.8rem;
     padding: 1.11rem;
     position: relative;
-    width: 100%;
+    text-decoration: none;
   }
   #menu-open:target .mobile__navigation a:only-child.current {
     background-color: #fff;
