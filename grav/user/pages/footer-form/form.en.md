@@ -57,7 +57,7 @@ form:
                 to: mail@annekesinnema.nl
                 subject: '[Call me back] {{ form.value.name|e }}'
                 body: '{% include ''forms/data.html.twig'' %}'
-        -tweet
+        -
             save:
                 fileprefix: callme-
                 dateformat: Ymd-His-u

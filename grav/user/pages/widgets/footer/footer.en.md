@@ -1,26 +1,26 @@
 ---
-title: Benieuwd?
-subtitle: Laten we eens kennis maken!
-intro: Heb je een concrete opdracht of een vraagstuk waar je hulp bij nodig hnebt, of wil je gewoon een keer kennis maken? Ik ben altijd in voor een kop thee om te kijken of we iets voor elkaar kunnen betekenen!
+title: Curious?
+subtitle: Let's meet!
+intro: Do you have a job for me, a question or do you just want to meet with me to talk about front-end development? I'm always up for meeting up for coffee (as long as you don't mind me having tea)!
 
-adresLabel: adres
-kvkLabel: Kamer van Koophandel
-btwLabel: BTW nummer
+adresLabel: address
+kvkLabel: Dutch chamber of commerce (KvK)
+btwLabel: Dutch VAT number
 bankLabel: Bank
 
-callbackLabel: Wil je teruggebeld worden?
-callback: Neem gerust contact op met het onderstaande formulier! Een sms, whatsapp-bericht of een <i>direct message</i> op social media bereikt me ook!
+callbackLabel: Would you like me to call you?
+callback: Fill in the form below and I will call you. You can also reach  me by sending me a text message or a DM on social media. 
 
-contactLabel: Contactinformatie
+contactLabel: Contact information
 emailLabel: E-mail
-wetransferLabel: Grote bestanden?
-wetransfer: Stuur me je bestanden via WeTransfer!
-wetransfermessage: Bij%20vragen%20kun%20je%20me%20bereiken%20op%20telefoonnummer%20...%20.%20Mijn%20naam%20is%20...
+wetransferLabel: Large files?
+wetransfer: Send me your large files through WeTransfer!
+wetransfermessage: Please%20contact%20me%20for%20questions%20through%20...%20My%20name%20is%20...
 
-phoneLabel: Telefoon
-socialLabel: Volg mij ook op social media
+phoneLabel: Phone
+socialLabel: Follow me on social media
 
-by: door
+by: by
 
 published: true
 visible: false
