@@ -3,7 +3,7 @@
 {% import 'macros/dates.twig' as dates %}
 
 <!DOCTYPE html>
-<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}" id="html">
 <head>
   <title>{% if header.title %}{{ header.title|e('html') }} - {% endif %}{{ site.title }}</title>
   <meta charset="utf-8">
@@ -24,8 +24,6 @@
 </head>
 <body class="{% if page.home %}page-home{% else %}page-{{ page.slug }}{% endif %}">
 
-  {# {% include 'partials/navigation.html.twig' %} #}
-  
   {% do track_views(page.route) %}
 
   <div class="container">
@@ -73,15 +71,13 @@
     {% include 'partials/analytics.html.twig' %}
   {% endif %}
     
-  {# block javascripts %}
-      {% do assets.addJs('jquery',101) %}
+  {% block javascripts %}
       {% do assets.addJs('theme://js/main.js',100) %}
-      {% do assets.addJs('theme://js/jquery.jscroll.min.js') %}
-  {% endblock #}
+  {% endblock %}
 
-  {# {% block bottom %}
+  {% block bottom %}
     {{ assets.js()|raw }}
     {{ assets.js('bottom')|raw }}
-  {% endblock %} #}
+  {% endblock %} 
 </body>
 </html>

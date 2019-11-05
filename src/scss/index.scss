@@ -16,7 +16,9 @@
     'sections/availability';
 
 
-    :focus {
-        outline-offset: 4px;
-        z-index: 100;
+// hide elements on the live/production environment
+html.prod-env {
+    .langswitcher {
+        display: none;
     }
+}

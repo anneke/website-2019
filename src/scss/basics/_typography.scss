@@ -16,31 +16,6 @@ html {
     @media screen and (min-width: $desktop-large) {
         font-size: 30px;
     }
-
-    &::after {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: black;
-        padding: 10px;
-        color: white;
-
-        @media screen and (min-width: $tablet-portrait) {
-            content: 'tablet-portrait'
-        }
-        @media screen and (min-width: $tablet-landscape) {
-            content: 'tablet-landscape'
-        }
-        @media screen and (min-width: $desktop-small) {
-            content: 'desktop-small'
-        }
-        @media screen and (min-width: $desktop) {
-            content: 'desktop'
-        }
-        @media screen and (min-width: $desktop-large) {
-            content: 'desktop-large'
-        }
-    }
 }
 
 body {

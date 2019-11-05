@@ -1,3 +1,37 @@
+html.dev-env::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: black;
+  padding: 10px;
+  color: white;
+}
+@media screen and (min-width: 40em) {
+  html.dev-env::after {
+    content: "tablet-portrait";
+  }
+}
+@media screen and (min-width: 75em) {
+  html.dev-env::after {
+    content: "tablet-landscape";
+  }
+}
+@media screen and (min-width: 87.5em) {
+  html.dev-env::after {
+    content: "desktop-small";
+  }
+}
+@media screen and (min-width: 100em) {
+  html.dev-env::after {
+    content: "desktop";
+  }
+}
+@media screen and (min-width: 120em) {
+  html.dev-env::after {
+    content: "desktop-large";
+  }
+}
+
 @media screen and (min-width: 900px) {
   .mobile-only {
     display: none;
@@ -29,6 +63,11 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+:focus {
+  outline-offset: 4px;
+  z-index: 100;
 }
 
 ul {
@@ -65,39 +104,6 @@ html {
 @media screen and (min-width: 120em) {
   html {
     font-size: 30px;
-  }
-}
-html::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: black;
-  padding: 10px;
-  color: white;
-}
-@media screen and (min-width: 40em) {
-  html::after {
-    content: "tablet-portrait";
-  }
-}
-@media screen and (min-width: 75em) {
-  html::after {
-    content: "tablet-landscape";
-  }
-}
-@media screen and (min-width: 87.5em) {
-  html::after {
-    content: "desktop-small";
-  }
-}
-@media screen and (min-width: 100em) {
-  html::after {
-    content: "desktop";
-  }
-}
-@media screen and (min-width: 120em) {
-  html::after {
-    content: "desktop-large";
   }
 }
 
@@ -815,9 +821,8 @@ dt {
     display: none;
   }
 }
-:focus {
-  outline-offset: 4px;
-  z-index: 100;
+html.prod-env .langswitcher {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

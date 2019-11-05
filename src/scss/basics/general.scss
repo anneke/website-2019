@@ -33,6 +33,11 @@
     width: 1px;
 }
 
+:focus {
+    outline-offset: 4px;
+    z-index: 100;
+}
+
 ul {
     padding: 0 8%;
 }
