@@ -5,6 +5,12 @@
         <aside class="section-availability section-availability--mobile">
             <h2>{{ availability.header.title }}</h2>
             {{ availability.content }}
+            {% if page.template != 'contact' %}
+                <a href="/contact" class="readmore readmore--dark"
+                    ><span class="a11y">{{ availability.header.pre_cta }} </span
+                    ><span>{{ availability.header.cta }}</span>
+                </a>
+            {% endif %}
         </aside>
     {% else %}
         <section class="section-availability">
@@ -22,9 +28,9 @@
 
             {% if page.template != 'contact' %}
                 <footer>
-                    <a href="#callmeplease">
-                        <span class="a11y">{{ availability.header.pre_cta }}</span> 
-                        <span>{{ availability.header.cta }}</span>
+                    <a href="#callmeplease" class="readmore readmore--dark"
+                        ><span class="a11y">{{ availability.header.pre_cta }} </span
+                        ><span>{{ availability.header.cta }}</span>
                     </a>
                 </footer>
             {% endif %}
