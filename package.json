@@ -5,24 +5,19 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run build-scss",
+    "dev-storybook": "npm run convert-scss-watch && npm run dev-storybook",
+    "storybook": "start-storybook -p 6006",
     "build": "npm run build-storybook && npm run build-scss",
     "build-scss": "sass --watch grav/user/themes/annekesinnema/scss/index.scss grav/user/themes/annekesinnema/css/styles.css",
-    "dev-storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "convert-scss": "sass grav/user/themes/annekesinnema/scss/index.scss .storybook/styles.css",
-    "convert-scss-watch": "sass --watch grav/user/themes/annekesinnema/scss/index.scss .storybook/styles.css",
-    "storybook": "npm run convert-scss && npm run dev-storybook"
+    "convert-scss-watch": "sass --watch grav/user/themes/annekesinnema/scss/index.scss .storybook/styles.css"
   },
   "author": "Anneke Sinnema",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@storybook/html": "^5.2.1",
-    "parcel-bundler": "^1.12.3",
-    "posthtml": "^0.11.6",
-    "posthtml-expressions": "^1.1.1",
-    "posthtml-include": "^1.2.0",
-    "posthtml-md": "^1.1.0",
     "sass": "^1.22.12",
     "typescript": "^3.6.3"
   },
