@@ -6,11 +6,11 @@
   "scripts": {
     "dev": "npm run build-scss",
     "build": "npm run build-storybook && npm run build-scss",
-    "build-scss": "sass --watch src/scss/index.scss grav/user/themes/annekesinnema/css/styles.css",
+    "build-scss": "sass --watch grav/user/themes/annekesinnema/scss/index.scss grav/user/themes/annekesinnema/css/styles.css",
     "dev-storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "convert-scss": "sass src/scss/index.scss dist/styles.css",
-    "convert-scss-watch": "sass --watch src/scss/index.scss .storybook/styles.css",
+    "convert-scss": "sass grav/user/themes/annekesinnema/scss/index.scss .storybook/styles.css",
+    "convert-scss-watch": "sass --watch grav/user/themes/annekesinnema/scss/index.scss .storybook/styles.css",
     "storybook": "npm run convert-scss && npm run dev-storybook"
   },
   "author": "Anneke Sinnema",
