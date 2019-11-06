@@ -475,6 +475,7 @@ html, body {
   .site-header nav {
     margin-left: auto;
     text-align: right;
+    text-transform: none;
   }
 
   .site-main {
