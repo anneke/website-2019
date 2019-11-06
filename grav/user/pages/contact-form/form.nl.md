@@ -62,6 +62,7 @@ form:
             id: whatabout
             arialabel: whatabout
             required: true
+            rows: 5
     buttons:
         -
             type: submit

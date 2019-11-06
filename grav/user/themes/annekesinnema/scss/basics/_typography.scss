@@ -98,3 +98,27 @@ p {
         margin-bottom: 0;
     }
 }
+
+.readmore {
+    position: relative;
+    display: inline-block;
+}
+
+.readmore:before {
+    display: inline-block;
+    width: 7px;
+    height: 14px;
+    margin-right: 5px;
+    background: black;
+    position: relative;
+    top: 2px;
+    content: " ";
+}
+
+.readmore--light::before {
+    background: $link-svg-white transparent no-repeat center center;
+}
+
+.readmore--dark::before {
+    background: $link-svg-purple transparent no-repeat center center;
+}

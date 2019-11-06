@@ -305,3 +305,23 @@ html, body {
         grid-row: 2;
     }
 }
+
+.page-post,
+.page-post-list {
+    .side-content {
+        position: relative;
+        
+        &::before {
+            content: " ";
+            display: block;
+            background-color: $light-blue;
+            border-bottom-left-radius: 40%;
+            position: absolute;
+            width: calc(100% + 200px);
+            height: 400px;
+            z-index: -1;
+            left: -5vw;
+            top: -0px;
+        }
+    }
+}

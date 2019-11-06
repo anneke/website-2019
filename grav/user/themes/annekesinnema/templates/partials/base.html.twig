@@ -22,7 +22,7 @@
     {{ assets.css()|raw }}    
   {% endblock %}
 </head>
-<body class="{% if page.home %}page-home{% else %}page-{{ page.slug }}{% endif %}" id="menu-open">
+<body class="{% if page.home %}page-home{% else %}page-{{ page.template }}{% endif %}" id="menu-open">
             
   <a class="skip-main" href="#main">Skip to main content</a>
 
@@ -53,10 +53,10 @@
         </main>
 
         <aside class="side-content side-content--{{ page.slug }}">
-            {% if page.slug != 'blog' %}
+            {% if (page.template != 'post-list') or (page.template != 'post') %}
               {% include 'partials/availability.html.twig' with {
                 'truncate': false, 
-              } %}
+              } %}  
             {% endif %}
 
             {% block sidebar %}
