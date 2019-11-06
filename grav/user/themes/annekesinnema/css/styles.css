@@ -518,6 +518,14 @@ html, body {
   .main-area:nth-child(2) {
     grid-row: 2;
   }
+  .main-area:nth-child(3) {
+    grid-row: 3;
+  }
+  .main-area .section-site-intro,
+.main-area .section-services {
+    grid-area: content;
+    grid-row: auto;
+  }
   .main-area .main-content {
     display: grid;
     grid-template-columns: [main-start content-start values-start] 25fr [content-end] 2fr [values-end];

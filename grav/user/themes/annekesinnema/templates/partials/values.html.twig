@@ -1,5 +1,9 @@
 <section class="section-values">
-    <h2 class="values__title">{{ 'valuesheader'|t }}</h2>
+    {% if page.home %}
+        <h2 class="values__title">{{ 'valuesheader'|t }}</h2>
+    {% else %}
+        <h3 class="values__title">{{ 'valuesheader'|t }}</h3>
+    {% endif %}
     <div class="grid">
         {% set values_collection = page.find('/about').children.published %}
         {% for value in values_collection %}

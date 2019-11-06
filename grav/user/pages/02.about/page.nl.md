@@ -1,6 +1,6 @@
 ---
 title: Over mij 
-a11ytitle: Hoi! Ik ben Anneke.
+a11ytitle: Over mij
 
 content:
     items: @self.children

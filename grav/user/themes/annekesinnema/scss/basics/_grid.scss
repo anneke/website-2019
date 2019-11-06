@@ -107,7 +107,7 @@ html, body {
             [main-end]
                 2fr 
             [sidebar-start] 
-                11fr 
+                11fr
             [sidebar-end main-end] 
                 $padding-left-and-right;
         grid-template-rows: auto;
@@ -123,6 +123,16 @@ html, body {
 
         &:nth-child(2) {
             grid-row: 2;
+        }
+
+        &:nth-child(3) {
+            grid-row: 3;
+        }
+
+        .section-site-intro,
+        .section-services {
+            grid-area: content;
+            grid-row: auto;
         }
 
         .main-content {
