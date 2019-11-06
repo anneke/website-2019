@@ -1,9 +1,5 @@
-<section class="section-services">
-    {% if page.home %}
-        <h2 class="services-title">{{ 'servicesheader'|t }}</h2>
-    {% else %}
-        <h3 class="services-title">{{ 'servicesheader'|t }}</h3>
-    {% endif %}
+<section class="section section-services">
+    <h2 class="services-title">{{ 'servicesheader'|t }}</h2>
 
     <div class="grid">
         {% set services_collection = page.find('/services').children.published %}

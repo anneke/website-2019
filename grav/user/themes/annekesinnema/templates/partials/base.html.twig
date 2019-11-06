@@ -35,13 +35,10 @@
         <main class="main-area" role="main" id="main">
 
             <div class="main-content">
-              <section class="section-site-intro">
+              <section class="section section-usercontent">
                 {% block content %}{% endblock %}
               </section>
 
-              {% if not page.home %}
-                <h2 class="a11y">Herhalende content</h2>
-              {% endif %}
               {% include 'partials/availability.html.twig' with {'truncate': true} %}
 
               {% if page.home %}

@@ -3,16 +3,11 @@
     {% set collection = page.collection %} 
 
     {% block content %}
-        {% if page.header.a11ytitle %}
-            <h2>{{ page.header.a11ytitle }}</h2>
-        {% endif %}
-
-        {{ page.content }}
 
         {% for post in collection|slice(0, 1) %}
             <article class="post">
                 <header>
-                    <h2>
+                    <h2 class="post__title">
                         {{ 'SITE.LATEST_BLOG'|t }}: <a href="{{ post.url }}">{{ post.title }}</a>
                     </h2>
                     <time timestamp="{{ post.date|date("d-n-Y") }}">
@@ -34,6 +29,7 @@
     {% endblock %}
 
     {% block sidebar %}
+        {{ page.content }}
         {% 
             include 'partials/blogsidebar.html.twig' 
         %}

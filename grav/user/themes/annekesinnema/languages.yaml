@@ -13,6 +13,8 @@ en:
   tags: Tags
   blogs_per_category: Blogs per category
   category: Category
+  menuLabel: Menu
+  menuCloseLabel: Close
  
 nl:
   SITE:
@@ -24,8 +26,10 @@ nl:
   MONTHS_OF_THE_YEAR: [januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december]
   DAYS_OF_THE_WEEK: [maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag]
   servicesheader: Waar kan ik je mee helpen?
-  valuesheader: Waarom moet je mij hebbben?
+  valuesheader: Waarom moet je mij hebben?
   latest_blogs: Laatste blogs
   tags: Tags
   blogs_per_category: Blogs per categorie
   category: Categorie
+  menuLabel: Menu
+  menuCloseLabel: Sluit

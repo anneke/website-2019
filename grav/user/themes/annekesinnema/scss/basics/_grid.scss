@@ -24,7 +24,8 @@ html, body {
     }
 }
 
-.main-content > section {
+// .main-content > 
+.section {
     padding: $whitespace-small 0;
 }
 
@@ -142,7 +143,7 @@ html, body {
             grid-row: 3;
         }
 
-        .section-site-intro,
+        .section-usercontent,
         .section-services {
             grid-area: content;
             grid-row: auto;
@@ -176,12 +177,15 @@ html, body {
         justify-content: flex-start;
     }
 
-    .main-content > section {
+    // .main-content > 
+    .section {
         padding: $whitespace-medium 0;
     }
 
     .section-services {
         position: relative;
+        padding-top: $whitespace-large;
+        padding-bottom: $whitespace-large;
 
         &::before,
         &::after {

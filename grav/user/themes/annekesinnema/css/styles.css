@@ -121,7 +121,7 @@ html {
 body {
   font-family: "effra", Arial, Helvetica, sans-serif;
   font-size: 1rem !important;
-  line-height: 1.35rem;
+  line-height: 1.35;
 }
 
 a {
@@ -132,42 +132,46 @@ a:hover, a:focus {
   text-decoration: underline double;
 }
 
-h1, h2, h3 {
-  line-height: 1.3;
+h1, h2, h3, h4 {
   font-weight: normal;
   margin-top: 0;
 }
 @media screen and (min-width: 40em) {
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     margin-bottom: 1.35rem;
   }
 }
-h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
+h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child) {
   margin-top: 1.35rem;
 }
 
 h1 {
+  font-size: inherit;
+}
+
+h2,
+.values__title {
   font-size: 2.1rem;
 }
 
-h2 {
+h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
 h3,
 .side-content h2,
-.section-site-intro > p:first-of-type,
-.value__title {
+.value__title,
+.section-usercontent > p:first-of-type {
   font-size: 1.2rem;
 }
 
-h3 {
+h4 {
   margin-bottom: 0.5rem;
 }
 
-h4,
-.side-content h3 {
+h5,
+.side-content h4 {
   font-size: 1.1rem;
   font-weight: normal;
   line-height: 1.35;
@@ -420,7 +424,7 @@ html, body {
   }
 }
 
-.main-content > section {
+.section {
   padding: 1.11rem 0;
 }
 
@@ -521,7 +525,7 @@ html, body {
   .main-area:nth-child(3) {
     grid-row: 3;
   }
-  .main-area .section-site-intro,
+  .main-area .section-usercontent,
 .main-area .section-services {
     grid-area: content;
     grid-row: auto;
@@ -547,12 +551,14 @@ html, body {
     justify-content: flex-start;
   }
 
-  .main-content > section {
+  .section {
     padding: 1.665rem 0;
   }
 
   .section-services {
     position: relative;
+    padding-top: 2.22rem;
+    padding-bottom: 2.22rem;
   }
   .section-services::before, .section-services::after {
     content: " ";
@@ -842,6 +848,7 @@ dt {
 
   #menu-open:target .mobile__navigation {
     z-index: 3;
+    width: 100%;
   }
   #menu-open:target .mobile__navigation::before {
     content: " ";

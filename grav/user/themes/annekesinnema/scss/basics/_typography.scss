@@ -17,7 +17,7 @@ html {
 body {
     font-family: 'effra', Arial, Helvetica, sans-serif;
     font-size: 1rem !important;
-    line-height: 1.35rem;
+    line-height: 1.35;
 }
 
 a {
@@ -30,8 +30,8 @@ a {
     }
 }
 
-h1, h2, h3 {
-    line-height: 1.3;
+h1, h2, h3, h4 {
+    // line-height: 1.3;
     font-weight: normal;
     margin-top: 0;
 
@@ -44,29 +44,33 @@ h1, h2, h3 {
     }
 }
 
-h1 { 
+h1 {
+    font-size: inherit;
+}
+
+h2,
+.values__title { 
     font-size: 2.1rem;
 }
 
-h2 { 
+h3 { 
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 h3,
 .side-content h2,
-.section-site-intro > p:first-of-type,
-.value__title {
-    font-size: 1.20rem;
+.value__title,
+.section-usercontent > p:first-of-type {
+    font-size: 1.2rem;
 }
 
-h3 {
-    // margin-top: .5rem;
+h4 {
     margin-bottom: .5rem;
 }
 
-h4,
-.side-content h3 {
+h5,
+.side-content h4 {
     font-size: 1.1rem;
     font-weight: normal;
     line-height: 1.35;

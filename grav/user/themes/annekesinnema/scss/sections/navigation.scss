@@ -37,6 +37,7 @@
 
     #menu-open:target .mobile__navigation {
         z-index: 3;
+        width: 100%;
 
         &::before {
             content: ' ';
