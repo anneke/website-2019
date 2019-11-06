@@ -34,6 +34,19 @@ html, body {
     text-transform: uppercase;
 }
 
+.site-header__title, .site-navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    .langswitcher {
+        top: 0;
+        transform: none;
+        margin: 0;
+        text-transform: none;
+    }
+}
+
 .logo {
     margin-right: $whitespace-small;       
 }

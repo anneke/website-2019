@@ -146,18 +146,6 @@ h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
   margin-top: 1.35rem;
 }
 
-.site-header__title {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.site-header__title .langswitcher {
-  top: 0;
-  transform: none;
-  margin: 0;
-  text-transform: none;
-}
-
 h1 {
   font-size: 2.1rem;
 }
@@ -440,6 +428,18 @@ html, body {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
+}
+
+.site-header__title, .site-navigation {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.site-header__title .langswitcher, .site-navigation .langswitcher {
+  top: 0;
+  transform: none;
+  margin: 0;
+  text-transform: none;
 }
 
 .logo {
@@ -924,9 +924,6 @@ dt {
   .ul-inline > li {
     display: inline-block;
     margin-left: 1.665rem;
-  }
-  .ul-inline > li a {
-    padding-bottom: 1rem;
   }
 }
 
