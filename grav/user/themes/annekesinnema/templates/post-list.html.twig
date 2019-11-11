@@ -5,7 +5,7 @@
     {% block content %}
 
         <article class="blog-post">
-        {% for post in collection|slice(0, 1) %}
+        {% for page in collection|slice(0, 1) %}
                 <header class="blog-post__header">
                     <div class="blog-post__title">
                         <h2 class="blog-post__title">
@@ -64,9 +64,10 @@
 
                 <nav class="blog-post__nav">
                     {% for post in collection|slice(1, 1) %}
-                        <a href="{{ page.url }}" class="next">
+                        <a href="{{ post.url }}" class="next">
                             <span class="arrow">←</span>
                             {{ 'previous'|t }}
+                            {{ post.title }}
                         </a>
                     {% endfor %} 
                 </nav>

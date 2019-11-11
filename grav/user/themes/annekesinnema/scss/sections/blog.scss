@@ -71,42 +71,6 @@
     grid-row: 1;
 }
 
-pre {
-    padding: $whitespace-small;
-    margin: 0;
-
-    &::before,
-    &::after {
-        border-top: 1px solid $red;
-        color: $red;
-        height: 1px;
-        content: ' ';
-        display: block;
-        width: 50%;
-        position: relative;
-        left: 0;
-    }
-
-    &::before {
-        content: 'Code ';
-        font-family: 'effra', Arial, Helvetica, sans-serif;
-        color: $red;
-        font-size: .7rem;
-        top: -1rem;
-        padding-top: 1rem;
-    }
-
-    &::after {
-        bottom: -1rem;
-        padding-bottom: 1rem;
-    }
-}
-
-code {
-    color: $red;
-    font-size: inherit;
-}
-
 .next,
 .prev {
     box-sizing: border-box;

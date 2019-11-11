@@ -57,16 +57,16 @@
 
                 <nav class="blog-post__nav">
                     {% if not page.isFirst %}
-                        <a href="{{ page.prevSibling.url }}" class="prev">
-                            <span class="arrow">←</span>
-                            {{ 'previous'|t }}
+                        <a href="{{ page.nextSibling.url }}" class="next">
+                            {{ 'next'|t }}
+                            <span class="arrow">→</span>
                         </a>
                     {% endif %}
 
                     {% if not page.isLast %}
-                        <a href="{{ page.nextSibling.url }}" class="next">
-                            {{ 'next'|t }}
-                            <span class="arrow">→</span>
+                        <a href="{{ page.prevSibling.url }}" class="prev">
+                            <span class="arrow">←</span>
+                            {{ 'previous'|t }}
                         </a>
                     {% endif %}
                 </nav>

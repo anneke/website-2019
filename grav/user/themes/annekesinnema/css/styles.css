@@ -240,6 +240,38 @@ p:empty {
   background: url("../images/link-purple.svg") transparent no-repeat center center;
 }
 
+pre {
+  padding: 1.11rem;
+  margin: 0;
+}
+pre::before, pre::after {
+  border-top: 1px solid #B84D68;
+  color: #B84D68;
+  height: 1px;
+  content: " ";
+  display: block;
+  width: 50%;
+  position: relative;
+  left: 0;
+}
+pre::before {
+  content: "Code ";
+  font-family: "effra", Arial, Helvetica, sans-serif;
+  color: #B84D68;
+  font-size: 0.7rem;
+  top: -2rem;
+  padding-top: 1rem;
+}
+pre::after {
+  bottom: -1rem;
+  padding-bottom: 1rem;
+}
+
+code {
+  color: #B84D68;
+  font-size: inherit;
+}
+
 .form-input-wrapper,
 .form-textarea-wrapper {
   position: relative;
@@ -1028,38 +1060,6 @@ dt {
 .blog-post__nav {
   grid-column: 1/2;
   grid-row: 1;
-}
-
-pre {
-  padding: 1.11rem;
-  margin: 0;
-}
-pre::before, pre::after {
-  border-top: 1px solid #B84D68;
-  color: #B84D68;
-  height: 1px;
-  content: " ";
-  display: block;
-  width: 50%;
-  position: relative;
-  left: 0;
-}
-pre::before {
-  content: "Code ";
-  font-family: "effra", Arial, Helvetica, sans-serif;
-  color: #B84D68;
-  font-size: 0.7rem;
-  top: -1rem;
-  padding-top: 1rem;
-}
-pre::after {
-  bottom: -1rem;
-  padding-bottom: 1rem;
-}
-
-code {
-  color: #B84D68;
-  font-size: inherit;
 }
 
 .next,

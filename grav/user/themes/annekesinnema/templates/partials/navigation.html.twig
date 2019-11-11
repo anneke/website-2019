@@ -36,7 +36,7 @@
 {% macro loop(page) %}
     {% for p in page.children.visible %}
         {% set current_page = (p.active or p.activeChild) ? 'current' : '' %}
-        {% set current_main = (p.active or p.activeChild) ? '#main' : '' %}
+        {% set current_main = (p.active) ? '#main' : '' %}
         <li>
             <a href="{{ p.url }}{{ current_main }}" class="{{ current_page }}">
                 {{ p.menu }}
