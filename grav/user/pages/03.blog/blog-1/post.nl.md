@@ -1,7 +1,6 @@
 ---
 title: Blog 1
 date: 16:00 10-07-2015
-headline: Get ready to fall in love :)
 metadata:
     'og:title': Blog Post Title
     'og:type': article

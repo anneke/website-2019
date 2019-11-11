@@ -1,7 +1,6 @@
 ---
 title: Blog 2
 date: 17:00 10-07-2015
-headline: Get ready to fall in love :)
 metadata:
     'og:title': Blog Post Title
     'og:type': article
@@ -36,7 +35,7 @@ Paragrafen worden opgemaakt zoals deze tekst. Een paragraaf is een basis element
 
 Paragrafen moeten gescheiden worden door een lege lijn. Basis opmaken zoals *cursief* en **vet** worden ondersteund. Dit kan, *zoals **hier** ook genest* worden.
 
-![Alt Text](post.jpeg)
+![Alt Text](post.jpeg?sizes=80vw)
 
 ``` 
 <html>
