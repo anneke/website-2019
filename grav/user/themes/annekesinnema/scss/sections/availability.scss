@@ -16,8 +16,8 @@
 
 .section-availability--mobile {
     margin-bottom: 0;
-    margin-left: -$padding-left-and-right;
-    margin-right: -$padding-left-and-right;
+    margin-left: 1rem;
+    margin-right: 1rem;
     margin-top: 0;
 
     @media screen and (min-width: $tablet-portrait) {

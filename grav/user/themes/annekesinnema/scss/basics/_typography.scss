@@ -1,9 +1,9 @@
 html {
-    font-size: 18px;
+    font-size: 16px;
 
-    // @media screen and (min-width: $tablet-landscape) {
-    //     font-size: 18px;
-    // } 
+    @media screen and (min-width: $tablet-portrait) {
+        font-size: 18px;
+    } 
 
     @media screen and (min-width: $desktop) {
         font-size: 25px;
@@ -52,7 +52,11 @@ h2,
 .values__title,
 .side-content.side-content--post h2,
 .side-content.side-content--post-list h2 { 
-    font-size: 2.1rem;
+    font-size: 1.6rem;
+
+    @media screen and (min-width: $tablet-portrait) {
+        font-size: 2.1rem;
+    }
 }
 
 h3 { 
@@ -63,7 +67,8 @@ h3 {
 h3,
 .side-content h2,
 .value__title,
-.section-usercontent > p:first-of-type {
+.section-usercontent > p:first-of-type,
+.blog-post__body > p:first-of-type {
     font-size: 1.2rem;
 }
 
@@ -121,9 +126,14 @@ p {
     background: $link-svg-purple transparent no-repeat center center;
 }
 
-
 pre {
-    padding: $whitespace-small;
+    padding: $whitespace-small 0;
+
+
+    @media screen and (min-width: $tablet-portrait) {
+        padding: $whitespace-small;
+    }
+
     margin: 0;
 
     &::before,

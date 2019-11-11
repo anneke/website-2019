@@ -65,9 +65,9 @@
                 <nav class="blog-post__nav">
                     {% for post in collection|slice(1, 1) %}
                         <a href="{{ post.url }}" class="next">
-                            <span class="arrow">←</span>
-                            {{ 'previous'|t }}
-                            {{ post.title }}
+                            {# <span class="arrow">←</span> #}
+                            <span aria-hidden="true">&laquo;</span>
+                            {{ 'Previous blog'|t }}
                         </a>
                     {% endfor %} 
                 </nav>

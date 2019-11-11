@@ -59,13 +59,15 @@
                     {% if not page.isFirst %}
                         <a href="{{ page.nextSibling.url }}" class="next">
                             {{ 'next'|t }}
-                            <span class="arrow">→</span>
+                            <span aria-hidden="true">&raquo;</span>
+                            {# <span class="arrow">→</span> #}
                         </a>
                     {% endif %}
 
                     {% if not page.isLast %}
                         <a href="{{ page.prevSibling.url }}" class="prev">
-                            <span class="arrow">←</span>
+                            {# <span class="arrow">←</span> #}
+                            <span aria-hidden="true">&laquo;</span>
                             {{ 'previous'|t }}
                         </a>
                     {% endif %}

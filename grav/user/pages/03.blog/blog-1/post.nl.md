@@ -18,7 +18,10 @@ metadata:
 taxonomy:
     category:
         - Toegankelijkheid 
-    tag: []
+        - Eten
+        - Mexico
+        - Persoonlijk
+    tag: [toetjes, kittens, dogs]
 imagename: toet.png
 imagealt: a picture of a post
 ---
