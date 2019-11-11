@@ -1,4 +1,147 @@
-.post header img {
-    width: 100%;
+.blog-post__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+    
+.blog-post-grid {
+    display: grid;
+    grid-auto-columns: 4fr 1fr 19fr;
+}
+
+.blog-post__title {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+}
+
+.blog-post__time {
+    color: $purple;
+}
+
+.blog-post__save-button {
+    color: $purple;
+    background: white;
+    text-decoration: underline;
+    height: max-content;
+    width: max-content;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        margin-left: 10px;
+    }
+}
+
+.blog-post__image,
+.blog-post__body img {
     height: auto;
+    width: 100%;
+    margin: 1rem auto 1rem auto;
+}
+
+.blog-post__body {
+    grid-column: 3 / 4;
+    grid-row: 1;
+
+    blockquote {
+        width: 50%;
+        font-size: 1.8rem;
+        margin: 2rem auto 1rem auto;
+        
+        &::before {
+            background: black;
+            height: 1px;
+            content: ' ';
+            display: block;
+            width: 50%;
+            position: relative;
+            left: 0;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.blog-post__nav {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+pre {
+    padding: $whitespace-small;
+    margin: 0;
+
+    &::before,
+    &::after {
+        border-top: 1px solid $red;
+        color: $red;
+        height: 1px;
+        content: ' ';
+        display: block;
+        width: 50%;
+        position: relative;
+        left: 0;
+    }
+
+    &::before {
+        content: 'Code ';
+        font-family: 'effra', Arial, Helvetica, sans-serif;
+        color: $red;
+        font-size: .7rem;
+        top: -1rem;
+        padding-top: 1rem;
+    }
+
+    &::after {
+        bottom: -1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+code {
+    color: $red;
+    font-size: inherit;
+}
+
+.next,
+.prev {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    // border: 2px solid $purple;
+    // padding: 5px 10px;
+}
+
+.blog-post__tag-list {
+    padding: 0;
+    margin: 0;
+
+    li {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+    }
+}
+
+.blog-post__tag {
+    display: inline-block;
+    margin-right: $whitespace-small;
+    padding: 1px 5px;
+    color: $purple;
+    border: 1px solid $purple;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: .8rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        background-color: $purple;
+        color: $white;
+        text-decoration: none;
+    }
 }

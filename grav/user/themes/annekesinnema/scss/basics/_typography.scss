@@ -49,7 +49,9 @@ h1 {
 }
 
 h2,
-.values__title { 
+.values__title,
+.side-content.side-content--post h2,
+.side-content.side-content--post-list h2 { 
     font-size: 2.1rem;
 }
 
@@ -65,8 +67,14 @@ h3,
     font-size: 1.2rem;
 }
 
+.side-content--post h2,
+.side-content--post-list h2 {
+    margin-top: 2rem;
+}
+
 h4 {
     margin-bottom: .5rem;
+    font-weight: bolder;
 }
 
 h5,
@@ -99,8 +107,7 @@ p {
     display: inline-block;
     width: 7px;
     height: 14px;
-    margin-right: 5px;
-    background: black;
+    margin-right: 7px;
     position: relative;
     top: 2px;
     content: " ";

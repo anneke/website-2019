@@ -52,14 +52,11 @@
             </div>
         </main>
 
-        <aside class="side-content side-content--{{ page.slug }}">
-            {% if (page.template != 'post-list') or (page.template != 'post') %}
-              {% include 'partials/availability.html.twig' with {
-                'truncate': false, 
-              } %}  
-            {% endif %}
-
+        <aside class="side-content side-content--{{ page.template }}">
             {% block sidebar %}
+                {% include 'partials/availability.html.twig' with {
+                  'truncate': false, 
+                } %}
             {% endblock %}
 
             {# {% include 'partials/referrals.html.twig' %} #}

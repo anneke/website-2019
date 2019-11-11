@@ -9,6 +9,7 @@ en:
   DAYS_OF_THE_WEEK: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
   servicesheader: What can I help you with?
   valuesheader: Why work with me?
+  more_blogs: More blogs
   latest_blogs: Latest blogs
   tags: Tags
   blogs_per_category: Blogs per category
@@ -27,6 +28,7 @@ nl:
   DAYS_OF_THE_WEEK: [maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag]
   servicesheader: Waar kan ik je mee helpen?
   valuesheader: Waarom moet je mij hebben?
+  more_blogs: Meer blogs
   latest_blogs: Laatste blogs
   tags: Tags
   blogs_per_category: Blogs per categorie

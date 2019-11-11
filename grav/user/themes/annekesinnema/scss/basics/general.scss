@@ -46,6 +46,26 @@ li {
     list-style-image: $list-svg-purple;
 }
 
+.post-list {
+    padding: 0;
+}
+
+.post-list li {
+    list-style-type: none;
+    list-style-image: none;
+
+    ::before {
+        background: $link-svg-purple transparent no-repeat center center;
+        display: inline-block;
+        width: 7px;
+        height: 14px;
+        margin-right: 7px;
+        position: relative;
+        top: 2px;
+        content: " ";
+    }
+}
+
 a.skip-main {
     left:-999px;
     position:absolute;

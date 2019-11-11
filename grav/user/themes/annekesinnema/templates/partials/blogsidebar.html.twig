@@ -1,23 +1,28 @@
-{% set collection = page.collection %} 
+{% set collection = page.find('/blog').children.published %}
+        
 {% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
 {% set categorylist = taxonomylist.get() %}   
 
-{% if collection|length > 1 %}
+{% if collection|length >= 1 %}
 
-    {% if collection|length > 1 %}
-        <section class="widget">
-            <h3 class="widget__title">{{ 'latest_blogs'|t }}</h3>
-            <ul class="post-list">
-                {% for post in collection %}
-                    <li>
+    <h2>{{ 'more_blogs'|t }}</h2>
+
+    <section class="widget">
+        <h3 class="widget__title">{{ 'latest_blogs'|t }}</h3>
+        <ul class="post-list">
+            {% for post in collection %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }} - {{ post.header.headline }}</a>
+                    <br />
+                    <time timestamp="{{ page.date|date("d-n-Y") }}" class="a11y">
                         {{ post.date|date('d') }}
-                        {{ 'MONTHS_OF_THE_YEAR'|ta(post.date|date('n') - 1) }} 
-                        <a href="{{ post.url }}">{{ post.title }} - {{ post.header.headline }}</a>
-                    </li>
-                {% endfor %} 
-            </ul>
-        </section>
-    {% endif %}
+                        {{ 'MONTHS_OF_THE_YEAR'|ta(post.date|date('n') - 1) }}
+                        {{ post.date|date('Y') }}
+                    </time>
+                </li>
+            {% endfor %} 
+        </ul>
+    </section>
 
     {% if taxlist and taxlist['tag']|length > 3 %}
         <section class="widget">
@@ -56,13 +61,8 @@
         </section>
     {% endif %} 
 
-{% endif %}
-
-{# 
-{% if 
-    collection|length <= 1 
-%}
+{% else %}
     {% include 'partials/availability.html.twig' with {
         'truncate': false, 
     } %}
-{% endif %} #}
+{% endif %} 
