@@ -17,11 +17,15 @@
     .form-input-wrapper,
     .form-textarea-wrapper  {
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
         padding: 0;
 
         input, label, textarea {
             padding: .675rem;
+            display: flex;
+            width: 100%;
+            align-items: center;
         }
 
         input, textarea {
@@ -41,7 +45,6 @@ textarea {
     font-size: inherit;
     line-height: inherit;
     position: relative;
-    box-sizing: border-box;
     font-family: inherit;
     font-size: inherit;
 }
@@ -108,7 +111,7 @@ button, [type="submit"] {
             border-left: 2px solid $pink;
             border-right: 2px solid $pink;
 
-            @media screen and (min-width: $tablet-portrait) {
+            @media screen and (min-width: $tablet-landscape) {
                 flex-direction: row;
             }
         }
