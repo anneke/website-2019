@@ -63,13 +63,14 @@ html, body {
 
 .site-header__title,
 .section,
-.side-content,
-footer > section {
-    padding: 1rem;
-
+.side-content {
     @media screen and (min-width: $tablet-portrait) {
         padding: 0;
     }
+}
+
+.site-footer > section {
+    padding: 1rem;
 }
 
 .logo {
@@ -103,13 +104,14 @@ footer > section {
     &::before {
         background: $purple;
         content: ' ';
-        width: calc(100% + 15vw);
+        width: 100%;
         height: 100%;
         display: block;
         position: absolute;
         z-index: -1;
-        left: -10vw;
         top: 0;
+        left: 0;
+        box-sizing: border-box;
     }
 }
 
@@ -120,29 +122,21 @@ footer > section {
 .site-main {
     grid-template-rows: auto;
     padding-bottom: ($whitespace-medium * 2);
-
-    @media screen and (min-width: $tablet-portrait) {
         display: grid; 
         grid-template-columns: 
-                $padding-left-and-right
             [main-start] 
                 27fr
             [main-end] 
-                $padding-left-and-right;
-    }  
-
-    @media screen and (min-width: $tablet-landscape) {
-        display: grid; 
-        grid-template-columns: 
-                $padding-left-and-right
-            [main-start] 
-                27fr
-            [main-end]
-                2fr 
+                minmax(50px, 2fr) 
             [sidebar-start] 
                 11fr
             [sidebar-end] 
                 $padding-left-and-right;
+}
+
+@media screen and (max-width: 52.5em) {
+    .services__grid {
+        grid-gap: 0 .5rem;
     }
 }
 
@@ -184,21 +178,36 @@ footer > section {
             grid-row: auto;
         }
 
+        .section-services {
+            grid-row: 2;
+        }
+
         .main-content {
             display: grid; 
             grid-template-columns: 
+                [servicebg-start] 
+                    $padding-left-and-right
                 [main-start content-start values-start] 
                     25fr
                 [content-end] 
-                    2fr 
-                [values-end];
+                    2fr
+                [values-end servicebg-end];
             grid-template-rows: auto;
         }
     }
 
-    // .main-content > 
     .section {
         padding: $whitespace-medium 0;
+    }
+
+    .bg-services {
+        grid-area: servicebg;
+        grid-row: 2 / 4;
+        background-color: $light-blue;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom-right-radius: 50%;
     }
 
     .section-services {
@@ -206,37 +215,26 @@ footer > section {
         padding-top: $whitespace-large;
         padding-bottom: $whitespace-large;
 
-        &::before,
-        &::after {
-            content: " ";
-            display: block;
-            background-color: $light-blue;
-            border-bottom-right-radius: 40%;
-            border-bottom-left-radius: 0;
-            position: absolute;
-            width: calc(100% + 400px);
-            height: calc(100%);
-            z-index: -1;
-            left: -$padding-left-and-right;
-            top: -0px;
-        }
-        
-        .services__grid {
-            display: grid;
-            grid-template-columns: 14fr 1fr 14fr;
-            grid-template-rows: repeat(2, min-content $whitespace-medium $whitespace-medium $whitespace-medium) min-content;
-            grid-template-areas: 
-                "service-1 . service-2"
-                " .        . service-2"
-                "service-3 . service-2"
-                "service-3 . .        "
-                "service-3 . service-4"
-                "service-3 . service-4"
-                " .        . .        "
-                "service-5 . service-6"
-                "service-5 . service-6";
+        &::before {
+            content: none;
         }
     }
+        
+    .services__grid {
+        display: grid;
+        grid-template-columns: 14fr 1fr 14fr;
+        grid-template-rows: repeat(2, min-content $whitespace-medium $whitespace-medium $whitespace-medium) min-content;
+        grid-template-areas: 
+            "service-1 . service-2"
+            " .        . service-2"
+            "service-3 . service-2"
+            "service-3 . .        "
+            "service-3 . service-4"
+            "service-3 . service-4"
+            " .        . .        "
+            "service-5 . service-6"
+            "service-5 . service-6";
+        }
 
         .service-1 {
             grid-area: service-1;
@@ -274,20 +272,17 @@ footer > section {
         position: relative;
         display: grid; 
         grid-template-columns: 
-                    $padding-left-and-right
                 [header-start footer-start] 
                     14fr
                 [header-end form-start purplebg-start] 
                     1fr
                     12fr    
                     2fr
-                    [form-end]  
+                [form-end]  
                     2fr
                 [summary-start] 
                     11fr
-                [summary-end footer-end] 
-                    $padding-left-and-right
-                [purplebg-end];
+                [summary-end footer-end purplebg-end];
         grid-template-rows: repeat(2, min-content);
 
         &::before,
@@ -301,12 +296,6 @@ footer > section {
             position: absolute;
             z-index: -1;
         }
-
-        // &::after {
-        //     width: 50vw;
-        //     z-index: -1;
-        //     right: -50vw;
-        // }
     }
 
     .site-footer__contactform,
@@ -329,8 +318,7 @@ footer > section {
         padding-left: $whitespace-medium;
     }
 
-    .site-footer form {
-        margin-left: -($whitespace-medium * 2);
+    .site-footer form { 
         color: black;
     }
 
@@ -381,9 +369,6 @@ footer > section {
     .side-content--post-list {
         justify-content: flex-start;
     }
-}
-
-@media screen and (min-width: $tablet-landscape) {
 
     .side-content {
         grid-area: sidebar;
@@ -400,5 +385,32 @@ footer > section {
     .side-content--post,
     .side-content--post-list {
         justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: $tablet-landscape) {
+    // .site-footer {
+    //     position: relative;
+    //     display: grid; 
+    //     grid-template-columns: 
+    //                 $padding-left-and-right
+    //             [header-start footer-start] 
+    //                 14fr
+    //             [header-end form-start purplebg-start] 
+    //                 1fr
+    //                 12fr    
+    //                 2fr
+    //                 [form-end]  
+    //                 2fr
+    //             [summary-start] 
+    //                 11fr
+    //             [summary-end footer-end] 
+    //                 $padding-left-and-right
+    //             [purplebg-end];
+    //     grid-template-rows: repeat(2, min-content);
+    // }
+
+    .site-footer form {
+        margin-left: -($whitespace-medium * 2);
     }
 }

@@ -1,6 +1,4 @@
-
-
-@media screen and (min-width:900px){ 
+@media screen and (min-width: $tablet-portrait){ 
     .mobile-only {
         display: none;
     }
