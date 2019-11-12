@@ -10,7 +10,6 @@ html, body {
 
     @media screen and (min-width: $tablet-portrait) {
         max-width: $max-content-width;
-        max-width: 90vw; 
     }
 }
 
@@ -118,13 +117,40 @@ footer > section {
     padding-top: 0;
 }
  
+.site-main {
+    grid-template-rows: auto;
+    padding-bottom: ($whitespace-medium * 2);
+
+    @media screen and (min-width: $tablet-portrait) {
+        display: grid; 
+        grid-template-columns: 
+                $padding-left-and-right
+            [main-start] 
+                27fr
+            [main-end] 
+                $padding-left-and-right;
+    }  
+
+    @media screen and (min-width: $tablet-landscape) {
+        display: grid; 
+        grid-template-columns: 
+                $padding-left-and-right
+            [main-start] 
+                27fr
+            [main-end]
+                2fr 
+            [sidebar-start] 
+                11fr
+            [sidebar-end] 
+                $padding-left-and-right;
+    }
+}
 
 @media screen and (min-width: $tablet-portrait) {
-
     .container {
         padding: 0;
     }
-    
+
     .site-header {
         justify-items: flex-end;
         flex-direction: row;
@@ -135,22 +161,6 @@ footer > section {
             text-align: right;
             text-transform: none;
         }
-    }
-
-    .site-main {
-        display: grid; 
-        grid-template-columns: 
-                $padding-left-and-right
-            [main-start] 
-                27fr
-            [main-end]
-                2fr 
-            [sidebar-start] 
-                11fr
-            [sidebar-end main-end] 
-                $padding-left-and-right;
-        grid-template-rows: auto;
-        padding-bottom: ($whitespace-medium * 2);
     }
 
     .main-area {
@@ -186,23 +196,6 @@ footer > section {
         }
     }
 
-    .side-content {
-        grid-area: sidebar;
-        grid-row: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .widget__title {
-            margin-top: $whitespace-small;
-        }
-    }
-
-    .side-content--post,
-    .side-content--post-list {
-        justify-content: flex-start;
-    }
-
     // .main-content > 
     .section {
         padding: $whitespace-medium 0;
@@ -227,14 +220,8 @@ footer > section {
             left: -$padding-left-and-right;
             top: -0px;
         }
-
-        &::after {
-            border-radius: 0;
-            width: 50vw;
-            left: -50vw;
-        }
         
-        .grid {
+        .services__grid {
             display: grid;
             grid-template-columns: 14fr 1fr 14fr;
             grid-template-rows: repeat(2, min-content $whitespace-medium $whitespace-medium $whitespace-medium) min-content;
@@ -315,11 +302,11 @@ footer > section {
             z-index: -1;
         }
 
-        &::after {
-            width: 50vw;
-            z-index: -1;
-            right: -50vw;
-        }
+        // &::after {
+        //     width: 50vw;
+        //     z-index: -1;
+        //     right: -50vw;
+        // }
     }
 
     .site-footer__contactform,
@@ -357,9 +344,7 @@ footer > section {
         grid-column: footer-start / footer-end;
         grid-row: 2;
     }
-}
 
-@media screen and (min-width: $tablet-portrait) {
     .page-post,
     .page-post-list {
         .side-content {
@@ -378,5 +363,42 @@ footer > section {
                 top: -0px;
             }
         }
+    }
+
+    .side-content {
+        grid-area: main;
+        grid-row: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .widget__title {
+            margin-left: $whitespace-small;
+        }
+    }
+
+    .side-content--post,
+    .side-content--post-list {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: $tablet-landscape) {
+
+    .side-content {
+        grid-area: sidebar;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .widget__title {
+            margin-top: $whitespace-small;
+        }
+    }
+
+    .side-content--post,
+    .side-content--post-list {
+        justify-content: flex-start;
     }
 }

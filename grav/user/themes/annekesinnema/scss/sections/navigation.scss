@@ -1,4 +1,4 @@
-@media screen and (max-width: $tablet-portrait) {
+@media screen and (max-width: $tablet-landscape) {
     .navigation__list {
         display: none;
     }
@@ -131,4 +131,3 @@
         margin-left: $whitespace-medium;
     }
 }
-

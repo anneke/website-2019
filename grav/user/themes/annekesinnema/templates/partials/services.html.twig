@@ -1,7 +1,7 @@
 <section class="section section-services">
-    <h2 class="services-title">{{ 'servicesheader'|t }}</h2>
+    <h2 class="services__title">{{ 'servicesheader'|t }}</h2>
 
-    <div class="grid">
+    <div class="services__grid">
         {% set services_collection = page.find('/services').children.published %}
         {% for service in services_collection %}
             {% include 'partials/service-item.html.twig' with {'number': loop.index} %}
