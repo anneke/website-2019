@@ -3,6 +3,8 @@ title: Curious?
 subtitle: Let's meet!
 intro: Do you have a job for me, a question or do you just want to meet with me to talk about front-end development? I'm always up for meeting up for coffee (as long as you don't mind me having tea)!
 
+expandedTitle: Contact me
+
 adresLabel: address
 kvkLabel: Dutch chamber of commerce (KvK)
 btwLabel: Dutch VAT number

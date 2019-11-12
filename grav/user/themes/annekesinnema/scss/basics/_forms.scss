@@ -2,9 +2,9 @@
 .form-textarea-wrapper  {
     position: relative;
     border-top: 0;
-    border-left: 2px solid $pink;
-    border-right: 2px solid $pink;
-    border-bottom: 2px solid $pink;
+    border-left: 1px solid $pink;
+    border-right: 1px solid $pink;
+    border-bottom: 1px solid $pink;
     padding: .675rem;
 
     input,
@@ -40,13 +40,22 @@ input[type="tel"],
 input[type="email"], 
 textarea {
     background-color: white;
+    display: block;
     border: 0;
+    width: 100%;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
     position: relative;
     font-family: inherit;
     font-size: inherit;
+    padding: .675rem;
+
+    &:focus {
+        outline-offset: initial;
+        outline-color: $purple;
+        outline-width: thick;
+    }
 }
 
 textarea {
@@ -99,7 +108,11 @@ button, [type="submit"] {
 
 #callmeplease {
     background: white;
-    border: 2px solid $pink;
+    border: 1px solid $pink;
+
+    &:focus-within {
+        box-shadow: 0 0 20px 2px $pink;
+    }
 }
 
     .form-field--checkboxes {
@@ -108,8 +121,8 @@ button, [type="submit"] {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            border-left: 2px solid $pink;
-            border-right: 2px solid $pink;
+            border-left: 1px solid $pink;
+            border-right: 1px solid $pink;
 
             @media screen and (min-width: $tablet-landscape) {
                 flex-direction: row;

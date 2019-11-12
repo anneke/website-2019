@@ -74,7 +74,11 @@ h3,
 
 .side-content--post h2,
 .side-content--post-list h2 {
-    margin-top: 2rem;
+    margin-top: 0;
+    
+    @media screen and (min-width: $tablet-portrait) {
+        margin-top: 2rem;
+    }
 }
 
 h4 {

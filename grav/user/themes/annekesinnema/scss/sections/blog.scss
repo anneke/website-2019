@@ -18,7 +18,7 @@
 }
 
 .blog-post__time {
-    color: $purple;
+    // color: $purple;
 }
 
 .blog-post__save-button {
@@ -42,8 +42,8 @@
 .blog-post__image,
 .blog-post__body img {
     height: auto;
-    width: calc(100% + 2rem);
-    margin: 1rem -1rem;
+    width: calc(100% + 8rem);
+    margin: 1rem -2rem;
 
     @media screen and (min-width: $tablet-portrait) {
         width: 100%;
@@ -57,7 +57,7 @@
 
     blockquote {
         font-size: 1.8rem;
-        margin: 2rem auto 1rem auto;
+        margin: 2rem auto 1.5rem auto;
         
         &::before {
             background: black;
@@ -81,10 +81,11 @@
 .blog-post__nav {
     margin-top: 1rem;
     border-top: 1px solid $purple;
-    border-bottom: 2px solid $purple;
     padding: $whitespace-small 0 $whitespace-medium;
 
     @media screen and (min-width: $tablet-portrait) {
+        border: 0;
+        padding: 0;
         grid-column: 1 / 2;
         grid-row: 1;
         margin-top: 0;
@@ -95,8 +96,6 @@
 .prev { 
     width: 100%;
     text-align: center;
-    // border: 2px solid $purple;
-    // padding: 5px 10px;
 }
 
 .blog-post__tag-list {
@@ -139,6 +138,11 @@
     border-top: 1px solid $pink;
 
     @media screen and (max-width: $tablet-portrait) {
+        border: 0;
+        padding: 0;
+        display: inherit;
+        margin: 0;
+
         + .post-list {
             display: none;
         }

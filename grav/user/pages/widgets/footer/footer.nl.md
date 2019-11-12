@@ -3,6 +3,8 @@ title: Benieuwd?
 subtitle: Laten we eens kennis maken!
 intro: Heb je een concrete opdracht of een vraagstuk waar je hulp bij nodig hnebt, of wil je gewoon een keer kennis maken? Ik ben altijd in voor een kop thee om te kijken of we iets voor elkaar kunnen betekenen!
 
+expandedTitle: Neem contact met me op
+
 adresLabel: adres
 kvkLabel: Kamer van Koophandel
 btwLabel: BTW nummer

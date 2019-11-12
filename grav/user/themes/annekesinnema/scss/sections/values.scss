@@ -6,9 +6,16 @@
     }
 }
 
-@media screen and (min-width: $tablet-portrait) {
+@media screen and (min-width: $tiny-screen) {
     .section-values .grid {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0 $whitespace-large;
+    }
+}
+
+@media screen and (min-width: $tablet-portrait) {
+    .section-values .grid {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 0 $whitespace-large;
     }

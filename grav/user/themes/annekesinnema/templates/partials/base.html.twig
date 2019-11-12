@@ -33,7 +33,6 @@
 
     <div class="site-main">
         <main class="main-area" role="main" id="main">
-
             <div class="main-content">
               <div class="bg-services"></div>
 
@@ -41,7 +40,9 @@
                 {% block content %}{% endblock %}
               </section>
 
-              {% include 'partials/availability.html.twig' with {'truncate': true} %}
+              {% if not page.slug == 'contact' %}
+                {% include 'partials/availability.html.twig' with {'truncate': true} %}
+              {% endif %}
 
               {% if page.home %}
                 {% include 'partials/services.html.twig' with {'truncate': true} %}
@@ -63,6 +64,7 @@
 
             {# {% include 'partials/referrals.html.twig' %} #}
         </aside>
+        <div class="bg-sidecontent"></div>
     </div>
 
     {% block footer %}
