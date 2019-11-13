@@ -1,14 +1,14 @@
-title: Grav                                 # Name of the site
-default_lang: en                            # Default language for site (potentially used by theme)
+title: Anneke Sinnema                       # Name of the site
+default_lang: nl                            # Default language for site (potentially used by theme)
 
 author:
-  name: John Appleseed                      # Default author name
-  email: 'john@example.com'                 # Default author email
+  name: Anneke Sinnema                      # Default author name
+  email: 'mail@annekesinnema.nl'            # Default author email
 
 taxonomies: [category,tag]                  # Arbitrary list of taxonomy types
 
 metadata:
-  description: 'My Grav Site'               # Site description
+  description: 'Anneke Sinnema, front-end webdeveloper'               # Site description
 
 summary:
   enabled: true                             # enable or disable summary of page
