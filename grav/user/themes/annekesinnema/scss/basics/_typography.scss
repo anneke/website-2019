@@ -132,13 +132,11 @@ p {
 
 pre {
     padding: $whitespace-small 0;
-
+    margin: 0;
 
     @media screen and (min-width: $tablet-portrait) {
         padding: $whitespace-small;
     }
-
-    margin: 0;
 
     &::before,
     &::after {
@@ -170,4 +168,6 @@ pre {
 code {
     color: $red;
     font-size: inherit;
+    display: block;
+    word-break: break-word;
 }

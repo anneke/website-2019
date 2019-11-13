@@ -4,7 +4,7 @@ html, body {
 }    
 
 .container {
-    margin: 0px auto;
+    margin: 0 auto;
     width: 100%; 
 
     @media screen and (min-width: $tablet-portrait) {
@@ -12,10 +12,7 @@ html, body {
     }
 }
 
-// HEADER
-
 .site-header {
-    text-transform: uppercase;
     display: flex; 
     flex-direction: column;
 }
@@ -23,6 +20,7 @@ html, body {
 .site-header__title {
     display: grid;
     grid-auto-columns: max-content max-content;
+    grid-auto-rows: 1fr 1fr;
     align-items: center;
     padding: 1rem;
 
@@ -41,19 +39,16 @@ html, body {
         margin-top: 0;
         margin-bottom: 0;
     }
+}
 
-    .langswitcher {
-        grid-column: 2 / 3;
-        grid-row: 2;
-        top: 0;
-        transform: none;
-        margin: 0 !important;
-        text-transform: none;
+.langswitcher {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    top: 0;
 
-        li {
-            margin-left: 0;
-            margin-right: 10px;
-        }
+    li {
+        margin-left: 0;
+        margin-right: $whitespace-tiny;
     }
 }
 
@@ -74,6 +69,7 @@ html, body {
 .section-services {
     position: relative;
 
+    // REFACTOR?
     &::before {
         content: " ";
         display: block;
@@ -82,12 +78,13 @@ html, body {
         border-bottom-left-radius: 50% 10%;
         position: absolute;
         width: 100%;
-        height: calc(100% + 10vw);
+        height: 100%;
         z-index: -1;
         left: 0;
-        top: -5vw;
+        top: -$whitespace-tiny;
     }
 }
+
 .side-content {
     padding: 2rem 2rem 1rem 2rem;
 }
@@ -108,7 +105,7 @@ html, body {
     .side-content {
         background-color: $light-blue;
         position: relative;
-        top: -15px;
+        top: $whitespace-small;
         z-index: -1;
 
         @media screen and (min-width: $tablet-portrait) {
@@ -157,22 +154,6 @@ html, body {
     padding-top: 0;
 }
 
-@media screen and (min-width: $tablet-portrait) {
-    .site-main {
-        grid-template-rows: auto;
-        padding-bottom: ($whitespace-medium * 2);
-            display: grid; 
-            grid-template-columns: 
-                [main-start] 
-                    27fr
-                [main-end] 
-                    minmax(50px, 2fr) 
-                [sidebar-start] 
-                    11fr
-                [sidebar-end];
-    }
-}
-
 @media screen and (max-width: 52.5em) {
     .services__grid {
         grid-gap: 0 .5rem;
@@ -180,14 +161,42 @@ html, body {
 }
 
 @media screen and (min-width: $tablet-portrait) {
-    .container {
-        padding: 0;
+    .site-main {
+        grid-template-rows: auto;
+        padding-bottom: ($whitespace-medium * 2);
+            display: grid; 
+            grid-template-columns: 
+                [main-start] 
+                    20fr
+                    2rem
+                [sidebar-start] 
+                    13fr
+                [main-end] 
+                    2fr 
+                [sidebar-end];
+    }
+
+    .main-content {
+        display: grid; 
+        grid-template-columns: 
+            [servicebg-start] 
+                $padding-left-and-right
+            [main-start content-start values-start] 
+                25fr
+            [content-end values-end]
+                2fr 
+            [servicebg-end];
+        grid-template-rows: auto;
+    }
+
+    .section-usercontent {
+        width: 50%;
     }
 
     .site-header {
         justify-items: flex-end;
         flex-direction: row;
-        padding: $whitespace-medium $padding-left-and-right 0;
+        padding: $whitespace-medium $padding-left-and-right $whitespace-medium;
         
         nav {
             margin-left: auto;
@@ -198,68 +207,48 @@ html, body {
 
     .main-area {
         grid-area: main;
-
-        &:first-child {
             grid-row: 1;
-        }
-
-        &:nth-child(2) {
-            grid-row: 2;
-        }
-
-        &:nth-child(3) {
-            grid-row: 3;
-        }
-
-        .section-usercontent,
-        .section-services {
-            grid-area: content;
-            grid-row: auto;
-        }
-
-        .section-services {
-            grid-row: 2;
-        }
-
-        .main-content {
-            display: grid; 
-            grid-template-columns: 
-                [servicebg-start] 
-                    $padding-left-and-right
-                [main-start content-start values-start] 
-                    25fr
-                [content-end] 
-                    2fr
-                [values-end servicebg-end];
-            grid-template-rows: auto;
-        }
     }
 
-    .bg-sidecontent {
-        grid-column: 2 / 4;
-        grid-row: 1 / 2;
-        background-color: $light-blue;
-        z-index: -1;
-        width: 100%;
-        height: 400px;
-        border-bottom-left-radius: 40%;
+    .section-usercontent,
+    .section-services {
+        grid-area: content;
+        grid-row: auto;
     }
 
     .bg-services {
         grid-area: servicebg;
-        grid-row: 2 / 4;
+        grid-row: 2 / 3;
         background-color: $light-blue;
         z-index: -1;
-        width: 120%;
+        width: 100%;
         height: 100%;
         border-bottom-right-radius: 35% 20%;
     }
 
+    .page-post,
+    .page-post-list {
+        .bg-sidecontent {
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+            background-color: $light-blue;
+            z-index: -1;
+            width: 100%;
+            height: 22rem;
+            border-bottom-left-radius: 40%;
+        }
+    }
+
     .section {
         padding: $whitespace-medium 0;
+
+        .main-content &:nth-child(2) {
+            padding-top: 0;
+        }
     }
 
     .section-services {
+        grid-row: 2;
         position: relative;
         padding-top: $whitespace-large;
         padding-bottom: $whitespace-large;
@@ -311,26 +300,27 @@ html, body {
 
     .section-values {
         grid-column: values;
+        grid-row: 3;
     }
 
     .list-values  {
-        padding-left: 0px;
+        padding-left: 0;
     }
 
     .site-footer {
         position: relative;
         display: grid; 
         grid-template-columns: 
-                [header-start footer-start] 
-                    14fr
-                [header-end form-start purplebg-start] 
-                    1fr
-                    12fr     
-                [form-end]  
-                    1fr
-                [summary-start] 
-                    14fr
-                [summary-end footer-end purplebg-end];
+            [header-start footer-start] 
+                14fr
+            [header-end form-start purplebg-start] 
+                1fr
+                12fr     
+            [form-end]  
+                1fr
+            [summary-start] 
+                14fr
+            [summary-end footer-end purplebg-end];
         grid-template-rows: repeat(2, min-content);
 
         &::before,
@@ -395,7 +385,7 @@ html, body {
         grid-area: sidebar;
         grid-row: 1;
         display: flex;
-        padding-right:        $padding-left-and-right;
+        padding: 0 $padding-left-and-right 0 0;
         flex-direction: column;
         justify-content: space-between;
         z-index: 1;
@@ -404,16 +394,76 @@ html, body {
             margin-top: $whitespace-small;
         }
     }
-}
-
-@media screen and (min-width: $tablet-portrait) {
+    
     .site-footer form {
         margin-left: -($whitespace-medium * 2);
     }
 }
 
 
+@media screen and (min-width: 970px) {
+    .site-main {
+        grid-template-rows: auto;
+        padding-bottom: ($whitespace-medium * 2);
+            display: grid; 
+            grid-template-columns: 
+                [main-start] 
+                    27fr
+                [main-end] 
+                    2rem
+                [sidebar-start] 
+                    13fr
+                [sidebar-end];
+    }
 
+    .main-content {
+        display: grid; 
+        grid-template-columns: 
+            [servicebg-start] 
+                $padding-left-and-right
+            [main-start content-start values-start] 
+                25fr
+            [content-end values-end servicebg-end];
+        grid-template-rows: auto;
+    }
+
+    .section-usercontent {
+        width: inherit;
+    }
+
+    .bg-services {
+        width: 120%;
+    }
+}
+
+@media screen and (min-width: $desktop-small) {
+    .site-main {
+        grid-template-rows: auto;
+        padding-bottom: ($whitespace-medium * 2);
+            display: grid; 
+            grid-template-columns: 
+                [main-start] 
+                    27fr
+                [main-end] 
+                    minmax(2.77rem, 2fr) 
+                [sidebar-start] 
+                    11fr
+                [sidebar-end];
+    }
+
+    .main-content {
+        display: grid; 
+        grid-template-columns: 
+            [servicebg-start] 
+                $padding-left-and-right
+            [main-start content-start values-start] 
+                25fr
+            [content-end] 
+                2fr
+            [values-end servicebg-end];
+        grid-template-rows: auto;
+    }
+}
 
 
 

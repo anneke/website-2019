@@ -9,7 +9,7 @@
         margin-top: 1rem;
     }
 
-    @media screen and (min-width: $tablet-portrait) {
+    @media screen and (min-width: $tablet-landscape) {
         padding: 2rem;
     }
 }
@@ -47,10 +47,14 @@
     background: $status-red;
 }
 
+
+.section-wetransfer {
+    margin-top: 1rem;
+}
+
 @media screen and (min-width: $tablet-portrait) {
     .section-wetransfer {
         font-size: .9rem;
         line-height: inherit;
-        margin-top: 1rem;
     }
 }

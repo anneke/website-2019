@@ -1,7 +1,8 @@
 $tiny-screen: 25em; // 400px
 $tablet-portrait: 47.75em; // 764px
-$tablet-landscape: 75em; // 1200px
-$desktop-small: 87.5em; // 1400px
+$tablet-landscape: 64em;
+$desktop-small: 75em; // 1200px // 
+    // was 87.5em; // 1400px
 $desktop: 100em; // 1600px
 $desktop-large: 120em; // 2000px
 
@@ -13,7 +14,11 @@ html.dev-env::after {
     background: black;
     padding: 10px;
     color: white;
+    content: 'default';
 
+    @media screen and (min-width: $tiny-screen) {
+        content: 'tiny-screen'
+    }
     @media screen and (min-width: $tablet-portrait) {
         content: 'tablet-portrait'
     }
