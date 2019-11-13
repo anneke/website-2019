@@ -598,19 +598,7 @@ html, body {
 
 .section-services {
   position: relative;
-}
-.section-services::before {
-  content: " ";
-  display: block;
   background-color: #F2F9FF;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 50% 10%;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  left: 0;
-  top: -0.6rem;
 }
 
 .side-content {
@@ -717,6 +705,7 @@ html, body {
 
   .section-usercontent,
 .section-services {
+    background: transparent;
     grid-area: content;
     grid-row: auto;
   }
