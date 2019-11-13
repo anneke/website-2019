@@ -828,6 +828,16 @@ html, body {
     z-index: -1;
   }
 
+  .bg-sitefooter {
+    background: #6F66AB;
+    grid-area: purplebg;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    z-index: -1;
+  }
+
   .site-footer__contactform::before,
 .site-footer__contact::before {
     content: none;
