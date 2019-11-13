@@ -70,6 +70,8 @@ html.dev-env::after {
 }
 
 :focus {
+  outline-color: currentColor;
+  outline-width: 3px;
   outline-offset: 4px;
   z-index: 100;
 }
