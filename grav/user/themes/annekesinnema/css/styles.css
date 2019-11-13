@@ -83,7 +83,7 @@ html.dev-env::after {
 }
 
 ul {
-  padding: 0 8%;
+  padding-left: 17px;
 }
 
 li {
@@ -188,21 +188,24 @@ h1 {
 h2,
 .values__title,
 .side-content.side-content--post h2,
-.side-content.side-content--post-list h2 {
+.side-content.side-content--post-list h2,
+.site-footer h3 {
   font-size: 1.6rem;
 }
 @media screen and (min-width: 47.75em) {
   h2,
 .values__title,
 .side-content.side-content--post h2,
-.side-content.side-content--post-list h2 {
+.side-content.side-content--post-list h2,
+.site-footer h3 {
     font-size: 2.1rem;
   }
 }
 
-h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+@media screen and (min-width: 47.75em) {
+  .site-footer h3 {
+    font-size: 1.2rem;
+  }
 }
 
 h3,
@@ -614,13 +617,15 @@ html, body {
   padding: 2rem 2rem 1rem 2rem;
 }
 
+.side-content--page,
 .side-content--contact {
   background-color: #F2F9FF;
   padding: 2rem;
   border-bottom-right-radius: 50% 35%;
 }
 @media screen and (min-width: 47.75em) {
-  .side-content--contact {
+  .side-content--page,
+.side-content--contact {
     background-color: transparent;
     padding: 0;
   }
@@ -1022,8 +1027,8 @@ html, body {
 }
 
 .site-footer__byline {
-  padding: 15px 5vw;
-  font-size: 0.8rem;
+  padding: 1.665rem 5vw;
+  font-size: 0.9rem;
 }
 @media screen and (min-width: 47.75em) {
   .site-footer__byline {
@@ -1044,8 +1049,12 @@ dt, dd {
 }
 
 dt {
-  font-size: 0.8rem;
   margin-top: 1.35rem;
+}
+
+dd {
+  font-size: 1.1rem;
+  padding-bottom: 0.3rem;
 }
 
 @media screen and (min-width: 51em) {

@@ -15,8 +15,8 @@
 }
 
 .site-footer__byline {
-    padding: 15px $padding-left-and-right;
-    font-size: .8rem;
+    padding: $whitespace-medium $padding-left-and-right;
+    font-size: .9rem;
 
     @media screen and (min-width: $tablet-portrait) {
         display: flex;
@@ -36,6 +36,11 @@ dt, dd {
 }
 
 dt {
-    font-size: .8rem;
+    // font-size: .8rem;
     margin-top: 1.35rem;
+}
+
+dd {
+    font-size: 1.1rem;
+    padding-bottom: .3rem;
 }

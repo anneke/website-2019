@@ -28,9 +28,9 @@
 
         <section class="site-footer__contactform" id="contactform">
             <h3>{{ footer.header.callbackLabel }}</h3>
-            <p>
+            {# <p>
                 {{ footer.header.callback }}
-            </p> 
+            </p>  #}
             {% include "forms/form.html.twig" with { form: forms('callmeplease') } %}
         </section>
 
@@ -42,7 +42,8 @@
                 <dt>{{ footer.header.wetransferLabel }}</dt>
                 <dd><a href="https://www.wetransfer.com/?to=mail@annekesinnema.nl&msg={{ footer.header.wetransfermessage }}">{{ footer.header.wetransfer }}</a></dd>
                 <dt>{{ footer.header.phoneLabel }}</dt>
-                <dd><a href="tel:0644870256">06-44870256</a> / <a href="tel:0534321728">053-4321728</a></dd>
+                <dd><a href="tel:0644870256">06-44870256</a></dd>
+                <dd><a href="tel:0534321728">053-4321728</a></dd>
             </dl>
 
             <h3>{{ footer.header.socialLabel }}</h3>

@@ -10,13 +10,13 @@ kvkLabel: Kamer van Koophandel
 btwLabel: BTW nummer
 bankLabel: Bank
 
-callbackLabel: Zal ik je bellen?
+callbackLabel: Wil je graag dat ik je bel?
 callback: Neem gerust contact op met het onderstaande formulier! Een sms, whatsapp-bericht of een <i>direct message</i> op social media bereikt me ook!
 
 contactLabel: Of wil je liever zelf contact opnemen?
 emailLabel: E-mail
 wetransferLabel: Grote bestanden?
-wetransfer: Stuur me je bestanden via WeTransfer!
+wetransfer: Stuur ze me via WeTransfer!
 wetransfermessage: Bij%20vragen%20kun%20je%20me%20bereiken%20op%20telefoonnummer%20...%20.%20Mijn%20naam%20is%20...
 
 phoneLabel: Telefoon
