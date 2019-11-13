@@ -1166,8 +1166,7 @@ dt {
 .blog-post__image,
 .blog-post__body img {
   height: auto;
-  width: calc(100% + 8rem);
-  margin: 1rem -2rem;
+  margin: 1.5rem auto;
 }
 @media screen and (min-width: 47.75em) {
   .blog-post__image,
