@@ -668,20 +668,9 @@ html, body {
 .site-footer__contactform,
 .site-footer__contact {
   color: white;
+  background: #6F66AB;
   position: relative;
   padding-top: 1.665rem;
-}
-.site-footer__contactform::before,
-.site-footer__contact::before {
-  background: #6F66AB;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
 }
 
 .site-footer__contact {
@@ -696,7 +685,6 @@ html, body {
 @media screen and (min-width: 47.75em) {
   .site-main {
     grid-template-rows: auto;
-    padding-bottom: 3.33rem;
     display: grid;
     grid-template-columns: [main-start] 20fr 2rem [sidebar-start] 13fr [main-end] 2fr [sidebar-end];
   }
@@ -814,18 +802,8 @@ html, body {
   .site-footer {
     position: relative;
     display: grid;
-    grid-template-columns: [header-start footer-start] 14fr [header-end form-start purplebg-start] 1fr 12fr [form-end] 1fr [summary-start] 14fr [summary-end footer-end purplebg-end];
-    grid-template-rows: repeat(2, min-content);
-  }
-  .site-footer::before, .site-footer::after {
-    background: #6F66AB;
-    content: " ";
-    grid-area: purplebg;
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    z-index: -1;
+    grid-template-columns: [header-start footer-start] 18fr [header-end form-start purplebg-start] 1fr 12fr [form-end] 1fr [summary-start] 14fr [summary-end footer-end purplebg-end];
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .bg-sitefooter {
@@ -836,21 +814,20 @@ html, body {
     display: block;
     position: relative;
     z-index: -1;
-  }
-
-  .site-footer__contactform::before,
-.site-footer__contact::before {
-    content: none;
+    grid-row: 1/2;
   }
 
   .site-footer__header {
     grid-area: header;
+    grid-row: span 2;
     padding-right: 4.995rem;
     padding-left: 5vw;
   }
 
   .site-footer__contactform {
-    grid-area: form;
+    background: transparent;
+    grid-area: purplebg;
+    grid-row: 1;
     padding-top: 1.665rem;
     padding-bottom: 1.665rem;
     padding-left: 1.665rem;
@@ -862,7 +839,10 @@ html, body {
   }
 
   .site-footer__contact {
-    grid-area: summary;
+    background: transparent;
+    grid-area: purplebg;
+    background: #6F66AB;
+    grid-row: 2;
     padding-top: 1.665rem;
     padding-bottom: 1.665rem;
   }
@@ -899,7 +879,6 @@ html, body {
 @media screen and (min-width: 970px) {
   .site-main {
     grid-template-rows: auto;
-    padding-bottom: 3.33rem;
     display: grid;
     grid-template-columns: [main-start] 27fr [main-end] 2rem [sidebar-start] 13fr [sidebar-end];
   }
@@ -917,11 +896,28 @@ html, body {
   .bg-services {
     width: 120%;
   }
+
+  .site-footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: [header-start footer-start] 14fr [header-end form-start purplebg-start] 1fr 12fr [form-end] 1fr [summary-start] 14fr [summary-end footer-end purplebg-end];
+    grid-template-rows: auto;
+  }
+
+  .site-footer__contactform {
+    grid-area: form;
+    grid-row: 1;
+  }
+
+  .site-footer__contact {
+    grid-area: summary;
+    grid-row: 1;
+    background: transparent;
+  }
 }
 @media screen and (min-width: 75em) {
   .site-main {
     grid-template-rows: auto;
-    padding-bottom: 3.33rem;
     display: grid;
     grid-template-columns: [main-start] 27fr [main-end] minmax(2.77rem, 2fr) [sidebar-start] 11fr [sidebar-end];
   }
@@ -1450,6 +1446,9 @@ dd {
 
 .section-wetransfer {
   margin-top: 1rem;
+}
+.section-wetransfer h2 {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 47.75em) {

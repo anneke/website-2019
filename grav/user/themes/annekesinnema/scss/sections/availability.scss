@@ -50,6 +50,10 @@
 
 .section-wetransfer {
     margin-top: 1rem;
+
+    h2 {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (min-width: $tablet-portrait) {
