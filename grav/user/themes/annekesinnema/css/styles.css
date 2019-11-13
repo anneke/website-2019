@@ -674,6 +674,7 @@ html, body {
   .site-main {
     grid-template-rows: auto;
     display: grid;
+    margin-bottom: 2.22rem;
     grid-template-columns: [main-start] 20fr 2rem [sidebar-start] 13fr [main-end] 2fr [sidebar-end];
   }
 

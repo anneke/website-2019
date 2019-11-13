@@ -141,6 +141,7 @@ html, body {
     .site-main {
         grid-template-rows: auto;
         display: grid; 
+        margin-bottom: $whitespace-large;
         grid-template-columns: 
             [main-start] 
                 20fr
@@ -183,7 +184,7 @@ html, body {
 
     .main-area {
         grid-area: main;
-            grid-row: 1;
+        grid-row: 1;
     }
 
     .section-usercontent,
