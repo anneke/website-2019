@@ -143,21 +143,29 @@ button, [type="submit"] {
         flex-shrink: 1; 
         flex-grow: 0; 
         flex-basis: auto;
-        font-size: .9rem;
+
+        @media screen and (min-width: $tablet-portrait) {
+            font-size: .9rem;
+        }
     }
 
     input[type="checkbox"] {
         height: 15px;
         width: 15px;
-        flex: 0;
+        flex: 0 0 15px;
         margin-right:   5px;
     }
 
     .checkboxes {
         flex: 1 1 10px;
+        padding: .675rem 0;
+
+        @media screen and (min-width: $tablet-portrait) {
+            padding: 0;
+        }
 
         &:hover {
-            background: #ccc;
+            background: $pink;
         }
     }
 

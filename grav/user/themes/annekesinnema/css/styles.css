@@ -447,21 +447,31 @@ button:visited span:last-child::after, [type=submit]:visited span:last-child::af
   flex-shrink: 1;
   flex-grow: 0;
   flex-basis: auto;
-  font-size: 0.9rem;
+}
+@media screen and (min-width: 47.75em) {
+  .checkbox-label {
+    font-size: 0.9rem;
+  }
 }
 
 input[type=checkbox] {
   height: 15px;
   width: 15px;
-  flex: 0;
+  flex: 0 0 15px;
   margin-right: 5px;
 }
 
 .checkboxes {
   flex: 1 1 10px;
+  padding: 0.675rem 0;
+}
+@media screen and (min-width: 47.75em) {
+  .checkboxes {
+    padding: 0;
+  }
 }
 .checkboxes:hover {
-  background: #ccc;
+  background: #F2DAEE;
 }
 
 #contact .form-input-wrapper,
