@@ -12,17 +12,20 @@
 
     .navigation__ontoggle,
     .navigation__offtoggle {
+        align-items: center;
         background: $purple;
+        border-bottom: 1px solid white;
+        border-left: 1px solid white;
         border-radius: 50% 0 0 50%;
         display: flex;
-        align-items: center;
-        justify-items: center;
         height: 56px;
-        position: absolute;
+        justify-items: center;
+        padding: 5px;
+        position: fixed;
         right: 0;
         top: 1rem;
         width: 40px;
-        padding: 5px;
+        z-index: 10;
         
         .toggle-background {
             color: white;
