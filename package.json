@@ -8,7 +8,7 @@
     "dev-storybook": "npm run convert-scss-watch && npm run dev-storybook",
     "storybook": "start-storybook -p 6006",
     "build": "npm run build-storybook && npm run build-scss",
-    "build-scss": "sass --watch grav/user/themes/annekesinnema/scss/index.scss grav/user/themes/annekesinnema/css/styles.css",
+    "build-scss": "sass --watch grav/user/themes/annekesinnema/scss/index.scss grav/user/themes/annekesinnema/css/styles.css --style=compressed",
     "build-storybook": "build-storybook",
     "convert-scss": "sass grav/user/themes/annekesinnema/scss/index.scss .storybook/styles.css",
     "convert-scss-watch": "sass --watch grav/user/themes/annekesinnema/scss/index.scss .storybook/styles.css",
