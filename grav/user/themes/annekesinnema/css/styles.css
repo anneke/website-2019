@@ -1017,6 +1017,18 @@ html, body {
 .site-footer__contact a:hover,
 .site-footer__contact a:focus {
   color: #fff;
+  padding: 3px 0;
+  display: inline-block;
+}
+@media screen and (min-width: 47.75em) {
+  .site-footer__contactform a,
+.site-footer__contactform a:hover,
+.site-footer__contactform a:focus,
+.site-footer__contact a,
+.site-footer__contact a:hover,
+.site-footer__contact a:focus {
+    padding: 0;
+  }
 }
 .site-footer__contactform li,
 .site-footer__contact li {
