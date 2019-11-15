@@ -8,13 +8,14 @@ $desktop-large: 120em; // 2000px
 
 // show the current most prevalent media query 
 html.dev-env::after {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background: black;
     padding: 10px;
     color: white;
     content: 'default';
+    z-index: 10;
 
     @media screen and (min-width: $tiny-screen) {
         content: 'tiny-screen'
