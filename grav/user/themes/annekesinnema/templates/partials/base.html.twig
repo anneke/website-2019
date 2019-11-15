@@ -17,7 +17,11 @@
 
   {% block stylesheets %}
     {% do assets.addCss('theme://css/styles.css',100) %}
-    {% do assets.addCss('https://use.typekit.net/mmr7vjx.css',100) %}
+    {# {% do assets.addCss('https://use.typekit.net/mmr7vjx.css',100) %} #}
+    <link
+    rel="prefetch"
+    as="style"
+    href='https://use.typekit.net/mmr7vjx.css'>
   {% endblock %}
   
   {% block assets deferred %}
