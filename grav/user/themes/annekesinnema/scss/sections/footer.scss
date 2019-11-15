@@ -30,14 +30,27 @@
     margin-top: 1.35rem;
 }
 
+dl {
+    margin-top: 0;
+}
+
+@media screen and (min-width: $tablet-landscape) {
+    dl {
+        margin-top: 1.35rem;
+    }
+}
+
 dt, dd {
     margin: 0;
     padding: 0;
 }
 
 dt {
-    // font-size: .8rem;
-    margin-top: 1.35rem;
+    font-size: .8rem;
+
+    &:not(:first-child) {
+        margin-top: 1.35rem;
+    }
 }
 
 dd {

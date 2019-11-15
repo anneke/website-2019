@@ -685,13 +685,6 @@ html, body {
     grid-template-rows: auto;
   }
 
-  .site-footer {
-    position: relative;
-    display: grid;
-    grid-template-columns: [header-start footer-start] 18fr [header-end form-start purplebg-start] 1fr 12fr [form-end] 1fr [summary-start] 14fr [summary-end footer-end purplebg-end];
-    grid-template-rows: repeat(2, 1fr);
-  }
-
   .section-usercontent {
     width: 50%;
   }
@@ -797,45 +790,35 @@ html, body {
     padding-left: 0;
   }
 
-  .bg-sitefooter {
+  .site-footer {
     background: #6F66AB;
-    grid-area: purplebg;
-    width: 100%;
-    height: 100%;
-    display: block;
+    color: #fff;
     position: relative;
-    z-index: -1;
-    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: [header-start footer-start] 24fr [header-end] 1fr [summary-start] 23fr [summary-end footer-end];
   }
 
   .site-footer__header {
     grid-area: header;
-    grid-row: span 2;
+    grid-row: 1;
     padding-right: 4.995rem;
     padding-left: 5vw;
   }
 
-  .site-footer__contactform {
-    background: transparent;
-    grid-area: purplebg;
-    grid-row: 1;
-    padding-top: 1.665rem;
-    padding-bottom: 1.665rem;
-    padding-left: 1.665rem;
-    padding-right: 0;
+  .site-footer__contactform,
+.site-footer__contact h3 {
+    display: none;
   }
 
   .site-footer form {
     color: black;
+    margin-left: -3.33rem;
   }
 
   .site-footer__contact {
-    background: transparent;
-    grid-area: purplebg;
-    background: #6F66AB;
-    grid-row: 2;
     padding-top: 1.665rem;
     padding-bottom: 1.665rem;
+    grid-column: 3/5;
   }
 
   .site-footer__byline {
@@ -862,10 +845,6 @@ html, body {
   .side-content .widget__title {
     margin-top: 1.11rem;
   }
-
-  .site-footer form {
-    margin-left: -3.33rem;
-  }
 }
 @media screen and (min-width: 64em) {
   .site-main {
@@ -889,21 +868,42 @@ html, body {
   }
 
   .site-footer {
+    background: transparent;
+    color: inherit;
     position: relative;
     display: grid;
     grid-template-columns: [header-start footer-start] 14fr [header-end form-start purplebg-start] 1fr 12fr [form-end] 1fr [summary-start] 14fr [summary-end footer-end purplebg-end];
-    grid-template-rows: auto;
+  }
+
+  .site-footer__header {
+    color: inherit;
+    grid-area: header;
+  }
+
+  .bg-sitefooter {
+    background: #6F66AB;
+    grid-area: purplebg;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    z-index: -1;
   }
 
   .site-footer__contactform {
+    display: inherit;
     grid-area: form;
-    grid-row: 1;
+    padding-top: 1.665rem;
+    padding-bottom: 1.665rem;
+    padding-left: 1.665rem;
+    padding-right: 0;
   }
 
   .site-footer__contact {
     grid-area: summary;
-    grid-row: 1;
-    background: transparent;
+  }
+  .site-footer__contact h3 {
+    display: block;
   }
 }
 @media screen and (min-width: 75em) {
@@ -986,7 +986,7 @@ html, body {
 
 .service-6 {
   background-color: transparent;
-  padding: 0px;
+  padding: 0;
   margin-bottom: 0;
   margin-top: 1.665rem;
 }
@@ -1040,12 +1040,24 @@ html, body {
   margin-top: 1.35rem;
 }
 
+dl {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 64em) {
+  dl {
+    margin-top: 1.35rem;
+  }
+}
 dt, dd {
   margin: 0;
   padding: 0;
 }
 
 dt {
+  font-size: 0.8rem;
+}
+dt:not(:first-child) {
   margin-top: 1.35rem;
 }
 

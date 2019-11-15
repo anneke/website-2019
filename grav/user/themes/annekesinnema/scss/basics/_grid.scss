@@ -286,61 +286,41 @@ html, body {
     }
 
     .site-footer {
+        background: $purple;
+        color: $white;
         position: relative;
         display: grid; 
         grid-template-columns: 
             [header-start footer-start] 
-                18fr
-            [header-end form-start purplebg-start] 
-                1fr
-                12fr     
-            [form-end]  
+                24fr
+            [header-end] 
                 1fr
             [summary-start] 
-                14fr
-            [summary-end footer-end purplebg-end];
-        grid-template-rows: repeat(2, 1fr);
-    }
-    
-    .bg-sitefooter {
-        background: $purple;
-        grid-area: purplebg;
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: relative;
-        z-index: -1;
-        grid-row: 1 / 2;
+                23fr
+            [summary-end footer-end];
     }
 
     .site-footer__header {
         grid-area: header;
-        grid-row: span 2;
+        grid-row: 1;
         padding-right: ($whitespace-medium * 3);
         padding-left: $padding-left-and-right;
     }
 
-    .site-footer__contactform {
-        background: transparent;
-        grid-area: purplebg;
-        grid-row: 1;
-        padding-top: $whitespace-medium;
-        padding-bottom: $whitespace-medium;
-        padding-left: $whitespace-medium;
-        padding-right: 0;
+    .site-footer__contactform,
+    .site-footer__contact h3 {
+        display: none;
     }
 
-    .site-footer form { 
-        color: black;
-    }
+        .site-footer form { 
+            color: black;
+            margin-left: -($whitespace-medium * 2);
+        }
 
-    .site-footer__contact {
-        background: transparent;
-        grid-area: purplebg;
-        background: $purple; // unset elsewhere
-        grid-row: 2;
+    .site-footer__contact { 
         padding-top: $whitespace-medium;
         padding-bottom: $whitespace-medium;
+        grid-column: 3 / 5;
     }
 
     .site-footer__byline {
@@ -370,16 +350,10 @@ html, body {
             margin-top: $whitespace-small;
         }
     }
-    
-    .site-footer form {
-        margin-left: -($whitespace-medium * 2);
-    }
 }
-
-
-// @media screen and (min-width: 970px) {
-
+ 
 @media screen and (min-width: $tablet-landscape) {
+
     .site-main {
         grid-template-rows: auto;
         display: grid; 
@@ -413,6 +387,8 @@ html, body {
     }
 
     .site-footer {
+        background: transparent;
+        color: inherit;
         position: relative;
         display: grid; 
         grid-template-columns: 
@@ -426,18 +402,38 @@ html, body {
             [summary-start] 
                 14fr
             [summary-end footer-end purplebg-end];
-        grid-template-rows: auto;
+    }
+
+    .site-footer__header {
+        color: inherit;
+        grid-area: header;
+    }
+
+    .bg-sitefooter {
+        background: $purple;
+        grid-area: purplebg;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        z-index: -1;
     }
 
     .site-footer__contactform {
+        display: inherit;
         grid-area: form;
-        grid-row: 1;
+        padding-top: $whitespace-medium;
+        padding-bottom: $whitespace-medium;
+        padding-left: $whitespace-medium;
+        padding-right: 0;
     }
 
     .site-footer__contact {
         grid-area: summary;
-        grid-row: 1;
-        background: transparent;
+
+        h3 {
+            display: block;
+        }
     }
 
 }

@@ -18,7 +18,7 @@
                     <dd>op aanvraag</dd>
 
                     <dt>{{ footer.header.bankLabel }}</dt>
-                    <dd></dd>
+                    <dd>NL21INGB0006748126</dd>
                 </dl>
             {% else %}
                 <h2>{{ footer.header.title }}<br />
@@ -29,9 +29,9 @@
 
         <section class="site-footer__contactform" id="contactform">
             <h3>{{ footer.header.callbackLabel }}</h3>
-            {# <p>
+            <p>
                 {{ footer.header.callback }}
-            </p>  #}
+            </p> 
             {% include "forms/form.html.twig" with { form: forms('callmeplease') } %}
         </section>
 
