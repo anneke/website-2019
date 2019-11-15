@@ -685,6 +685,13 @@ html, body {
     grid-template-rows: auto;
   }
 
+  .site-footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: [header-start footer-start] 18fr [header-end form-start purplebg-start] 1fr 12fr [form-end] 1fr [summary-start] 14fr [summary-end footer-end purplebg-end];
+    grid-template-rows: repeat(2, 1fr);
+  }
+
   .section-usercontent {
     width: 50%;
   }
@@ -790,13 +797,6 @@ html, body {
     padding-left: 0;
   }
 
-  .site-footer {
-    position: relative;
-    display: grid;
-    grid-template-columns: [header-start footer-start] 18fr [header-end form-start purplebg-start] 1fr 12fr [form-end] 1fr [summary-start] 14fr [summary-end footer-end purplebg-end];
-    grid-template-rows: repeat(2, 1fr);
-  }
-
   .bg-sitefooter {
     background: #6F66AB;
     grid-area: purplebg;
@@ -867,7 +867,7 @@ html, body {
     margin-left: -3.33rem;
   }
 }
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 64em) {
   .site-main {
     grid-template-rows: auto;
     display: grid;

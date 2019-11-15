@@ -153,18 +153,18 @@ html, body {
             [sidebar-end];
     }
 
-    .main-content {
-        display: grid; 
-        grid-template-columns: 
-            [servicebg-start] 
-                $padding-left-and-right
-            [main-start content-start values-start] 
-                25fr
-            [content-end values-end]
-                2fr 
-            [servicebg-end];
-        grid-template-rows: auto;
-    }
+        .main-content {
+            display: grid; 
+            grid-template-columns: 
+                [servicebg-start] 
+                    $padding-left-and-right
+                [main-start content-start values-start] 
+                    25fr
+                [content-end values-end]
+                    2fr 
+                [servicebg-end];
+            grid-template-rows: auto;
+        }
 
     .section-usercontent {
         width: 50%;
@@ -301,7 +301,7 @@ html, body {
             [summary-end footer-end purplebg-end];
         grid-template-rows: repeat(2, 1fr);
     }
-
+    
     .bg-sitefooter {
         background: $purple;
         grid-area: purplebg;
@@ -377,7 +377,9 @@ html, body {
 }
 
 
-@media screen and (min-width: 970px) {
+// @media screen and (min-width: 970px) {
+
+@media screen and (min-width: $tablet-landscape) {
     .site-main {
         grid-template-rows: auto;
         display: grid; 
