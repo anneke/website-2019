@@ -61,7 +61,7 @@
             </div>
         </main>
 
-        <aside class="side-content side-content--{{ page.template }}">
+        <aside class="side-content side-content--{{ page.template }}" aria-label="{{ 'aside-aria'|t }}">
             {% block sidebar %}
                 {% include 'partials/availability.html.twig' with {
                   'truncate': false, 

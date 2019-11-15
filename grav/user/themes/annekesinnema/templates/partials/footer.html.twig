@@ -1,6 +1,6 @@
 {% set footer = page.find('/widgets/footer') %}
 
-<footer>
+<footer aria-label="{{ 'footer-aria'|t }}">
     <section class="site-footer" aria-label="Footer">
         <div class="bg-sitefooter"></div>
         <section class="site-footer__header">
@@ -60,7 +60,7 @@
         </section>
     </section> 
 
-    <section class="site-byline" aria-label="Site colophon">
+    <section class="site-byline" aria-label="{{ 'colophon-aria'|t }}">
         <div class="site-footer__byline">
             <div>Content {{ footer.header.by }} Anneke Sinnema</div>
             <div>Design {{ footer.header.by }} Adrian Egger</div>

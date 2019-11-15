@@ -16,6 +16,10 @@ en:
   category: Category
   menuLabel: Menu
   menuCloseLabel: Close
+  colophon-aria: Colophon
+  footer-aria: Footer
+  aside-aria: Sidebar
+  nav-aria: Site navigation
  
 nl:
   SITE:
@@ -35,3 +39,7 @@ nl:
   category: Categorie
   menuLabel: Menu
   menuCloseLabel: Sluit
+  colophon-aria: Colofon
+  footer-aria: Footer
+  aside-aria: Sidebar
+  nav-aria: Site navigation
