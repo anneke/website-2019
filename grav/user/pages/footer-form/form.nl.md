@@ -16,8 +16,7 @@ form:
             autofocus: 'off'
             autocomplete: 'on'
             type: text
-            id: name
-            arialabel: ctaname
+            id: data[name]
             validate:
                 required: true
                 pattern: ^[a-zA-Z]*$
@@ -28,16 +27,14 @@ form:
             autofocus: 'off'
             autocomplete: 'on'
             type: tel
-            id: phonenr
-            arialabel: ctaphone
+            id: data[phone]
             validate:
                 required: true
         -
             name: when
             label: 'Heb je een voorkeur voor het moment dat ik bel?'
             type: checkboxes
-            id: when
-            arialabel: ctawhen
+            id: data[when]
             default:
                 ochtend: false
                 middag: false

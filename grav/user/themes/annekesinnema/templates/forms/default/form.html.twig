@@ -47,7 +47,7 @@
   {% block inner_markup_fields_end %}{% endblock %}
 
   {% block inner_markup_buttons_start %}
-  <footer class="buttons">
+  <div class="buttons">
   {% endblock %}
 
   {% for button in form.buttons %}
@@ -64,7 +64,7 @@
   {% endfor %}
 
   {% block inner_markup_buttons_end %}
-  </footer>
+  </div>
   {% endblock %}
 
   {{ nonce_field('form', 'form-nonce')|raw }}

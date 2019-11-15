@@ -1,7 +1,7 @@
 <article class="value value--{{ number }}">
     {% if value.header.icon %}
         <img src="{{ url('theme://images/') }}/icon-{{ value.header.icon }}.png" 
-            class="value__icon" width="auto" height="45" alt=""  loading="lazy" lazyload="1" />
+            class="value__icon" height="45" alt=""  loading="lazy" lazyload="1" />
     {% endif %}
     {% if page.home %}
         <h3 class="value__title">{{ value.title }}</h3>  
@@ -9,6 +9,6 @@
         <h4 class="value__title">{{ value.title }}</h4>  
     {% endif %}  
     <p class="value__summary">
-        {{ value.summary }}
+        {{ value.summary|striptags }}
     </p>
 </article>

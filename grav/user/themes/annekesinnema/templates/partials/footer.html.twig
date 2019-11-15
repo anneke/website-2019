@@ -1,7 +1,7 @@
 {% set footer = page.find('/widgets/footer') %}
 
 <footer>
-    <section class="site-footer">
+    <section class="site-footer" aria-label="Footer">
         <div class="bg-sitefooter"></div>
         <section class="site-footer__header">
             {% if page.slug == 'contact' %}
@@ -60,7 +60,7 @@
         </section>
     </section> 
 
-    <section class="site-byline">
+    <section class="site-byline" aria-label="Site colophon">
         <div class="site-footer__byline">
             <div>Content {{ footer.header.by }} Anneke Sinnema</div>
             <div>Design {{ footer.header.by }} Adrian Egger</div>
