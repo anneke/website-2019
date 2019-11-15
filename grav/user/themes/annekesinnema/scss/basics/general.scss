@@ -8,21 +8,6 @@
     box-sizing: border-box;
 }
 
-.no-styling {
-    float: none;
-    display: inline-block; 
-    padding: 0;
-    margin: 0; 
-    text-transform: none;
-    font-weight: normal;
-    background: transparent; 
-    box-shadow: none;
-    border: none;
-    width: inherit;
-    cursor: pointer;  
-    list-style-type: none;
-}
-
 .a11y {
     border: 0;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -39,7 +24,6 @@
     outline-color: currentColor;
     outline-width: 3px;
     outline-offset: 4px;
-    z-index: 100;
 }
 
 ul {
@@ -71,29 +55,29 @@ li {
 }
 
 a.skip-main {
-    left:-999px;
-    position:absolute;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-    z-index:-999;
+    height: 1px;
+    left: -999px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    z-index: -5;
     
     &:focus,
     &:active {
-        color: #fff;
         background-color:#000;
-        left: auto;
-        top: auto;
-        width: 30%;
-        height: auto;
-        overflow:auto;
-        margin: 10px 35%;
-        padding:5px;
         border-radius: 15px;
         border:4px solid yellow;
-        text-align:center;
+        color: #fff;
         font-size: 1.2em;
-        z-index:999;
+        height: auto;
+        left: auto;
+        margin: 10px 35%;
+        overflow:auto;
+        padding:5px;
+        text-align:center;
+        top: auto;
+        width: 30%;
+        z-index: 5;
     }
 }
