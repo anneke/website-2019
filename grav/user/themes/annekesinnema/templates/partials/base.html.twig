@@ -34,7 +34,7 @@
     {{ assets.css()|raw }}    
   {% endblock %}
 </head>
-<body class="{% if page.home %}page-home{% else %}page-{{ page.template }}{% endif %}" id="menu-open">
+<body class="{% if page.home %}page--home{% else %}page--{{ page.template }}{% endif %}" id="menu-open">
             
   <a class="skip-main" href="#main">Skip to main content</a>
 
@@ -67,6 +67,7 @@
             </div>
         </main>
 
+        <div class="bg-sidecontent"></div>
         <aside class="side-content side-content--{{ page.template }}" aria-label="{{ 'aside-aria'|t }}">
             {% block sidebar %}
                 {% include 'partials/availability.html.twig' with {
@@ -76,7 +77,6 @@
 
             {# {% include 'partials/referrals.html.twig' %} #}
         </aside>
-        <div class="bg-sidecontent"></div>
     </div>
 
     {% block footer %}

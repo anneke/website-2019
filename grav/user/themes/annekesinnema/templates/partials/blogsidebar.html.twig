@@ -43,40 +43,43 @@
         <section class="widget">
             <h3 class="widget__title">{{ 'blogs_per_category'|t }}</h3>
 
+            <div class="widget__grid">
             {% for letter in 'A'..'Z' %}   
             {% for tax,value in categorylist['category'] %} 
 
                 {% if tax starts with letter %}   
                     {# enable a condensed view on mobile when there are more than 5 categories #}
                     {% set maxTaggedBlogs = 5 %}
-                    {% set enableCondensing = (taxonomy.findTaxonomy({'category':tax})|length > maxTaggedBlogs) ? 'tax__header--condense' : '' %}
-
-                    <div class="tax__header {{ enableCondensing }}">
-                        <h4 class="tax__title">
-                            {{ 'category'|t }}: {{ tax }}
-                        </h4> 
-                        {% if taxonomy.findTaxonomy({'category':tax})|length > maxTaggedBlogs %}
-                            <a href="#open-{{ tax|lower }}"> 
-                                <svg width="14px" height="6px" viewBox="0 0 14 6" xmlns="http://www.w3.org/2000/svg">
-                                    <polyline transform="rotate(90 151.5 -128.5)" points="280 10 286 16 280 22" stroke="#6F66AB" fill="none" fill-rule="evenodd"/>
-                                </svg> 
-                            </a> 
-                        {% endif %}
-                    </div>
-                    <ul class="post-list" id="open-{{ tax|lower }}">
-                        {% for child in collection %}   
-                            {% if child in taxonomy.findTaxonomy({'category':tax}) %}
-                                <li>
-                                    <a href="{{ child.url }}" class="column__title">
-                                        {{ child.title }}
-                                    </a>
-                                </li> 
+                    {% set enableCondensing = (taxonomy.findTaxonomy({'category':tax})|length > maxTaggedBlogs) ? ' tax__header--condense' : '' %}
+                    <div class="widget__column">
+                        <div class="tax__header{{ enableCondensing }}">
+                            <h4 class="tax__title">
+                                {{ 'category'|t }}: {{ tax }}
+                            </h4> 
+                            {% if taxonomy.findTaxonomy({'category':tax})|length > maxTaggedBlogs %}
+                                <a href="#open-{{ tax|lower }}"> 
+                                    <svg width="14px" height="6px" viewBox="0 0 14 6" xmlns="http://www.w3.org/2000/svg">
+                                        <polyline transform="rotate(90 151.5 -128.5)" points="280 10 286 16 280 22" stroke="#6F66AB" fill="none" fill-rule="evenodd"/>
+                                    </svg> 
+                                </a> 
                             {% endif %}
-                        {% endfor %} 
-                    </ul> 
+                        </div>
+                        <ul class="post-list" id="open-{{ tax|lower }}">
+                            {% for child in collection %}   
+                                {% if child in taxonomy.findTaxonomy({'category':tax}) %}
+                                    <li>
+                                        <a href="{{ child.url }}" class="column__title">
+                                            {{ child.title }}
+                                        </a>
+                                    </li> 
+                                {% endif %}
+                            {% endfor %} 
+                        </ul> 
+                    </div>
                 {% endif %}  
             {% endfor %}
             {% endfor %} 
+            </div>
         </section>
     {% endif %} 
 

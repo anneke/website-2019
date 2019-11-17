@@ -1,11 +1,11 @@
-@media screen and (min-width: 51em){ 
+@media screen and (min-width: 60em){ 
     .navigation__ontoggle,
     .navigation__offtoggle {
         display: none;
     }
 }
 
-@media screen and (max-width: 51em) {
+@media screen and (max-width: 60em) {
     .navigation__list {
         display: none;
     }

@@ -5,7 +5,7 @@
     margin-bottom: 2rem;
 }
 
-@media screen and (min-width: $tablet-portrait) {
+@media screen and (min-width: $tablet-landscape) {
     .blog-post-grid {
         display: grid;
         grid-auto-columns: 4fr 1fr 19fr;
@@ -15,10 +15,6 @@
 .blog-post__title {
     flex: 1 1 auto;
     margin-bottom: 0;
-}
-
-.blog-post__time {
-    // color: $purple;
 }
 
 .blog-post__save-button {
@@ -70,7 +66,7 @@
         }
     }
 
-    @media screen and (min-width: $tablet-portrait) {
+    @media screen and (min-width: $tablet-landscape) {
         blockquote {
             width: 50%;
         }
@@ -111,6 +107,7 @@
 .blog-post__tag {
     display: inline-block;
     margin-right: $whitespace-small;
+    margin-bottom: $whitespace-small;
     padding: 1px 5px;
     color: $purple;
     border: 1px solid $purple;
