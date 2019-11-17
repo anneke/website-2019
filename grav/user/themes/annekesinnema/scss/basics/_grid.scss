@@ -20,7 +20,7 @@ html, body {
 .site-header__title {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: $rhythmrem;
 
     @media screen and (min-width: $tablet-portrait) {
         padding: 0;
@@ -43,7 +43,7 @@ html, body {
 }
 
 .section {
-    padding: 1rem 2rem;
+    padding: $rhythmrem ($rhythmrem * 2);
 
     @media screen and (min-width: $tablet-portrait) {
         padding: 0;
@@ -56,13 +56,13 @@ html, body {
 }
 
 .side-content {
-    padding: 2rem 2rem 1rem 2rem;
+    padding: ($rhythmrem * 2) ($rhythmrem * 2) $rhythmrem ($rhythmrem * 2);
 }
 
 .side-content--page,
 .side-content--contact {
     background-color: $light-blue;
-    padding: 2rem;
+    padding: ($rhythmrem * 2);
     border-bottom-right-radius: 50% 35%;
 
     @media screen and (min-width: $tablet-portrait) {
@@ -92,10 +92,10 @@ html, body {
 .site-footer__header,
 .site-footer__contactform,
 .site-footer__contact {
-    padding: 2rem;
+    padding: ($rhythmrem * 2);
 
     @media screen and (min-width: $tablet-portrait) {
-        padding: 1rem;
+        padding: $rhythmrem;
     }
 }
 
@@ -104,11 +104,11 @@ html, body {
     color: white;
     background: $purple;
     position: relative;
-
 }
 
 .site-footer__contactform {
     padding-top: $whitespace-medium;
+    padding-bottom: 0;
 }
 
 @media screen and (max-width: 52.5em) {
@@ -303,7 +303,7 @@ html, body {
     }
 
     .widget__column {
-        margin-bottom: 1rem;
+        margin-bottom: $rhythmrem;
     }
 
     .page--post-list,
@@ -328,7 +328,7 @@ html, body {
             [main-start] 
                 27fr
             [main-end] 
-                2rem
+                ($rhythmrem * 2)
             [sidebar-start] 
                 13fr
             [sidebar-end];

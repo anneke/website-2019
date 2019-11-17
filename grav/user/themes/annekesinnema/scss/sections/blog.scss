@@ -2,7 +2,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: ($rhythmrem * 2);
 }
 
 @media screen and (min-width: $tablet-landscape) {
@@ -42,7 +42,7 @@
 
     @media screen and (min-width: $tablet-portrait) {
         width: 100%;
-        margin: 1rem auto;
+        margin: $rhythmrem auto;
     }
 }
 
@@ -52,7 +52,7 @@
 }
 
 .blog-post__nav {
-    margin-top: 1rem;
+    margin-top: $rhythmrem;
     border-top: 1px solid $purple;
     padding: $whitespace-small 0 $whitespace-medium;
 
@@ -107,7 +107,7 @@
     align-content: center;
     display: flex;
     justify-content: space-between;
-    padding: $whitespace-tiny 1rem 0;
+    padding: $whitespace-tiny $rhythmrem 0;
     border-bottom: 1px solid $pink;
     border-top: 1px solid $pink;
 

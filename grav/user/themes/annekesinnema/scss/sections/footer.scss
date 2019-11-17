@@ -1,18 +1,12 @@
 .site-footer__contactform,
 .site-footer__contact {
-    padding-bottom: $whitespace-medium;
     color: $white;
 
     a,
     a:hover,
     a:focus {
         color: $white;
-        padding: 3px 0;
         display: inline-block;
-
-        @media screen and (min-width: $tablet-portrait) {
-            padding: 0;
-        }
     }
 
     li {
@@ -33,7 +27,7 @@
 .site-footer form {
     border-top: 2px solid $pink;
     color: black;
-    margin-top: 1.35rem;
+    margin-top: $rhythmrem;
 }
 
 dl {
@@ -42,7 +36,7 @@ dl {
 
 @media screen and (min-width: $tablet-landscape) {
     dl {
-        margin-top: 1.35rem;
+        margin-top: $rhythmrem;
     }
 }
 
@@ -55,11 +49,11 @@ dt {
     font-size: $size-h6;
 
     &:not(:first-child) {
-        margin-top: 1.35rem;
+        margin-top: $rhythmrem;
     }
 }
 
 dd {
-    font-size: 1.1rem;
-    padding-bottom: .3rem;
+    font-size: $size-h5;
+    padding-bottom: #{$rhythm / 4}rem;
 }

@@ -4,18 +4,18 @@
     padding: 1.5rem;
 
     footer {
-        margin-top: 1rem;
+        margin-top: $rhythmrem;
     }
 
     @media screen and (min-width: $tablet-landscape) {
-        padding: 2rem;
+        padding: ($rhythmrem * 2);
     }
 }
 
 .section-availability--mobile {
     margin-bottom: 0;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: $rhythmrem;
+    margin-right: $rhythmrem;
     margin-top: 0;
 
     @media screen and (min-width: $tablet-portrait) {
@@ -47,7 +47,7 @@
 
 
 .section-wetransfer {
-    margin-top: 1rem;
+    margin-top: $rhythmrem;
 
     h2 {
         margin-bottom: 0;

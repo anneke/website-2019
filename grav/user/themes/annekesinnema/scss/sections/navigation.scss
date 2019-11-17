@@ -23,16 +23,16 @@
         padding: 5px;
         position: fixed;
         right: 0;
-        top: 1rem;
+        top: $rhythmrem;
         width: 40px;
         z-index: 10;
         
         .toggle-background {
             color: white;
             text-transform: uppercase;
-            -webkit-transform: rotate(-90deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: rotate(-90deg);  /* IE 9 */
-                transform: rotate(-90deg);  /* Firefox 16+, IE 10+, Opera */
+            -webkit-transform: rotate(-90deg); 
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg); 
         }
     }
 

@@ -33,7 +33,7 @@ a {
 
 //////
 
-$size-h2 : 2rem;
+$size-h2 : ($rhythmrem * 2);
 $size-h3 : 1.33rem;
 $size-h4 : 1.22rem;
 $size-h5 : 1.11rem;
@@ -93,7 +93,7 @@ p, ul, ol, pre, table, blockquote {
 blockquote {
     font-size: $size-h3;
     width: 80%;
-    margin: 2rem auto 1.5rem auto;
+    margin: ($rhythmrem * 2) auto 1.5rem auto;
         
     &::before {
         background: black;
