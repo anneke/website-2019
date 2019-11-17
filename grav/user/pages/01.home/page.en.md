@@ -1,6 +1,7 @@
 ---
-title: Hi there
-class: home
+title: Home
+a11ytitle: Hi there
+visible: false
 ---
 
 This is a standard page. It could be an **about page** or a summary page that outlines your many gifts and talents that you intend to bring to the world of web development.

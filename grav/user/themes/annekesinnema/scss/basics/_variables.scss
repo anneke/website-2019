@@ -1,11 +1,18 @@
 $max-content-width: 1620px;
 
-
 $padding-left-and-right: 5vw;
-$whitespace-tiny: 0.6rem; //10px
-$whitespace-small: 1.11rem; //20px
-$whitespace-medium: 1.665rem; //30px
-$whitespace-large: 2.22rem; //40px
+    // $whitespace-tiny: 0.6rem; //10px
+    // $whitespace-small: 1.11rem; //20px
+    // $whitespace-medium: 1.665rem; //30px
+    // $whitespace-large: 2.22rem; //40px
+
+
+$rhythm  : 1.35;
+$rhythmrem  : 1.35rem;
+$whitespace-tiny:  $rhythmrem / 2; //10px
+$whitespace-small: $rhythmrem; //20px
+$whitespace-medium: $rhythmrem * 1.5; //30px
+$whitespace-large: $rhythmrem * 2; //40px
 
 $bright-green: #B4F5D7; 
 $bright-yellow: #E0F2C2; 

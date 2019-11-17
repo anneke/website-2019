@@ -2,7 +2,7 @@
 
 {% if truncate %}
     <section class="section-availability section-availability--mobile">
-        <h2>{{ availability.header.title }}</h2>
+        <h2 class="availability__title">{{ availability.header.title }}</h2>
         {{ availability.content }}
         {% if page.template != 'contact' %}
             <a href="/contact" class="readmore readmore--dark"
@@ -14,7 +14,7 @@
 {% else %}
 <div>
     <section class="section-availability">
-        <header>
+        <header class="availability__header">
             <h2 class="availability__title">
                 {{ availability.header.title }}
             </h2>
@@ -38,7 +38,7 @@
 
     {% if page.template != 'contact' %}
         <section class="section-wetransfer">
-            <h2>{{ availability.header.wetransfer_title }}</h2>
+            <h2 class="availability__title">{{ availability.header.wetransfer_title }}</h2>
             <a href="https://www.wetransfer.com/?to=mail@annekesinnema.nl&msg=Bij%20vragen%20kun%20je%20me%20bereiken%20op%20telefoonnummer%20...%20.%20Mijn%20naam%20is%20...">{{ availability.header.wetransfer }}</a> 
             <br />
             {{ availability.header.wetransfer_footer }}

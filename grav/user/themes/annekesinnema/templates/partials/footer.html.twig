@@ -5,7 +5,7 @@
         <div class="bg-sitefooter"></div>
         <section class="site-footer__header">
             {% if page.slug == 'contact' %}
-                <h2>{{ footer.header.expandedTitle }}</h2>
+                <h2 class="site-footer__title">{{ footer.header.expandedTitle }}</h2>
                 <dl>
                     <dt>{{ footer.header.adresLabel }}</dt>
                     <dd>Oostveenweg 28<br />
@@ -21,14 +21,14 @@
                     <dd>NL21INGB0006748126</dd>
                 </dl>
             {% else %}
-                <h2>{{ footer.header.title }}<br />
+                <h2 class="site-footer__title">{{ footer.header.title }}<br />
                     {{ footer.header.subtitle }}</h2>
                 <p>{{ footer.header.intro }}</p>
             {% endif %}
         </section>
 
         <section class="site-footer__contactform" id="contactform">
-            <h3>{{ footer.header.callbackLabel }}</h3>
+            <h3 class="site-footer__sub-title">{{ footer.header.callbackLabel }}</h3>
             <p>
                 {{ footer.header.callback }}
             </p> 
@@ -36,7 +36,7 @@
         </section>
 
         <section class="site-footer__contact"> 
-            <h3>{{ footer.header.contactLabel }}</h3>
+            <h3 class="site-footer__sub-title">{{ footer.header.contactLabel }}</h3>
             <dl>
                 <dt>{{ footer.header.emailLabel }}</dt>
                 <dd><a href="mailto:{{'mail@annekesinnema.nl'|safe_email}}">{{'mail@annekesinnema.nl'|safe_email}}</a></dd>
@@ -47,7 +47,7 @@
                 <dd><a href="tel:0534321728">053-4321728</a></dd>
             </dl>
 
-            <h3>{{ footer.header.socialLabel }}</h3>
+            <h3 class="site-footer__sub-title">{{ footer.header.socialLabel }}</h3>
             <ul>
                 <li><a href="https://twitter.com/asinnema">Twitter</a></li>
                 <li><a href="https://www.linkedin.com/in/annekesinnema/">LinkedIn</a></li>

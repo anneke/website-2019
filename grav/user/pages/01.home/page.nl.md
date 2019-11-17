@@ -1,6 +1,7 @@
 ---
-title: Welkom
-a11ytitle: Hoi!
+title: Homepage
+a11ytitle: Welkom
+visible: false
 ---
 
 Ik ben een front-end developer met een hart voor een fijne gebruikerservaring en een oog voor detail.

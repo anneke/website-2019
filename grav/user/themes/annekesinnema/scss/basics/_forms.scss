@@ -145,7 +145,7 @@ button, [type="submit"] {
         flex-basis: auto;
 
         @media screen and (min-width: $tablet-portrait) {
-            font-size: .9rem;
+            font-size: $size-h6;
         }
     }
 

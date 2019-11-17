@@ -56,7 +56,7 @@
 
 @media screen and (min-width: $tablet-portrait) {
     .section-wetransfer {
-        font-size: .9rem;
-        line-height: inherit;
+        font-size: $size-h6;
+        line-height: 1.35;
     }
 }

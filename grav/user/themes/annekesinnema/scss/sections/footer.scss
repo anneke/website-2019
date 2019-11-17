@@ -22,7 +22,7 @@
 
 .site-footer__byline {
     padding: $whitespace-medium $padding-left-and-right;
-    font-size: .9rem;
+    font-size: $size-h6;
 
     @media screen and (min-width: $tablet-portrait) {
         display: flex;
@@ -52,7 +52,7 @@ dt, dd {
 }
 
 dt {
-    font-size: .8rem;
+    font-size: $size-h6;
 
     &:not(:first-child) {
         margin-top: 1.35rem;

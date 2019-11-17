@@ -49,28 +49,6 @@
 .blog-post__body {
     grid-column: 3 / 4;
     grid-row: 1;
-
-    blockquote {
-        font-size: 1.8rem;
-        margin: 2rem auto 1.5rem auto;
-        
-        &::before {
-            background: black;
-            height: 1px;
-            content: ' ';
-            display: block;
-            width: 50%;
-            position: relative;
-            left: 0;
-            margin-bottom: 1rem;
-        }
-    }
-
-    @media screen and (min-width: $tablet-landscape) {
-        blockquote {
-            width: 50%;
-        }
-    }
 }
 
 .blog-post__nav {
@@ -113,7 +91,7 @@
     border: 1px solid $purple;
     border-radius: 3px;
     text-transform: uppercase;
-    font-size: .8rem;
+    font-size: $size-h6;
     text-decoration: none;
 
     &:hover,

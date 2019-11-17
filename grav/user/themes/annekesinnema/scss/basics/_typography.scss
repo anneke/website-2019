@@ -1,16 +1,16 @@
 html {
-    font-size: 16px;
+    font-size: 18px;
 
     @media screen and (min-width: $tablet-portrait) {
         font-size: 112.5%;
     } 
 
     @media screen and (min-width: $desktop) {
-        font-size: 156.25;
+        font-size: 156.25%;
     }
 
     @media screen and (min-width: $desktop-large) {
-        font-size: 187.5;
+        font-size: 187.5%;
     }
 }
 
@@ -18,7 +18,7 @@ body {
     font-family: 'effra', Arial, Helvetica, sans-serif;
     font-display: swap;
     font-size: 1rem !important;
-    line-height: 1.35;
+    line-height: $rhythm;
 }
 
 a {
@@ -31,88 +31,107 @@ a {
     }
 }
 
-h1, h2, h3, h4 { 
+//////
+
+$size-h2 : 2rem;
+$size-h3 : 1.33rem;
+$size-h4 : 1.22rem;
+$size-h5 : 1.11rem;
+$size-h6 : 0.9rem;
+
+h2, h3, h4, h5 {
+    font-family: inherit;
+    font-style: inherit;
     font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 0;
-
-    @media screen and (min-width: $tablet-landscape) {
-        margin-bottom: 1.35rem;
-    }
-
-    &:not(:first-child)   {
-        margin-top: 1.35rem;
-    }
+    line-height: $rhythm;
 }
 
 h1 {
     font-size: inherit;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h2,
-.values__title,
-.side-content.side-content--post h2,
-.side-content.side-content--post-list h2,
-.site-footer h3 { 
-    font-size: 1.6rem;
-
-    @media screen and (min-width: $tablet-portrait) {
-        font-size: 2.1rem;
-    }
-}
-
-.site-footer h3 {
-    @media screen and (min-width: $tablet-portrait) {
-        font-size: 1.2rem;
-    }
+.widget__title--categories {
+    font-size: $size-h2; 
+    margin-top: #{$rhythm * 1.5}rem;
+    margin-bottom: #{$rhythm}rem;
 }
 
 h3,
-.side-content h2,
-.value__title,
-.section-usercontent > p:first-of-type,
-.blog-post__body > p:first-of-type {
-    font-size: 1.2rem;
+.availability__title {
+    font-size: $size-h3;  
+    margin-top: #{$rhythm}rem;
+    margin-bottom:#{$rhythm / 2}rem;
 }
 
-.side-content--post h2,
-.side-content--post-list h2 {
+h4,
+.user-content p:first-of-type {
+    font-size: $size-h4;  
+    margin-top: #{$rhythm / 2}rem;
+    margin-bottom:#{$rhythm / 3}rem;
+}
+
+h5 {
+    font-size: $size-h5;  
+    margin-top: #{$rhythm / 3}rem;
+    margin-bottom:#{$rhythm / 4}rem;
+}
+
+main h2:first-child,
+.availability__title,
+.site-footer__title {
     margin-top: 0;
-    
-    @media screen and (min-width: $tablet-landscape) {
-        margin-top: 2rem;
+}
+
+p, ul, ol, pre, table, blockquote {
+    margin-top: 0;
+    margin-bottom: #{$rhythm / 2}rem;
+}
+
+blockquote {
+    font-size: $size-h3;
+    width: 80%;
+    margin: 2rem auto 1.5rem auto;
+        
+    &::before {
+        background: black;
+        height: 1px;
+        content: ' ';
+        display: block;
+        width: 50%;
+        position: relative;
+        left: 0;
+        margin-bottom: 1rem;
     }
 }
 
-.widget__title {
-    margin-top: 1rem;
-    margin-bottom: .5rem;
-
-    @media screen and (min-width: $tablet-landscape) {
-        margin-top: 2rem;
+@media screen and (min-width: $tablet-landscape) {
+    blockquote {
+        width: 50%;
     }
 }
 
-h4 {
-    margin-bottom: .5rem;
-    font-weight: bolder;
+ul ul, 
+ol ol, 
+ul ol, 
+ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-h5,
-.side-content h4 {
-    font-size: 1.1rem;
-    font-weight: normal;
-    line-height: 1.35;
+b, strong, em, small, code {
+    line-height: $rhythm;
 }
 
 time {
-    font-size: .9rem;
+    font-size: $size-h6;
 } 
 
 p { 
     margin-top: 0;
-    margin-bottom: 1rem;
-    // max-width: 72ch;
+    margin-bottom: #{$rhythm}rem;  
 
     &:empty {
         margin-bottom: 0;
@@ -166,7 +185,7 @@ pre {
         content: 'Code ';
         font-family: 'effra', Arial, Helvetica, sans-serif;
         color: $red;
-        font-size: .7rem;
+        font-size: $size-h6;
         top: -2rem;
         padding-top: 1rem;
     }
