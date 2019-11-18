@@ -1,7 +1,7 @@
 $tiny-screen: 25em; // 400px
 $tablet-portrait: 47.75em; // 764px
 $tablet-landscape: 64em;
-$desktop-small: 75em; // 1200px // 
+$desktop-small: 81em; // 1200px // 
     // was 87.5em; // 1400px
 $desktop: 100em; // 1600px
 $desktop-large: 120em; // 2000px
@@ -10,7 +10,7 @@ $desktop-large: 120em; // 2000px
 html.dev-env::after {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     background: black;
     padding: 10px;
     color: white;

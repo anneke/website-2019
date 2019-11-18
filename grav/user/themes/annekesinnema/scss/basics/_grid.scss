@@ -43,7 +43,7 @@ html, body {
 }
 
 .section {
-    padding: $rhythmrem ($rhythmrem * 2);
+    padding: $rhythmrem;
 
     @media screen and (min-width: $tablet-portrait) {
         padding: 0;
@@ -62,7 +62,7 @@ html, body {
 .side-content--page,
 .side-content--contact {
     background-color: $light-blue;
-    padding: ($rhythmrem * 2);
+    padding: $rhythmrem;
     border-bottom-right-radius: 50% 35%;
 
     @media screen and (min-width: $tablet-portrait) {
@@ -92,11 +92,7 @@ html, body {
 .site-footer__header,
 .site-footer__contactform,
 .site-footer__contact {
-    padding: ($rhythmrem * 2);
-
-    @media screen and (min-width: $tablet-portrait) {
-        padding: $rhythmrem;
-    }
+    padding: $rhythmrem;
 }
 
 .site-footer__contactform,
@@ -121,7 +117,6 @@ html, body {
     .site-main {
         grid-template-rows: auto;
         display: grid; 
-        margin-bottom: $whitespace-large;
         grid-template-columns:
             [main-start] 
                 1fr
@@ -324,6 +319,7 @@ html, body {
     .site-main {
         grid-template-rows: auto;
         display: grid; 
+        margin-bottom: $whitespace-large;
         grid-template-columns: 
             [main-start] 
                 27fr

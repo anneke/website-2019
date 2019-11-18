@@ -8,7 +8,7 @@
     }
 
     @media screen and (min-width: $tablet-landscape) {
-        padding: ($rhythmrem * 2);
+        padding: ($rhythmrem * 1.5);
     }
 }
 
@@ -48,10 +48,6 @@
 
 .section-wetransfer {
     margin-top: $rhythmrem;
-
-    h2 {
-        margin-bottom: 0;
-    }
 }
 
 @media screen and (min-width: $tablet-portrait) {

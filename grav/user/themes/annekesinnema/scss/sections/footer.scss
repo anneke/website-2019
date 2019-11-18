@@ -15,12 +15,13 @@
 }
 
 .site-footer__byline {
-    padding: $whitespace-medium $padding-left-and-right;
+    padding: $rhythmrem;
     font-size: $size-h6;
 
     @media screen and (min-width: $tablet-portrait) {
         display: flex;
         justify-content: space-between;
+        padding: $whitespace-medium $padding-left-and-right;
     }
 }
 
