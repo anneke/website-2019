@@ -1,7 +1,7 @@
 ---
 title: Benieuwd?
-subtitle: Laten we eens kennis maken!
-intro: Heb je een concrete opdracht of een vraagstuk waar je hulp bij nodig hnebt, of wil je gewoon een keer kennis maken? Ik ben altijd in voor een kop thee om te kijken of we iets voor elkaar kunnen betekenen!
+subtitle: Laten we eens afspreken!
+intro: Heb je een concrete opdracht of een vraagstuk waar je hulp bij nodig hebt, of wil je gewoon een keer kennis maken? <br/>Ik ben altijd in voor een kop thee om te kijken of we iets voor elkaar kunnen betekenen!
 
 expandedTitle: Neem contact met me op
 
@@ -11,7 +11,7 @@ btwLabel: BTW nummer
 bankLabel: Bank
 
 callbackLabel: Wil je graag dat ik je bel?
-callback: Neem gerust contact op met het onderstaande formulier! Een sms, whatsapp-bericht of een <i>direct message</i> op social media bereikt me ook!
+callback: Neem gerust contact op met het onderstaande formulier! Een sms, whatsapp-bericht of een <em>direct message</em> op social media bereikt me ook!
 
 contactLabel: Of wil je liever zelf contact opnemen?
 emailLabel: E-mail

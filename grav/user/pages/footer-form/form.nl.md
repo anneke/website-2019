@@ -63,5 +63,3 @@ form:
         -
             message: 'Thank you for your feedback!'
 ---
-<p class="note">Je kunt me natuurlijk ook altijd zelf bellen!<br/>
-Je kunt me <span class="implicit">thuis</span> bereiken op nummer <a href="tel:0534321728" class="tel" itemprop="telephone">053-4321728</a> of <span class="implicit">via mobiele telefoon</span> <a href="tel:0644870256" class="tel" itemprop="telephone">06-44870256</a>.</p>
