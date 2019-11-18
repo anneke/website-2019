@@ -67,10 +67,10 @@ h3,
 }
 
 h4,
-.user-content p:first-of-type {
+.section-usercontent p:first-of-type {
     font-size: $size-h4;  
     margin-top: #{$rhythm / 2}rem;
-    margin-bottom:#{$rhythm / 3}rem;
+    margin-bottom:#{$rhythm / 2}rem;
 }
 
 h5 {
@@ -135,6 +135,14 @@ p {
 
     &:empty {
         margin-bottom: 0;
+    }
+}
+
+.section-usercontent {
+    max-width: 72ch;
+
+    p:first-of-type {
+        margin-top: 0;
     }
 }
 
