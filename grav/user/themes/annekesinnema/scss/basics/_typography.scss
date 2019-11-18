@@ -18,6 +18,8 @@ body {
     font-family: 'effra', Arial, Helvetica, sans-serif;
     font-size: 1rem !important;
     line-height: $rhythm;
+    font-style: normal;
+    font-weight: 400;
 }
 
 @supports (font-display: swap) {
@@ -53,8 +55,10 @@ h2, h3, h4, h5 {
 
 h1 {
     font-size: inherit;
+    font-weight: normal;
     margin-top: 0;
     margin-bottom: 0;
+
 }
 
 h2,
@@ -72,7 +76,8 @@ h3,
 }
 
 h4,
-.section-usercontent p:first-of-type {
+.section-usercontent p:first-of-type,
+.section-usercontent h3 {
     font-size: $size-h4;  
     margin-top: #{$rhythm / 2}rem;
     margin-bottom:#{$rhythm / 2}rem;
@@ -86,7 +91,8 @@ h5 {
 
 main h2:first-child,
 .availability__title,
-.site-footer__title {
+.site-footer__title,
+.site-footer__sub-title {
     margin-top: 0;
 }
 
@@ -145,6 +151,10 @@ p {
 
 .section-usercontent {
     max-width: 72ch;
+
+    h3, h4 {
+        font-weight: bolder;
+    }
 
     p:first-of-type {
         margin-top: 0;
