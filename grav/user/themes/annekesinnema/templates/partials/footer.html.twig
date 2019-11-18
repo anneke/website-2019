@@ -49,8 +49,8 @@
 
             <h3 class="site-footer__sub-title">{{ footer.header.socialLabel }}</h3>
             <ul>
-                <li><a href="https://twitter.com/asinnema">Twitter</a></li>
-                <li><a href="https://www.linkedin.com/in/annekesinnema/">LinkedIn</a></li>
+                <li><a href="https://twitter.com/asinnema" rel="me"><span class="a11y">{{ footer.header.socialA11yLabel }} </span>Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/annekesinnema/" rel="me"><span class="a11y">{{ footer.header.socialA11yLabel }} </span>LinkedIn</a></li>
             </ul>
 
             {% set blogArticles = page.evaluate([{'@page.children':'/blog'}]) %}

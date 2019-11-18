@@ -21,6 +21,7 @@ wetransfermessage: Please%20contact%20me%20for%20questions%20through%20...%20My%
 
 phoneLabel: Phone
 socialLabel: Follow me on social media
+socialA11yLabel: My
 
 by: by
 
