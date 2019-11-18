@@ -16,9 +16,14 @@ html {
 
 body {
     font-family: 'effra', Arial, Helvetica, sans-serif;
-    font-display: swap;
     font-size: 1rem !important;
     line-height: $rhythm;
+}
+
+@supports (font-display: swap) {
+    body {
+        font-display: swap;
+    }
 }
 
 a {
