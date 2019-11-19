@@ -562,11 +562,13 @@ html, body {
   .site-main {
     grid-template-rows: auto;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: [main-start] 1fr [main-end];
   }
 
   .main-content {
     display: grid;
+    -ms-grid-columns: 4rem 25fr 2fr;
     grid-template-columns: [servicebg-start] 4rem [main-start content-start values-start] 25fr [content-end values-end] 2fr [servicebg-end];
     grid-template-rows: auto;
   }
@@ -618,6 +620,7 @@ html, body {
 
   .services__grid {
     display: grid;
+    -ms-grid-columns: 14fr 1fr 14fr;
     grid-template-columns: 14fr 1fr 14fr;
     grid-template-rows: repeat(2, min-content 2.025rem 2.025rem 2.025rem) min-content;
     grid-template-areas: "service-1 . service-2" " .        . service-2" "service-3 . service-2" "service-3 . .        " "service-3 . service-4" "service-3 . service-4" " .        . .        " "service-5 . service-6" "service-5 . service-6";
@@ -661,6 +664,7 @@ html, body {
     color: #fff;
     position: relative;
     display: grid;
+    -ms-grid-columns: 24fr 1fr 23fr;
     grid-template-columns: [header-start footer-start] 24fr [header-end] 1fr [summary-start] 23fr [summary-end footer-end];
   }
 
@@ -705,6 +709,7 @@ html, body {
 
   .widget__grid {
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -728,11 +733,13 @@ html, body {
     grid-template-rows: auto;
     display: grid;
     margin-bottom: 2.7rem;
+    -ms-grid-columns: 27fr 2.7rem 13fr;
     grid-template-columns: [main-start] 27fr [main-end] 2.7rem [sidebar-start] 13fr [sidebar-end];
   }
 
   .main-content {
     display: grid;
+    -ms-grid-columns: 4rem 25fr;
     grid-template-columns: [servicebg-start] 4rem [main-start content-start values-start] 25fr [content-end values-end servicebg-end];
     grid-template-rows: auto;
   }
@@ -770,6 +777,7 @@ html, body {
     color: inherit;
     position: relative;
     display: grid;
+    -ms-grid-columns: 14fr 1fr 12fr 1fr 14fr;
     grid-template-columns: [header-start footer-start] 14fr [header-end form-start purplebg-start] 1fr 12fr [form-end] 1fr [summary-start] 14fr [summary-end footer-end purplebg-end];
   }
 
@@ -821,11 +829,13 @@ html, body {
   .site-main {
     grid-template-rows: auto;
     display: grid;
+    -ms-grid-columns: 27fr 2fr 11fr;
     grid-template-columns: [main-start] 27fr [main-end] minmax(2.77rem, 2fr) [sidebar-start] 11fr [sidebar-end];
   }
 
   .main-content {
     display: grid;
+    -ms-grid-columns: 4rem 25fr 2fr;
     grid-template-columns: [servicebg-start] 4rem [main-start content-start values-start] 25fr [content-end] 2fr [values-end servicebg-end];
     grid-template-rows: auto;
   }

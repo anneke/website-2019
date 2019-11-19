@@ -22,15 +22,92 @@
 
 @media screen and (min-width: $tiny-screen) {
     .values__grid {
+        display: -ms-grid;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        -ms-grid-columns: 1fr $whitespace-large 1fr $whitespace-large;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 0 $whitespace-large;
+    }
+
+    .value--1 { 
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+    }
+    .value--2 { 
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+    }
+    .value--3 { 
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+    }
+    .value--4 { 
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+    }
+    .value--5 { 
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 1;
+    }
+    .value--1 { 
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 4;
+        -ms-grid-row-span: 1;
     }
 }
 
 @media screen and (min-width: $tablet-portrait) {
     .values__grid {
-        grid-template-columns: repeat(3, 1fr);
+        -ms-grid-columns: 1fr $whitespace-large 1fr $whitespace-large 1fr $whitespace-large;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 0 $whitespace-large;
+    }
+
+    .value--1 { 
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+    }
+    .value--2 { 
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+    }
+    .value--3 { 
+        -ms-grid-column: 5;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+    }
+    .value--4 { 
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+    }
+    .value--5 { 
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+    }
+    .value--1 { 
+        -ms-grid-column: 5;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
     }
 }

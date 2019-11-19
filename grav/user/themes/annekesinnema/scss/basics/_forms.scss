@@ -95,7 +95,9 @@ textarea {
         border: 0;
 
         @media screen and (min-width: $tiny-screen) {
+            display: -ms-grid;
             display: grid;
+            -ms-grid-columns: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
             grid-template-areas: 
             "group-label checkbox"
@@ -106,6 +108,10 @@ textarea {
 }
 
 .checkbox-grouplabel {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
     grid-area: group-label;
     align-items: flex-start;
 

@@ -38,9 +38,25 @@
 
 @media screen and (min-width: $tiny-screen) {
     .testimonials__grid {
+        display: -ms-grid;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        -ms-grid-columns: 1fr $whitespace-large 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 0 $whitespace-large;
+    }
+
+    .testimonial--1 { 
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+    }
+
+    .testimonial--2 { 
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
     }
 }
 

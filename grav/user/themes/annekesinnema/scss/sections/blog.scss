@@ -7,8 +7,10 @@
 
 @media screen and (min-width: $tablet-landscape) {
     .blog-post-grid {
+        display: -ms-grid;
         display: grid;
-        grid-auto-columns: 4fr 1fr 19fr;
+        -ms-grid-columns: 4fr 1fr 19fr;
+        grid-template-columns: 4fr 1fr 19fr;
     }
 }
 
@@ -47,6 +49,10 @@
 }
 
 .blog-post__body {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-column: 3 / 4;
     grid-row: 1;
 }
@@ -59,6 +65,10 @@
     @media screen and (min-width: $tablet-portrait) {
         border: 0;
         padding: 0;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
         grid-column: 1 / 2;
         grid-row: 1;
         margin-top: 0;
