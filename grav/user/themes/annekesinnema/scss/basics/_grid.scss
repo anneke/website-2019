@@ -56,20 +56,24 @@ html, body {
 }
 
 .side-content {
-    padding: ($rhythmrem * 2) ($rhythmrem * 2) $rhythmrem ($rhythmrem * 2);
+    padding: ($rhythmrem * 2) $rhythmrem $rhythmrem $rhythmrem;
 }
 
-.side-content--page,
-.side-content--contact {
-    background-color: $light-blue;
-    padding: $rhythmrem;
-    border-bottom-right-radius: 50% 35%;
-
-    @media screen and (min-width: $tablet-portrait) {
-        background-color: transparent;
-        padding: 0;
-    }
+.section-testimonials {
+    padding: 0;
 }
+
+// .side-content--page,
+// .side-content--contact {
+//     background-color: $light-blue;
+//     padding: $rhythmrem;
+//     border-bottom-right-radius: 50% 35%;
+
+//     @media screen and (min-width: $tablet-portrait) {
+//         background-color: transparent;
+//         padding: 0;
+//     }
+// }
 
 .side-content--post,
 .side-content--post-list {
@@ -419,6 +423,9 @@ html, body {
         grid-area: sidebar;
         grid-row: 1;
         padding: 0 $padding-left-and-right 0 0;
+        
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
     }
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html.dev-env::after {
   position: fixed;
   top: 0;
@@ -201,14 +202,14 @@ blockquote {
   margin: 2.7rem auto 1.5rem auto;
 }
 blockquote::before {
-  background: black;
-  height: 1px;
+  background: #6F66AB;
+  height: 2px;
   content: " ";
   display: block;
   width: 50%;
   position: relative;
   left: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.35rem;
 }
 
 @media screen and (min-width: 64em) {
@@ -488,21 +489,11 @@ html, body {
 }
 
 .side-content {
-  padding: 2.7rem 2.7rem 1.35rem 2.7rem;
+  padding: 2.7rem 1.35rem 1.35rem 1.35rem;
 }
 
-.side-content--page,
-.side-content--contact {
-  background-color: #F2F9FF;
-  padding: 1.35rem;
-  border-bottom-right-radius: 50% 35%;
-}
-@media screen and (min-width: 47.75em) {
-  .side-content--page,
-.side-content--contact {
-    background-color: transparent;
-    padding: 0;
-  }
+.section-testimonials {
+  padding: 0;
 }
 
 .side-content--post,
@@ -798,6 +789,8 @@ html, body {
     grid-area: sidebar;
     grid-row: 1;
     padding: 0 4rem 0 0;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
   }
 
@@ -1238,19 +1231,6 @@ dd {
   }
 }
 
-@media screen and (min-width: 35em) {
-  .section-values .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0 2.7rem;
-  }
-}
-@media screen and (min-width: 47.75em) {
-  .section-values .grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0 2.7rem;
-  }
-}
 .value {
   padding-top: 1.35rem;
   text-align: center;
@@ -1261,17 +1241,132 @@ dd {
     text-align: left;
   }
 }
-
-.reference {
-  margin-bottom: 2.7rem;
-}
-.reference:last-child {
-  margin-bottom: none;
+.value p:last-child {
+  margin-bottom: 0;
 }
 
-.reference__quote {
-  font-size: 1.77rem;
+@media screen and (min-width: 35em) {
+  .values__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 2.7rem;
+  }
+}
+@media screen and (min-width: 47.75em) {
+  .values__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 2.7rem;
+  }
+}
+.testimonials__title {
+  text-align: center;
+}
+.testimonials__title::after {
+  background: #6F66AB;
+  height: 2px;
+  content: " ";
+  display: block;
+  width: 50%;
+  position: relative;
+  left: 0;
+  margin-top: 1.35rem;
+  left: 25%;
+}
+@media screen and (min-width: 47.75em) {
+  .testimonials__title {
+    text-align: left;
+  }
+  .testimonials__title::after {
+    left: 0;
+  }
+}
+
+.testimonial {
+  margin-top: 0;
+  margin-bottom: 2.025rem;
+  width: 100%;
+}
+.testimonial::before {
+  content: none;
+}
+.testimonial:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 35em) {
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 2.7rem;
+  }
+}
+@media screen and (min-width: 64em) {
+  .testimonials__title {
+    display: none;
+  }
+
+  .testimonials__grid {
+    display: block;
+  }
+}
+.testimonial__quote {
+  font-size: 1.22rem;
   line-height: 1.35;
+  margin-bottom: 0;
+  padding-left: 1ch;
+}
+.testimonial__quote::before {
+  content: "“";
+  display: inline-block;
+  width: 1ch;
+  margin-left: -1ch;
+}
+.testimonial__quote::after {
+  content: "”";
+  display: inline-block;
+}
+@media screen and (min-width: 47.75em) {
+  .testimonial__quote {
+    font-size: 1.33rem;
+  }
+}
+
+.testimonial__footer {
+  font-size: 1rem;
+  margin-top: 0.675rem;
+  line-height: 1.35;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.testimonial__footer::before {
+  content: "—";
+  display: inline-block;
+  padding-right: 0.675rem;
+}
+@media screen and (min-width: 47.75em) {
+  .testimonial__footer {
+    margin-top: 1.35rem;
+  }
+}
+@media screen and (min-width: 81em) {
+  .testimonial__footer {
+    font-size: 1.22rem;
+  }
+}
+
+.testimonial__source {
+  flex: 1 1 50%;
+  font-style: normal;
+}
+@media screen and (min-width: 35em) {
+  .testimonial__source {
+    flex: 0 0 50%;
+  }
+}
+
+.testimonial__source-company {
+  color: #6F66AB;
 }
 
 .section-availability {

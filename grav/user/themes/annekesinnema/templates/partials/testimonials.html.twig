@@ -1,0 +1,11 @@
+
+<section class="section section-testimonials">
+    <h2 class="testimonials__title">{{ 'testimonialsheader'|t }}</h2>
+
+    <div class="testimonials__grid">
+        {% set testimonial_collection = page.find('/testimonials').children.published %}
+        {% for testimonial in testimonial_collection %}
+            {% include 'partials/testimonials-item.html.twig' with {'number': loop.index} %}
+        {% endfor %}
+    </div>
+</section>

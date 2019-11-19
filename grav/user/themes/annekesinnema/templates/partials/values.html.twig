@@ -4,7 +4,7 @@
     {% else %}
         <h3 class="values__title">{{ 'valuesheader'|t }}</h3>
     {% endif %}
-    <div class="grid">
+    <div class="values__grid">
         {% set values_collection = page.find('/about').children.published %}
         {% for value in values_collection %}
             {% include 'partials/value-item.html.twig' with {'number': loop.index} %}

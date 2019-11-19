@@ -106,14 +106,14 @@ blockquote {
     margin: ($rhythmrem * 2) auto 1.5rem auto;
         
     &::before {
-        background: black;
-        height: 1px;
+        background: $purple;
+        height: 2px;
         content: ' ';
         display: block;
         width: 50%;
         position: relative;
         left: 0;
-        margin-bottom: 1rem;
+        margin-bottom: $rhythmrem;
     }
 }
 

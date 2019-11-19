@@ -20,6 +20,7 @@ en:
   footer-aria: Footer
   aside-aria: Sidebar
   nav-aria: Site navigation
+  testimonialsheader: What people say about me
  
 nl:
   SITE:
@@ -43,3 +44,4 @@ nl:
   footer-aria: Footer
   aside-aria: Sidebar
   nav-aria: Site navigation
+  testimonialsheader: Wat anderen over mij zeggen
