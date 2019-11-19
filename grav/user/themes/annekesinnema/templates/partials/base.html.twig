@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="theme://images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="theme://images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="theme://images/favicon-16x16.png">
-  <link rel="manifest" href="theme://images/site.webmanifest">
+  {# <link rel="manifest" href="theme://images/site.webmanifest"> #}
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}'s blog" href="/rss.xml">
 
@@ -31,7 +31,7 @@
     {{ assets.css()|raw }}    
   {% endblock %}
 </head>
-<body class="{% if page.home %}page--home{% else %}page--{{ page.template }}{% endif %}" id="menu-open">
+<body class="{% if page.home %}page--home{% else %}page--{{ page.template }}{% endif %}">
             
   <a class="skip-main" href="#main">Skip to main content</a>
 

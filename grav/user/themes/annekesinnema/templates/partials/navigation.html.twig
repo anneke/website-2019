@@ -1,12 +1,12 @@
 <nav class="site-navigation" role="navigation" aria-label="{{ 'nav-aria'|t }}">
-    <a href="#menu-open" class="navigation__ontoggle mobile-only">
+    <button class="navigation__ontoggle mobile-only">
         <div class="toggle-background">{{ 'menuLabel'|t }}</div>
-    </a>
+    </button>
 
     <div class="mobile__navigation">
-        <a href="#menu-closed" class="navigation__offtoggle mobile-only">
+        <button class="navigation__offtoggle mobile-only">
             <div class="toggle-background">{{ 'menuCloseLabel'|t }}</div>
-        </a>
+        </button>
 
         <ul class="ul-inline navigation__list">
             {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}

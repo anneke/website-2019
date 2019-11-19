@@ -5,6 +5,10 @@
     }
 }
 
+button {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 60em) {
     .navigation__list {
         display: none;
@@ -12,19 +16,22 @@
 
     .navigation__ontoggle,
     .navigation__offtoggle {
-        align-items: center;
         background: $purple;
         border: 1px solid white;
         border-right: 0;
         border-radius: 50% 0 0 50%;
         display: flex;
         height: 62px;
-        justify-items: center;
+        justify-content: center;
         position: fixed;
         right: 0;
         top: $rhythmrem;
         width: 40px;
         z-index: 10;
+        font-size: 1rem;
+        font-family: inherit;
+        display: flex;
+        padding-right: 0;
         
         .toggle-background {
             color: white;
@@ -44,11 +51,7 @@
         }   
     }
 
-    #menu-open:target .navigation__ontoggle {
-        display: none;
-    }
-
-    #menu-open:target .mobile__navigation {
+    .mobile__navigation.is-active {
         z-index: 3;
         width: 100%;
 
@@ -66,6 +69,8 @@
         .navigation__offtoggle {
             display: flex;
             z-index: 4;
+            justify-content: center;
+            padding-right: 0;
         }
 
         .navigation__list,
@@ -77,6 +82,10 @@
         a {
             text-decoration: none;
             text-transform: uppercase;
+
+            &:focus {
+                outline-offset: 0;
+            }
         }
 
         a:only-child {
