@@ -45,7 +45,7 @@
                 {% if help %}
                     <span class="hint--bottom" data-hint="{{ help|t|e('html_attr') }}">{{ text|t|e }}</span>
                 {% else %}
-                    <span class="checkbox-label">{{ text|t|e }}</span>
+                    <span class="checkbox-text">{{ text|t|e }}</span>
                 {% endif %}
         </label>
     {% endfor %}

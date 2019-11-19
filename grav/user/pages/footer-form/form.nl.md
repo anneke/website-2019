@@ -29,6 +29,16 @@ form:
             validate:
                 required: true
         -
+            name: about
+            label: 'Waar gaat het over?'
+            autofocus: 'off'
+            autocomplete: 'off'
+            type: textarea
+            rows: 3
+            id: data[about]
+            validate:
+                required: true
+        -
             name: when
             label: 'Heb je een voorkeur voor het moment dat ik bel?'
             type: checkboxes

@@ -49,6 +49,7 @@ label {
 textarea {
     resize: vertical;
     vertical-align: top;
+    overflow: auto;
 }
 
 [type="submit"] {
@@ -102,7 +103,8 @@ textarea {
     padding: ($rhythmrem / 2);
 }
 
-.checkbox-label {
+.checkbox-label,
+.checkbox-text {
     padding: ($rhythmrem / 4) ($rhythmrem / 2);
     font-size: $size-h6;
 }
@@ -116,5 +118,8 @@ textarea {
 
     &:focus-within {
         background: $pink;
+        box-shadow: 0px 0px 2px 3px $purple;
+        overflow-y: visible;
+        z-index: 1;
     }
 }

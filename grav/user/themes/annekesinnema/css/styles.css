@@ -126,6 +126,7 @@ body {
   line-height: 1.35;
   font-style: normal;
   font-weight: 400;
+  color: #0D061C;
 }
 
 @supports (font-display: swap) {
@@ -326,34 +327,9 @@ code {
     padding: 0;
   }
 }
-.form-input-wrapper input,
-.form-input-wrapper label,
-.form-input-wrapper textarea,
-.form-textarea-wrapper input,
-.form-textarea-wrapper label,
-.form-textarea-wrapper textarea {
-  padding: 0;
-}
-@media screen and (min-width: 47.75em) {
-  .form-input-wrapper input,
-.form-input-wrapper label,
-.form-input-wrapper textarea,
-.form-textarea-wrapper input,
-.form-textarea-wrapper label,
-.form-textarea-wrapper textarea {
-    padding: 0.675rem;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    flex: 2 1 0;
-  }
-}
 
-input[type=text],
-input[type=search],
-input[type=tel],
-input[type=email],
-textarea {
+.input,
+label {
   background-color: white;
   display: block;
   border: 0;
@@ -364,21 +340,33 @@ textarea {
   position: relative;
   font-family: inherit;
   font-size: inherit;
-  padding: 0.675rem;
 }
-input[type=text]:focus,
-input[type=search]:focus,
-input[type=tel]:focus,
-input[type=email]:focus,
-textarea:focus {
+@media screen and (min-width: 47.75em) {
+  .input,
+label {
+    padding: 0.45rem 0.675rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex: 2 1 0;
+  }
+  .input:not(:first-child),
+label:not(:first-child) {
+    border-left: 1px solid #F2DAEE;
+  }
+}
+.input:focus,
+label:focus {
   outline-offset: initial;
   outline-color: #6F66AB;
   outline-width: thick;
+  background-color: #F2DAEE;
 }
 
 textarea {
   resize: vertical;
   vertical-align: top;
+  overflow: auto;
 }
 
 [type=submit] {
@@ -391,8 +379,7 @@ textarea {
   font-size: inherit;
   font-weight: normal;
   margin-top: 0;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 0.3375rem 0.675rem;
   text-align: center;
   text-decoration: none;
   transform: none;
@@ -411,74 +398,35 @@ textarea {
   content: " yes";
 }
 
-.hitarea {
-  width: inherit;
-}
-.hitarea span:last-child {
-  text-decoration: underline;
-}
-
 .form-field--checkboxes .form-input-wrapper {
   border: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  border-left: 1px solid #F2DAEE;
-  border-right: 1px solid #F2DAEE;
-}
-@media screen and (min-width: 64em) {
-  .form-field--checkboxes .form-input-wrapper {
-    flex-direction: row;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "group-label checkbox" "group-label checkbox" "group-label checkbox";
 }
 
 .checkbox-grouplabel {
-  flex-basis: 100%;
-}
-@media screen and (min-width: 47.75em) {
-  .checkbox-grouplabel {
-    padding: 0.675rem;
-    padding-bottom: 0;
-  }
+  grid-area: group-label;
+  padding: 0.675rem;
 }
 
-.checkbox-label {
-  flex-shrink: 1;
-  flex-grow: 0;
-  flex-basis: auto;
-}
-@media screen and (min-width: 47.75em) {
-  .checkbox-label {
-    font-size: 0.9rem;
-  }
+.checkbox-label,
+.checkbox-text {
+  padding: 0.3375rem 0.675rem;
+  font-size: 0.9rem;
 }
 
-input[type=checkbox] {
-  height: 15px;
-  width: 15px;
-  flex: 0 0 15px;
-  margin-right: 5px;
-}
-
-.checkboxes {
-  flex: 1 1 10px;
-  padding: 0.675rem 0;
-}
-@media screen and (min-width: 47.75em) {
-  .checkboxes {
-    padding: 0;
-  }
-}
-.checkboxes:hover {
+.input:hover, .input:focus,
+.checkbox-label:hover,
+.checkbox-label:focus {
   background: #F2DAEE;
 }
-
-#callmeplease {
-  background: white;
-  border: 1px solid #F2DAEE;
-}
-#callmeplease:focus-within {
-  box-shadow: 0 0 20px 2px #F2DAEE;
+.input:focus-within,
+.checkbox-label:focus-within {
+  background: #F2DAEE;
+  box-shadow: 0px 0px 2px 3px #6F66AB;
+  overflow-y: visible;
+  z-index: 1;
 }
 
 html, body {

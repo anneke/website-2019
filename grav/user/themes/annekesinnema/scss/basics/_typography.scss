@@ -20,6 +20,7 @@ body {
     line-height: $rhythm;
     font-style: normal;
     font-weight: 400;
+    color: $default-text-color;
 }
 
 @supports (font-display: swap) {
