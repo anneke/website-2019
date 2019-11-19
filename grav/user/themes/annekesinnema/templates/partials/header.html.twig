@@ -1,6 +1,8 @@
 <header class="site-header">
     <div class="site-header__title">
-        <img src="{{ url('theme://images/logo.png') }}" class="logo" width="66" height="66" alt="" />
+        <a href="{{ base_url == '' ? '/' : base_url }}" aria-hidden="true">
+            <img src="{{ url('theme://images/logo.png') }}" class="logo" width="66" height="66" alt="" />
+        </a>
         <h1><a href="{{ base_url == '' ? '/' : base_url }}">
             {{ site.title }}
         </a></h1>
