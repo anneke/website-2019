@@ -5,7 +5,7 @@
     <h2 class="testimonials__title">{{ 'testimonialsheader'|t }}</h2>
 
     <div class="testimonials__grid">
-        {% for testimonial in testimonial_collection %}
+        {% for testimonial in testimonial_collection|slice(0,2) %}
             {% include 'partials/testimonials-item.html.twig' with {'number': loop.index} %}
         {% endfor %}
     </div>
