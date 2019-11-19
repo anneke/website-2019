@@ -48,9 +48,9 @@ form:
                 middag: false
                 avond: false
             options:
-                ochtend: '9.00 - 12.00'
-                middag: '13.00 - 17.00'
-                avond: '19.00 - 21.00'
+                ochtend: ' 9.00 — 12.00'
+                middag: '13.00 — 17.00'
+                avond: '19.00 — 21.00'
     buttons:
         -
             type: submit

@@ -317,9 +317,8 @@ code {
   position: relative;
   border: 1px solid #F2DAEE;
   border-top: 0;
-  padding: 0.675rem;
 }
-@media screen and (min-width: 47.75em) {
+@media screen and (min-width: 35em) {
   .form-input-wrapper,
 .form-textarea-wrapper {
     display: flex;
@@ -341,11 +340,15 @@ label {
   position: relative;
   font-family: inherit;
   font-size: inherit;
+  padding: 0.45rem 0.675rem;
 }
-@media screen and (min-width: 47.75em) {
+.input:not(:first-child),
+label:not(:first-child) {
+  border-top: 1px solid #F2DAEE;
+}
+@media screen and (min-width: 35em) {
   .input,
 label {
-    padding: 0.45rem 0.675rem;
     display: flex;
     width: 100%;
     align-items: center;
@@ -353,6 +356,7 @@ label {
   }
   .input:not(:first-child),
 label:not(:first-child) {
+    border-top: 0;
     border-left: 1px solid #F2DAEE;
   }
 }
@@ -401,20 +405,35 @@ textarea {
 
 .form-field--checkboxes .form-input-wrapper {
   border: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "group-label checkbox" "group-label checkbox" "group-label checkbox";
+}
+@media screen and (min-width: 35em) {
+  .form-field--checkboxes .form-input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "group-label checkbox" "group-label checkbox" "group-label checkbox";
+  }
 }
 
 .checkbox-grouplabel {
   grid-area: group-label;
-  padding: 0.675rem;
+  align-items: flex-start;
+}
+@media screen and (min-width: 35em) {
+  .checkbox-grouplabel {
+    padding: 0.675rem;
+  }
 }
 
 .checkbox-label,
 .checkbox-text {
-  padding: 0.3375rem 0.675rem;
   font-size: 0.9rem;
+  padding: 0.45rem 0.675rem;
+}
+@media screen and (min-width: 35em) {
+  .checkbox-label,
+.checkbox-text {
+    padding: 0.3375rem 0.675rem;
+  }
 }
 
 .input:hover, .input:focus,
