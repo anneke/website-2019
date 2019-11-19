@@ -1,13 +1,15 @@
-<section class="section section-values">
+{% set values_collection = page.find('/about').children.published %}
+{% if values_collection|length > 3 %}
+    <section class="section section-values">
     {% if page.home %}
         <h2 class="values__title">{{ 'valuesheader'|t }}</h2>
     {% else %}
         <h3 class="values__title">{{ 'valuesheader'|t }}</h3>
     {% endif %}
-    <div class="values__grid">
-        {% set values_collection = page.find('/about').children.published %}
-        {% for value in values_collection %}
-            {% include 'partials/value-item.html.twig' with {'number': loop.index} %}
-        {% endfor %}
-    </div>
-</section>
+        <div class="values__grid">
+            {% for value in values_collection %}
+                {% include 'partials/value-item.html.twig' with {'number': loop.index} %}
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}

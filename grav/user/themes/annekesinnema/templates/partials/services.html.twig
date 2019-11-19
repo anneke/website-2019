@@ -1,10 +1,13 @@
-<section class="section section-services">
-    <h2 class="services__title">{{ 'servicesheader'|t }}</h2>
 
-    <div class="services__grid">
-        {% set services_collection = page.find('/services').children.published %}
-        {% for service in services_collection %}
-            {% include 'partials/service-item.html.twig' with {'number': loop.index} %}
-        {% endfor %}
-    </div>
-</section>
+{% set services_collection = page.find('/services').children.published %}
+{% if services_collection|length > 0 %}
+    <section class="section section-services">
+        <h2 class="services__title">{{ 'servicesheader'|t }}</h2>
+
+        <div class="services__grid">
+            {% for service in services_collection %}
+                {% include 'partials/service-item.html.twig' with {'number': loop.index} %}
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}
