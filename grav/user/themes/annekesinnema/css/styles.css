@@ -983,14 +983,14 @@ dd {
     font-family: inherit;
     display: flex;
     padding-right: 0;
+    align-items: center;
   }
   .navigation__ontoggle .toggle-background,
 .navigation__offtoggle .toggle-background {
     color: white;
     text-transform: uppercase;
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
+    height: 1.35rem;
   }
 
   .navigation__offtoggle {
