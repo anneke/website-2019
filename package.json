@@ -14,7 +14,8 @@
     "convert-scss-watch": "sass --watch grav/user/themes/annekesinnema/scss/index.scss .storybook/styles.css",
     "deploy-to-dev": "dploy dev",
     "deploy": "dploy prod",
-    "deploy-storybook": "build-storybook && dploy storybook"
+    "deploy-storybook": "build-storybook && dploy storybook",
+    "stats": "parker grav/user/themes/annekesinnema/css/styles.css"
   },
   "author": "Anneke Sinnema",
   "license": "ISC",
