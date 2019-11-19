@@ -829,7 +829,7 @@ html, body {
   }
 
   .site-footer__contactform {
-    display: inherit;
+    display: block;
     grid-area: form;
     padding-top: 2.025rem;
     padding-bottom: 2.025rem;
@@ -974,11 +974,10 @@ html, body {
 }
 
 .site-footer form {
-  border-top: 2px solid #F2DAEE;
   color: black;
   margin-top: 1.35rem;
   background: white;
-  border: 2px solid #F2DAEE;
+  border: 1px solid #F2DAEE;
 }
 @media screen and (min-width: 47.75em) {
   .site-footer form {

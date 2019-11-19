@@ -12,7 +12,6 @@ form:
         -
             name: name
             label: 'Naam'
-            placeholder: 'Jouw naam'
             autofocus: 'off'
             autocomplete: 'on'
             type: text
@@ -23,7 +22,6 @@ form:
         -
             name: phone
             label: 'Telefoonnummer'
-            placeholder: 'Jouw telefoonnummer'
             autofocus: 'off'
             autocomplete: 'on'
             type: tel

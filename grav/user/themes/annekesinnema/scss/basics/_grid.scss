@@ -399,7 +399,7 @@ html, body {
     }
 
     .site-footer__contactform {
-        display: inherit;
+        display: block;
         grid-area: form;
         padding-top: $whitespace-medium;
         padding-bottom: $whitespace-medium;

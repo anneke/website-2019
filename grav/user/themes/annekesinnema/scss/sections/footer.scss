@@ -30,11 +30,10 @@
 }
 
 .site-footer form {
-    border-top: 2px solid $pink;
     color: black;
     margin-top: $rhythmrem;
     background: white;
-    border: 2px solid $pink;
+    border: 1px solid $pink;
 
     @media screen and (min-width: $tablet-portrait) {
         margin-top: 0;
