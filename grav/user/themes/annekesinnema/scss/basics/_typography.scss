@@ -16,7 +16,7 @@ html {
 
 body {
     font-family: 'effra', Arial, Helvetica, sans-serif;
-    font-size: 1rem !important;
+    font-size: 1rem;
     line-height: $rhythm;
     font-style: normal;
     font-weight: 400;
@@ -46,7 +46,7 @@ $size-h4 : 1.22rem;
 $size-h5 : 1.11rem;
 $size-h6 : 0.9rem;
 
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
     font-family: inherit;
     font-style: inherit;
     font-weight: normal;
@@ -55,23 +55,21 @@ h2, h3, h4, h5 {
 
 h1 {
     font-size: inherit;
-    font-weight: normal;
     margin-top: 0;
     margin-bottom: 0;
-
 }
 
 h2,
 .widget__title--categories {
     font-size: $size-h2; 
     margin-top: #{$rhythm * 1.5}rem;
-    margin-bottom: #{$rhythm}rem;
+    margin-bottom: $rhythmrem;
 }
 
 h3,
 .availability__title {
     font-size: $size-h3;  
-    margin-top: #{$rhythm}rem;
+    margin-top: $rhythmrem;
     margin-bottom:#{$rhythm / 2}rem;
 }
 
@@ -142,7 +140,7 @@ time {
 
 p { 
     margin-top: 0;
-    margin-bottom: #{$rhythm}rem;  
+    margin-bottom: $rhythmrem;  
 
     &:empty {
         margin-bottom: 0;
@@ -151,10 +149,6 @@ p {
 
 .section-usercontent {
     max-width: 72ch;
-
-    h3, h4 {
-        font-weight: bolder;
-    }
 
     p:first-of-type {
         margin-top: 0;
@@ -166,7 +160,7 @@ p {
     display: inline-block;
 }
 
-.readmore:before {
+.readmore::before {
     display: inline-block;
     width: 7px;
     height: 14px;

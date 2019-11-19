@@ -140,12 +140,6 @@ html, body {
         justify-items: flex-end;
         flex-direction: row;
         padding: $rhythmrem $padding-left-and-right $rhythmrem;
-        
-        nav {
-            margin-left: auto;
-            text-align: right;
-            text-transform: none;
-        }
     }
 
     .main-area {
@@ -339,6 +333,16 @@ html, body {
                 25fr
             [content-end values-end servicebg-end];
         grid-template-rows: auto;
+    }
+
+    .site-navigation  {
+        margin-left: auto;
+        text-align: right;
+        text-transform: none;
+    }
+
+    .navigation__list-item {
+        margin-left: 0;
     }
 
     .bg-services {

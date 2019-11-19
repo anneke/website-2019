@@ -1,66 +1,49 @@
 .form-input-wrapper,
-.form-textarea-wrapper  {
+.form-textarea-wrapper {
     position: relative;
+    border: 1px solid $pink;
     border-top: 0;
-    border-left: 1px solid $pink;
-    border-right: 1px solid $pink;
-    border-bottom: 1px solid $pink;
-    padding: .675rem;
+    padding: ($rhythmrem / 2);
 
-    input,
-    textarea {
-        padding: 0;
-    }
-}
-
-@media screen and (min-width: $tablet-portrait) {
-    .form-input-wrapper,
-    .form-textarea-wrapper  {
+    @media screen and (min-width: $tablet-portrait) {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
         padding: 0;
+    }
 
-        input, label, textarea {
-            padding: .675rem;
+    .input,
+    label {
+        background-color: white;
+        display: block;
+        border: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        position: relative;
+        font-family: inherit;
+        font-size: inherit;
+
+        @media screen and (min-width: $tablet-portrait) {
+            padding: ($rhythmrem / 2);
             display: flex;
             width: 100%;
             align-items: center;
-        }
-
-        input, textarea {
             flex: 2 1 0;
         }
+
+        &:focus {
+            outline-offset: initial;
+            outline-color: $purple;
+            outline-width: thick;
+        }
     }
-}
 
-input[type="text"],
-input[type="search"],
-input[type="tel"],
-input[type="email"], 
-textarea {
-    background-color: white;
-    display: block;
-    border: 0;
-    width: 100%;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    position: relative;
-    font-family: inherit;
-    font-size: inherit;
-    padding: .675rem;
-
-    &:focus {
-        outline-offset: initial;
-        outline-color: $purple;
-        outline-width: thick;
+    textarea {
+        resize: vertical;
+        vertical-align: top;
     }
-}
-
-textarea {
-    resize: vertical;
-    vertical-align: top;
 }
 
 [type="submit"] {
@@ -98,111 +81,56 @@ textarea {
     }
 }
 
-.hitarea {
-    width: inherit;
-
-    span:last-child {
-        text-decoration: underline;
-    }
-}
-
-#callmeplease {
-    background: white;
-    border: 1px solid $pink;
-
-    &:focus-within {
-        box-shadow: 0 0 20px 2px $pink;
-    }
-}
-
-    .form-field--checkboxes {
-        .form-input-wrapper {
-            border: 0;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            border-left: 1px solid $pink;
-            border-right: 1px solid $pink;
-
-            @media screen and (min-width: $tablet-landscape) {
-                flex-direction: row;
-            }
-        }
-    }
-
-    .checkbox-grouplabel {
-        flex-basis: 100%;
-
-        @media screen and (min-width: $tablet-portrait) {
-            padding: .675rem;
-            padding-bottom: 0;
-        }
-    }
-
-    .checkbox-label {
-        flex-shrink: 1; 
-        flex-grow: 0; 
-        flex-basis: auto;
-
-        @media screen and (min-width: $tablet-portrait) {
-            font-size: $size-h6;
-        }
-    }
-
-    input[type="checkbox"] {
-        height: 15px;
-        width: 15px;
-        flex: 0 0 15px;
-        margin-right:   5px;
-    }
-
-    .checkboxes {
-        flex: 1 1 10px;
-        padding: .675rem 0;
-
-        @media screen and (min-width: $tablet-portrait) {
-            padding: 0;
-        }
-
-        &:hover {
-            background: $pink;
-        }
-    }
-
-#contact {
-    .form-input-wrapper,
-    .form-textarea-wrapper  {
-        margin-bottom: .5rem;
+.form-field--checkboxes {
+    .form-input-wrapper {
         border: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-left: 1px solid $pink;
+        border-right: 1px solid $pink;
+
+        @media screen and (min-width: $tablet-landscape) {
+            flex-direction: row;
+        }
+    }
+}
+
+.checkbox-grouplabel {
+    flex-basis: 100%;
+
+    @media screen and (min-width: $tablet-portrait) {
+        padding: ($rhythmrem / 2);
+        padding-bottom: 0;
+    }
+}
+
+.checkbox-label {
+    flex-shrink: 1; 
+    flex-grow: 0; 
+    flex-basis: auto;
+
+    @media screen and (min-width: $tablet-portrait) {
+        font-size: $size-h6;
+    }
+}
+
+input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+    flex: 0 0 15px;
+    margin-right: 5px;
+}
+
+.checkboxes {
+    flex: 1 1 10px;
+    padding: ($rhythmrem / 2) 0;
+
+    @media screen and (min-width: $tablet-portrait) {
         padding: 0;
+    }
 
-        label {
-            flex: 0 1 170px;
-        }
-
-        input,
-        textarea,
-        label {
-            display: block;
-            padding: .675rem;
-            width: 100%;
-        }
-
-        input,
-        textarea {
-            border: 1px solid $pink;
-
-            &:hover {
-                border: 1px solid rgba($purple, .3);
-            }
-
-            &:focus {
-                border: 1px solid $purple;
-            }
-        }
-
-        label {
-            padding-left: 0;
-        }
+    &:hover {
+        background: $pink;
     }
 }

@@ -11,7 +11,7 @@
         <h3 class="widget__title">{{ 'latest_blogs'|t }}</h3>
         <ul class="post-list">
             {% for post in collection %}
-                <li>
+                <li class="post-list__item">
                     <a href="{{ post.url }}">{{ post.title }}</a>
                     <br />
                     <time timestamp="{{ page.date|date("d-n-Y") }}" class="a11y">
@@ -29,7 +29,7 @@
             <h3 class="widget__title">{{ 'tags'|t }}</h3>
             <ul class="post-list blog-post__tag-list">
                 {% for tax,value in taxlist['tag'] %}
-                    <li>
+                    <li class="post-list__item">
                         {% set active = uri.param('tag') == tax? 'active' : '' %}
                         <a class="{{ active }}" href="{{ base_url }}/{{ 'tag' }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
                     </li>
@@ -67,7 +67,7 @@
                         <ul class="post-list" id="open-{{ tax|lower }}">
                             {% for child in collection %}   
                                 {% if child in taxonomy.findTaxonomy({'category':tax}) %}
-                                    <li>
+                                    <li class="post-list__item">
                                         <a href="{{ child.url }}" class="column__title">
                                             {{ child.title }}
                                         </a>

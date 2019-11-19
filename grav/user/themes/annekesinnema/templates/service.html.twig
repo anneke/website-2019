@@ -42,10 +42,10 @@
 
         <!-- Archive post list -->
         {% if page.header.archive %}
-            <ul id="post-list" class="archive readmore">
+            <ul id="" class="post-list">
                 <h3>Read more</h3>
                 {% for post in site.posts %}
-                    <li>
+                    <li class="post-list__item">
                         <a href="{{ post.url }}">{{ post.title }}<aside class="dates">{{ post.date|date("M d")  }}</aside></a>
                     </li>
                 {% endfor %}
