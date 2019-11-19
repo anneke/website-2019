@@ -12,13 +12,13 @@ const menu = document.querySelector('.mobile__navigation');
 const firstItem = document.querySelector('.navigation__list li:first-of-type a');
 
 const pageClickables = document.querySelectorAll(
-	'a, input:not([disabled]), ' +
-	'select:not([disabled]), textarea:not([disabled]),  ' +
-	'button:not([disabled]), *[tabindex] '
+	'a, input, ' +
+	'select, textarea,  ' +
+	'button, *[tabindex] '
 );
 
 const menuClickables = menu.querySelectorAll(
-	'a, button:not([disabled]), *[tabindex] '
+	'a, button, *[tabindex] '
 );
 
 function toggleMenu() {
