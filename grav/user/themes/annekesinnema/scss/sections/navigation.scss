@@ -5,10 +5,6 @@
     }
 }
 
-button {
-    cursor: pointer;
-}
-
 @media screen and (max-width: 60em) {
     .navigation__list {
         display: none;
@@ -116,28 +112,29 @@ button {
     }
 }
 
-.ul-sub {
-    background: white;
-    border: 1px solid grey;
-    display: none;
-    position: absolute;
-    left: 0;
-    top: (1.35rem * 1.5);
-    z-index: 2;
-    text-align: left;
-    width: 250px;
+// Unused submenu
+// .ul-sub {
+//     background: white;
+//     border: 1px solid grey;
+//     display: none;
+//     position: absolute;
+//     left: 0;
+//     top: ($rhythmrem * 1.5);
+//     z-index: 2;
+//     text-align: left;
+//     width: 250px;
 
-    li {
-        padding: .625rem;
-        list-style-type: none;
-        list-style-position: inside;
-        border-bottom: 1px solid grey;
+//     li {
+//         padding: ($rhythmrem * .5);
+//         list-style-type: none;
+//         list-style-position: inside;
+//         border-bottom: 1px solid grey;
 
-        &:last-child  {
-            border: 0;
-        }
-    }
-}
+//         &:last-child  {
+//             border: 0;
+//         }
+//     }
+// }
 
 .ul-inline {
     list-style-type: none;
