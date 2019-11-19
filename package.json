@@ -15,7 +15,8 @@
     "deploy-to-dev": "dploy dev",
     "deploy": "dploy prod",
     "deploy-storybook": "build-storybook && dploy storybook",
-    "stats": "parker grav/user/themes/annekesinnema/css/styles.css"
+    "stats": "parker grav/user/themes/annekesinnema/css/styles.css",
+    "autoprefixer": "postcss grav/user/themes/annekesinnema/css/styles.css -d grav/user/themes/annekesinnema/css/prefixed"
   },
   "author": "Anneke Sinnema",
   "license": "ISC",
