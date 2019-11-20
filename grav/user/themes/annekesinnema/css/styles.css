@@ -81,7 +81,7 @@ a.skip-main {
   left: -999px;
   overflow: hidden;
   position: absolute;
-  top: auto;
+  top: to;
   width: 1px;
   z-index: -5;
 }
@@ -90,16 +90,74 @@ a.skip-main:focus, a.skip-main:active {
   border-radius: 15px;
   border: 4px solid yellow;
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1.33rem;
   height: auto;
   left: auto;
   margin: 10px 35%;
   overflow: auto;
-  padding: 5px;
+  padding: 0.675rem;
   text-align: center;
-  top: auto;
+  top: 1.35rem;
   width: 30%;
   z-index: 5;
+}
+
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -125px;
+  padding: 7px;
+  width: 250px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 0.675rem;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid rgba(51, 51, 51, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
 }
 
 html {
@@ -239,6 +297,11 @@ p {
 }
 p:empty {
   margin-bottom: 0;
+}
+
+span[lang=en],
+span[lang=nl] {
+  font-style: italic;
 }
 
 .section-usercontent {
@@ -408,13 +471,19 @@ textarea {
 }
 @media screen and (min-width: 35em) {
   .form-field--checkboxes .form-input-wrapper {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "group-label checkbox" "group-label checkbox" "group-label checkbox";
   }
 }
 
 .checkbox-grouplabel {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   grid-area: group-label;
   align-items: flex-start;
 }
@@ -561,12 +630,14 @@ html, body {
 @media screen and (min-width: 47.75em) {
   .site-main {
     grid-template-rows: auto;
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
     grid-template-columns: [main-start] 1fr [main-end];
   }
 
   .main-content {
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 4rem 25fr 2fr;
     grid-template-columns: [servicebg-start] 4rem [main-start content-start values-start] 25fr [content-end values-end] 2fr [servicebg-end];
@@ -580,19 +651,29 @@ html, body {
   }
 
   .main-area {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-area: main;
+    -ms-grid-row: 1;
     grid-row: 1;
   }
 
   .section-usercontent,
 .section-services {
     background: transparent;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-area: content;
+    -ms-grid-row: auto;
     grid-row: auto;
   }
 
   .bg-services {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
     grid-area: servicebg;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     grid-row: 2/3;
     background-color: #F2F9FF;
     z-index: -1;
@@ -609,6 +690,7 @@ html, body {
   }
 
   .section-services {
+    -ms-grid-row: 2;
     grid-row: 2;
     position: relative;
     padding-top: 2.7rem;
@@ -619,38 +701,68 @@ html, body {
   }
 
   .services__grid {
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 14fr 1fr 14fr;
     grid-template-columns: 14fr 1fr 14fr;
+    -ms-grid-rows: repeat(2, min-content 2.025rem 2.025rem 2.025rem) min-content;
     grid-template-rows: repeat(2, min-content 2.025rem 2.025rem 2.025rem) min-content;
     grid-template-areas: "service-1 . service-2" " .        . service-2" "service-3 . service-2" "service-3 . .        " "service-3 . service-4" "service-3 . service-4" " .        . .        " "service-5 . service-6" "service-5 . service-6";
   }
 
   .service-1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-area: service-1;
   }
 
   .service-2 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
     grid-area: service-2;
   }
 
   .service-3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 4;
     grid-area: service-3;
   }
 
   .service-4 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 2;
     grid-area: service-4;
   }
 
   .service-5 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 2;
     grid-area: service-5;
   }
 
   .service-6 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 2;
     grid-area: service-6;
   }
 
   .section-values {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
     grid-column: values;
     grid-row: 3;
   }
@@ -663,12 +775,17 @@ html, body {
     background: #6F66AB;
     color: #fff;
     position: relative;
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 24fr 1fr 23fr;
     grid-template-columns: [header-start footer-start] 24fr [header-end] 1fr [summary-start] 23fr [summary-end footer-end];
   }
 
   .site-footer__header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-area: header;
     grid-row: 1;
     padding-right: 6.075rem;
@@ -686,17 +803,29 @@ html, body {
   }
 
   .site-footer__contact {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     padding-top: 2.025rem;
     padding-bottom: 2.025rem;
     grid-column: 3/5;
   }
 
   .site-footer__byline {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     grid-column: footer-start/footer-end;
     grid-row: 2;
   }
 
   .side-content {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-column-span: 1;
     grid-area: main;
     grid-row: 2;
     padding: 2.7rem 4rem;
@@ -709,7 +838,6 @@ html, body {
 
   .widget__grid {
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -719,6 +847,9 @@ html, body {
 
   .page--post-list .bg-sidecontent,
 .page--post .bg-sidecontent {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
     grid-area: main;
     grid-row: 2;
     background-color: #F2F9FF;
@@ -731,6 +862,7 @@ html, body {
 @media screen and (min-width: 64em) {
   .site-main {
     grid-template-rows: auto;
+    display: -ms-grid;
     display: grid;
     margin-bottom: 2.7rem;
     -ms-grid-columns: 27fr 2.7rem 13fr;
@@ -738,6 +870,7 @@ html, body {
   }
 
   .main-content {
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 4rem 25fr;
     grid-template-columns: [servicebg-start] 4rem [main-start content-start values-start] 25fr [content-end values-end servicebg-end];
@@ -760,6 +893,10 @@ html, body {
 
   .page--post .bg-sidecontent,
 .page--post-list .bg-sidecontent {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-column: 2/5;
     grid-row: 1/2;
     background-color: #F2F9FF;
@@ -776,6 +913,7 @@ html, body {
     background: transparent;
     color: inherit;
     position: relative;
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 14fr 1fr 12fr 1fr 14fr;
     grid-template-columns: [header-start footer-start] 14fr [header-end form-start purplebg-start] 1fr 12fr [form-end] 1fr [summary-start] 14fr [summary-end footer-end purplebg-end];
@@ -783,11 +921,15 @@ html, body {
 
   .site-footer__header {
     color: inherit;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-area: header;
   }
 
   .bg-sitefooter {
     background: #6F66AB;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
     grid-area: purplebg;
     width: 100%;
     height: 100%;
@@ -797,6 +939,8 @@ html, body {
   }
 
   .site-footer__contactform {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
     display: block;
     grid-area: form;
     padding-top: 2.025rem;
@@ -806,6 +950,8 @@ html, body {
   }
 
   .site-footer__contact {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
     grid-area: summary;
   }
   .site-footer__contact h3 {
@@ -813,7 +959,10 @@ html, body {
   }
 
   .side-content {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
     grid-area: sidebar;
+    -ms-grid-row: 1;
     grid-row: 1;
     padding: 0 4rem 0 0;
     display: flex;
@@ -828,12 +977,14 @@ html, body {
 @media screen and (min-width: 81em) {
   .site-main {
     grid-template-rows: auto;
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 27fr 2fr 11fr;
     grid-template-columns: [main-start] 27fr [main-end] minmax(2.77rem, 2fr) [sidebar-start] 11fr [sidebar-end];
   }
 
   .main-content {
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 4rem 25fr 2fr;
     grid-template-columns: [servicebg-start] 4rem [main-start content-start values-start] 25fr [content-end] 2fr [values-end servicebg-end];
@@ -1054,6 +1205,7 @@ dd {
 .mobile__navigation.is-active .navigation__list li {
     display: block;
     z-index: 4;
+    width: 100%;
   }
   .mobile__navigation.is-active a {
     text-decoration: none;
@@ -1089,6 +1241,7 @@ dd {
 .ul-inline {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .ul-inline > li {
@@ -1111,8 +1264,10 @@ dd {
 
 @media screen and (min-width: 64em) {
   .blog-post-grid {
+    display: -ms-grid;
     display: grid;
-    grid-auto-columns: 4fr 1fr 19fr;
+    -ms-grid-columns: 4fr 1fr 19fr;
+    grid-template-columns: 4fr 1fr 19fr;
   }
 }
 .blog-post__title {
@@ -1150,6 +1305,10 @@ dd {
 }
 
 .blog-post__body {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
   grid-column: 3/4;
   grid-row: 1;
 }
@@ -1163,6 +1322,10 @@ dd {
   .blog-post__nav {
     border: 0;
     padding: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-column: 1/2;
     grid-row: 1;
     margin-top: 0;
@@ -1276,15 +1439,102 @@ dd {
 
 @media screen and (min-width: 35em) {
   .values__grid {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: 1fr 2.7rem 1fr 2.7rem;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 0 2.7rem;
+  }
+
+  .value--1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+  }
+
+  .value--2 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+  }
+
+  .value--3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+  }
+
+  .value--4 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+  }
+
+  .value--5 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+  }
+
+  .value--1 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
   }
 }
 @media screen and (min-width: 47.75em) {
   .values__grid {
-    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: 1fr 2.7rem 1fr 2.7rem 1fr 2.7rem;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0 2.7rem;
+  }
+
+  .value--1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+  }
+
+  .value--2 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+  }
+
+  .value--3 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+  }
+
+  .value--4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+  }
+
+  .value--5 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+  }
+
+  .value--1 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
   }
 }
 .testimonials__title {
@@ -1324,9 +1574,25 @@ dd {
 
 @media screen and (min-width: 35em) {
   .testimonials__grid {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: 1fr 2.7rem 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 0 2.7rem;
+  }
+
+  .testimonial--1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+  }
+
+  .testimonial--2 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
   }
 }
 @media screen and (min-width: 64em) {
