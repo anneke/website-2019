@@ -1,29 +1,32 @@
 ---
 title: Interim developer
-date: 16:00 10-07-2015
-headline: Get ready to fall in love :)
-taxonomy:
-    category: blog
-    tag: [grav]
+a11ytitle: Contract work
+menu: I'll join your team
+linkshort: How am I an asset?
+paginationTitle: I am also available for contract work
 ---
 
-You'll find this post in your `user/pages/01.blog/welcome-to-grav` folder - edit this post and reload the browser to see your changes.
+If you can temporarily use an extra hand, you can hire me as an interim front-end developer. I will gladly come and strengthen your team of specialists!
 
-To add new posts, simply add a folder in the `user/pages/01.blog/` folder and give it a unique slug for folder name. Then copy this `post.md` file into it and edit.
+===
 
----
+I believe that if you have a good grasp of the basics, then the frameworks or tools that go with it actually make a little less sense. That is why I really want to get to know my knowledge of Vanilla Javascript even better.
 
-[Grav][grav] supports [markdown](https://en.wikipedia.org/wiki/Markdown) so you can do things like this:
+I prefer to work on a fixed project for 3 months or longer where I can dig into the matter on the basis of close cooperation within a mixed team of specialists. I think clear communication is important. That is why I am happy to take the initiative to work together with UX and visual designers towards a well-documented end product.
 
-## Basic formatting
+### For example, during my last job I worked with or on:
 
-Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.
-
-Paragraphs must be separated by a blank line. Basic formatting of *italics* and **bold** is supported. This *can be **nested** like* so.
-
-Check out the [Grav docs][grav-docs] for more info on how to get the most out of Grav. File all bugs/feature requests at [Grav's GitHub repo][grav-gh].
-
-[grav]: http://getgrav.org
-[grav-docs]: http://learn.getgrav.org
-[grav-gh]: https://github.com/getgrav/grav
-
+- Angular (versions 4 to 7)
+- Modular thinking and using best practices in the field of custom components
+- Design Sprints
+- Working within a team with Scrum (with side experiments with Kanban)
+- Automated testing (End-to-end and unit testing)
+- Validating APIs with Swagger
+- Typescript
+- Docker
+- EventStore
+- OTAP street
+- a style guide in close collaboration with designers
+- Developing a component library
+- Documenting components, among other things through Storybook
+- Conducting job interviews, directing and supervising (new) colleagues

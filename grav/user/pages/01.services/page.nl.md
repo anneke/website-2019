@@ -6,6 +6,8 @@ content:
     items: @self.children
 ---
 
-<p>Ik bouw websites voor kleine én grote bedrijven en help ondernemers bij het onderhoud van hun website.</p>
+Ik maak websites en -applicaties die voldoen aan de hedendaagse standaarden voor kleine én grote bedrijven. 
 
-<p>Ik ben gespecialiseerd in robuuste en helder geschreven HTML en CSS, met een sterke focus op toegankelijkheid en UX, en (Vanilla) Javascript of Typescript waarmee de gebruikerservaring extra wordt ondersteund.</p>
+Daarnaast vind ik het ook belangrijk om mijn steentje bij te dragen aan een kwalitatief beter web. Dit doe ik door mezelf continue te verbeteren op het gebied van web toegankelijkheid. Want zeg nou zelf: het internet is toch voor iedereen?
+
+Ik geloof heilig in de <span lang="en">Girl Scout rule</span>, een principe waarbij ik gelijk de spreekwordelijke stofdoek haal over de code die ik tijdens het werken tegenkom.  

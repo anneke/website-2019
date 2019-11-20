@@ -4,6 +4,8 @@ a11ytitle: Hi there
 visible: false
 ---
 
-This is a standard page. It could be an **about page** or a summary page that outlines your many gifts and talents that you intend to bring to the world of web development.
+I am a front-end developer with a passion for a great user experience.
 
-This page has the header attribute `profile: true` that causes the bio information to be displayed at the top of the page.
+This is reflected in a specialization in robust and clearly written HTML and CSS, with a strong focus on accessibility and code reusability. (Vanilla) JavaScript is the icing on the cake! 🍰
+
+In addition to my work as a developer, I am also chairperson of [Fronteers] (https://fronteers.nl), the trade union for Front-end developers.

@@ -12,10 +12,6 @@ Mondelinge uitdrukkingsvaardigheid: Maakt feiten, meningen en ideeën aan andere
 Samenwerken: Heeft oog voor het groepsbelang en draagt actief bij aan het gemeenschappelijke resultaat.
 Betrokkenheid: Identificeert zich met en voelt zich nauw betrokken. -->
 
-<p>Ik geloof dat als je de basis goed onder de knie hebt, dat dan de frameworks of tools die er bij horen eigenlijk iets minder uitmaken. Daarom wil ik heel graag mijn kennis van Vanilla Javascript nog beter onder de knie krijgen.</p>
-
-<p>Het liefst werk ik gedurende minimaal 3 maanden of langer aan een vast project waarbij ik me kan ingraven in de materie op basis van een hechte samenwerking binnen een gemengd team specialisten. Helder communiceren vind ik belangrijk en ik neem graag het initiatief om samen met UX en visual designers op te trekken richting een goed gedocumenteerd eindproduct.</p>
-
 <h3>Fronteers ✨</h3>
 
 <p>Naast mijn werk als front-end developer ben ik sinds 2017 voorzitter voor Fronteers, de vakvereniging voor Front-end developers in Nederland en België. Ik heb in deze rol veel energie en aandacht in de vereniging gestoken om deze door te ontwikkelen naar een zichtbaarder en diverser vereniging. Zo zijn we vaker als vereniging aanwezig op verschillende congressen.</p> 

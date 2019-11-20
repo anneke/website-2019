@@ -1,29 +1,18 @@
 ---
 title: Websites
-date: 16:00 10-07-2015
-headline: Get ready to fall in love :)
-taxonomy:
-    category: blog
-    tag: [grav]
+a11ytitle: Websites for small companies
+menu: I build websites
+linkshort: How can I help you?
+linkdescription: 
+paginationTitle: I also build websites for smaller companies
+
+summary:
+    enabled: true
+    format: short
 ---
 
-You'll find this post in your `user/pages/01.blog/welcome-to-grav` folder - edit this post and reload the browser to see your changes.
+Maintaining and updating your own website shouldn't be a cause of stress.
 
-To add new posts, simply add a folder in the `user/pages/01.blog/` folder and give it a unique slug for folder name. Then copy this `post.md` file into it and edit.
+===
 
----
-
-[Grav][grav] supports [markdown](https://en.wikipedia.org/wiki/Markdown) so you can do things like this:
-
-## Basic formatting
-
-Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.
-
-Paragraphs must be separated by a blank line. Basic formatting of *italics* and **bold** is supported. This *can be **nested** like* so.
-
-Check out the [Grav docs][grav-docs] for more info on how to get the most out of Grav. File all bugs/feature requests at [Grav's GitHub repo][grav-gh].
-
-[grav]: http://getgrav.org
-[grav-docs]: http://learn.getgrav.org
-[grav-gh]: https://github.com/getgrav/grav
-
+I believe developer convenience is less important than customer convenience. Wether that customer is you as my client, or my clients' clients, a website should never get in your way from the goals you want to achieve. 

@@ -1,6 +1,6 @@
 
 {% set testimonial_collection = page.find('/testimonials').children.published %}
-{% if testimonial_collection|length > 0 %}
+{# {% if testimonial_collection|length > 0 %} #}
 <section class="section section-testimonials">
     <h2 class="testimonials__title">{{ 'testimonialsheader'|t }}</h2>
 
@@ -10,4 +10,4 @@
         {% endfor %}
     </div>
 </section>
-{% endif %}
+{# {% endif %} #}

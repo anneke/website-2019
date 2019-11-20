@@ -6,6 +6,8 @@ content:
     items: @self.children
 ---
 
-This is a standard page. It could be an **about page** or a summary page that outlines your many gifts and talents that you intend to bring to the world of web development.
+I create websites and applications that meet today's standards for companies large and small.
 
-This page has the header attribute `profile: true` that causes the bio information to be displayed at the top of the page.
+In addition, I also believe it is important to do my bit for a better world wide web. I do this by continuously improving myself in my knowledge of how to build accessible websites. Remember: [The web is for everyone](https://twitter.com/timberners_lee/status/228960085672599552)!
+
+I firmly believe in the _ Girl Scout rule_, a principle according to which you should always leave the code you encounter better than you found it.

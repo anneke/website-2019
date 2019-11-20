@@ -1,11 +1,11 @@
 ---
 title: Homepage
 a11ytitle: Welkom
-visible: false
+visible: true
 ---
 
-Ik ben een front-end developer met een hart voor een fijne gebruikerservaring en een oog voor detail.
+Ik ben een front-end developer met die zich met hart en ziel inzet voor een fijne gebruikerservaring. 
 
-Dit uit zich in een specialisatie in robuuste en helder geschreven HTML en CSS, met een sterke focus op toegankelijkheid en UX. (Vanilla) Javascript of Typescript zet ik in om de gebruikerservaring een extra <em lang="en">push</em> te geven. 
+Dit uit zich in een specialisatie in robuuste en helder geschreven HTML en CSS, met een sterke focus op toegankelijkheid en herbruikbaarheid. (Vanilla) JavaScript is de kers op de taart! 🍰
 
-Naast mijn werk als front-end developer ben ik ook betrokken bij [Fronteers, de vakvereniging voor Front-end developers](https://fronteers.nl). 
+Naast mijn werk als ontwikkelaar ben ik ook betrokken bij [Fronteers](https://fronteers.nl), de vakvereniging voor Front-end developers. 

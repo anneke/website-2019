@@ -14,4 +14,4 @@ Als je eenmaal een website hebt dan moet die ook onderhouden worden! Voor een va
 
 ===
 
-Ik heb ervaring met het onderhouden van websites in Wordpress, Drupal en Craft.
+Ik heb ervaring met het onderhouden van websites in Wordpress, Drupal, CraftCMS and Grav.
