@@ -1,5 +1,5 @@
 ---
-title: Homepage
+title: Home
 a11ytitle: Welkom
 visible: true
 ---

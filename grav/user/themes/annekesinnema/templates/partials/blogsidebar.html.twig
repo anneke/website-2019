@@ -14,7 +14,7 @@
                 <li class="post-list__item">
                     <a href="{{ post.url }}">{{ post.title }}</a>
                     <br />
-                    <time timestamp="{{ page.date|date("d-n-Y") }}" class="a11y">
+                    <time timestamp="{{ page.date|date("d-n-Y") }}" class="implicit">
                         {{ post.date|date('d') }}
                         {{ 'MONTHS_OF_THE_YEAR'|ta(post.date|date('n') - 1) }}
                         {{ post.date|date('Y') }}

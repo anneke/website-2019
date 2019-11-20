@@ -3,7 +3,7 @@ title: Interim developer
 a11ytitle: Contract work
 menu: I'll join your team
 linkshort: How am I an asset?
-paginationTitle: I am also available for contract work
+paginationTitle: do contract work
 ---
 
 If you can temporarily use an extra hand, you can hire me as an interim front-end developer. I will gladly come and strengthen your team of specialists!

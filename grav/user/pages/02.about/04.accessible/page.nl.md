@@ -8,6 +8,6 @@ summary:
     format: short
 ---
 
-Jouw klant staat voor mij op de eerste plaats, en dat betekent dat ik toegankelijkheid hoog in het vaandel heb staan.
+Jouw klant staat voor mij op de eerste plaats! Daarom heb ik <span lang="en">accessibility</span> (webtoegankelijkheid) hoog in het vaandel staan.
 
 ===

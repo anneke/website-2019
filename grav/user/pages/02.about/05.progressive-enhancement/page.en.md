@@ -1,12 +1,6 @@
 ---
-title: Progressive Enhancement
+title: I know each browser
 icon: progressive
-
-summary:
-    enabled: true
-    format: short
 ---
 
-Ik ken de beperkingen en de kansen van de meest populaire browsers. De functionaliteit blijft gelijk, de 'special effects' volgen wat elke browser aankan.
-
-===
+I know what each browser can handle, and will progressively enhance the user experience with what modern browsers can handle.

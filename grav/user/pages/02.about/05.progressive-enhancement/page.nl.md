@@ -1,13 +1,7 @@
 ---
-title: Progressive Enhancement
+title: Ik begrijp je browser
 icon: progressive
 visible: false
-
-summary:
-    enabled: true
-    format: short
 ---
 
-De functionaliteit blijft gelijk, de 'special effects' volgen wat elke browser aankan.
-
-===
+Ik zet de nieuwste snufjes en browserfeatures zo in dat ze de gebruikerservaring verbeteren in modernere browsers.

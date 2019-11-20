@@ -1,12 +1,6 @@
 ---
-title: Communicatie
+title: Empathy
 icon: communicatie
-
-summary:
-    enabled: true
-    format: short
 ---
 
-Een goede samenwerking begint met goede en heldere communicatie. Ik stel samen met jou een duidelijk traject op waarmee we samen aan de slag gaan.
-
-===
+A fine developer can write flashy code, but I believe a good one knows to value and foster empathy and communication skills in themselves.

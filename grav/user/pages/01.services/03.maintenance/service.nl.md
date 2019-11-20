@@ -1,9 +1,10 @@
 ---
 title: Onderhoud en ondersteuning
+a11ytitle: Onderhoud en ondersteuning
 menu: ik update uw website
 linkshort: Lees meer
 linkdescription: over website onderhoud 
-paginationTitle: Ik verzorg ook onderhoud en ondersteuning
+paginationTitle: je website helpen onderhouden
 
 summary:
     enabled: true
@@ -14,4 +15,12 @@ Als je eenmaal een website hebt dan moet die ook onderhouden worden! Voor een va
 
 ===
 
-Ik heb ervaring met het onderhouden van websites in Wordpress, Drupal, CraftCMS and Grav.
+Ik heb ervaring met het onderhouden van websites in Wordpress, Drupal, Craft CMS and Grav.
+
+![ ](WordPress-logotype-standard.png)
+
+![ ](drupal_logo-blue.png)
+
+![ ](logo-craft-cms.svg)
+
+![ ](grav-logo.png)

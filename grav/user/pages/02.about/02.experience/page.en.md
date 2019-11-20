@@ -1,12 +1,6 @@
 ---
-title: Jarenlange ervaring
+title: Decades of experience
 icon: kalender
-
-summary:
-    enabled: true
-    format: short
 ---
 
-Ik maak al producties voor het web sinds mijn veertiende. Ik heb dus de ervaring om door hypes heen te kijken.
-
-===
+I have been making productions for the web since I was fourteen years old! This helps me distinguish trends from hypes.

@@ -4,7 +4,7 @@ a11ytitle: Inhuur als interim
 menu: ik versterk teams
 linkshort: Lees meer
 linkdescription: over mijn ervaring op projecten
-paginationTitle: Ik versterk ook teams
+paginationTitle: je team tijdelijk komen versterken
 
 summary:
     enabled: true

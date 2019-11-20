@@ -43,7 +43,9 @@
     <div class="site-main">
         <main class="main-area" role="main" id="main">
             <div class="main-content">
-              <div class="bg-services"></div>
+              {% if page.home or page.slug == 'services' %}
+                <div class="bg-services"></div>
+              {% endif %}
 
               <section class="section section-usercontent">
                 {% block content %}{% endblock %}

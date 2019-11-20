@@ -2,9 +2,9 @@
 title: Websites
 a11ytitle: Websites for small companies
 menu: I build websites
-linkshort: How can I help you?
+linkshort: How can I help small businesses?
 linkdescription: 
-paginationTitle: I also build websites for smaller companies
+paginationTitle: build websites for smaller companies
 
 summary:
     enabled: true

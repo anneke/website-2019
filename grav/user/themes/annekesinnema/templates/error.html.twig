@@ -1,12 +1,28 @@
 {% extends 'partials/base.html.twig' %}
 
-{% block content %}
-    <div id="error">
-        <div>
-            <h1>Error {{ page.header.http_response_code }}</h1>
-            <p>
-                {{ page.content }}
-            </p>
-        </div>
-    </div>
+{% block header %}
 {% endblock %}
+
+{% set collection = page.collection() %} 
+{% block content %}
+    {% if page.header.title %}
+        <h2>{{ page.header.title }}</h2>
+    {% endif %}
+    
+    {{ page.content }}
+
+    {% if config.plugins.breadcrumbs.enabled %}
+        {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
+
+    {% if config.plugins.pagination.enabled and collection.params.pagination %}
+        {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+    {% endif %}  
+{% endblock %}
+
+{#     
+    {% block aside %}
+        {% include 'partials/sidebar.html.twig' with {'blog':page} %} 
+    {% endblock %} #}
+
+{# {% endembed %} #}

@@ -13,23 +13,12 @@
         </article>
 
         <nav id="post-nav" class="clearfix">
-            {% if not page.isFirst %}
-            <span class="prev">
-                <a href="{{ page.nextSibling.url }}"><span class="arrow">←</span> {{ page.nextSibling.header.paginationTitle }}</a>
-            </span>
-            {% endif %}
-
-            {% if not page.isFirst and not page.isLast %}
-            <br />
-            {% endif %}
-
-            {% if not page.isLast %}
-                {% if page.prevSibling.visible %}
-                <span class="next">
-                    <a href="{{ page.prevSibling.url }}">{{ page.prevSibling.header.paginationTitle }} <span class="arrow">→</span></a>
-                </span>
-            {% endif %}
-            {% endif %}
+            {{ 'i_can_also'|t }}
+            {% if not page.isFirst %}<span class="prev"><a href="{{ page.nextSibling.url }}"
+            >{{ page.nextSibling.header.paginationTitle }}</a
+            ></span>{% endif %}{% if not page.isFirst and not page.isLast %}
+            {{ 'or'|t }}{% endif %}{% if not page.isLast %}
+            {% if page.prevSibling.visible %}<span class="next"><a href="{{ page.prevSibling.url }}">{{ page.prevSibling.header.paginationTitle }}</a></span>{% endif %}{% endif %}!
         </nav>
 
         <!-- Disqus comments -->

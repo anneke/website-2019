@@ -2,8 +2,8 @@
 title: Websites
 a11ytitle: Websites voor kleine en grote bedrijven
 menu: ik bouw websites
-linkshort: Hoe kan ik je helpen?
-paginationTitle: Ik bouw ook websites voor MKB
+linkshort: Hoe kan ik bedrijven helpen?
+paginationTitle: websites maken voor kleine en grote bedrijven
 
 summary:
     enabled: true

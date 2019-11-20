@@ -7,7 +7,6 @@ en:
   SHARE: Share
   MONTHS_OF_THE_YEAR: [January, February, March, April, May, June, July, August, September, October, November, December]
   DAYS_OF_THE_WEEK: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
-  servicesheader: What can I help you with?
   valuesheader: Why work with me?
   more_blogs: More blogs
   latest_blogs: Latest blogs
@@ -21,6 +20,12 @@ en:
   aside-aria: Sidebar
   nav-aria: Site navigation
   testimonialsheader: What people say about me
+  servicesheader: What can I help you with?
+  servicesotherTitle: Anything else?
+  servicesother: Is there something else that you could use my help with?
+  serviceslinkText: Contact me!
+  i_can_also: I can also
+  or: or
  
 nl:
   SITE:
@@ -31,7 +36,6 @@ nl:
   SHARE: Deel
   MONTHS_OF_THE_YEAR: [januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december]
   DAYS_OF_THE_WEEK: [maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag]
-  servicesheader: Waar kan ik je mee helpen?
   valuesheader: Waarom moet je mij hebben?
   more_blogs: Meer blogs
   latest_blogs: Meest recente blogs
@@ -45,3 +49,9 @@ nl:
   aside-aria: Sidebar
   nav-aria: Site navigation
   testimonialsheader: Wat anderen over mij zeggen
+  servicesheader: Waar kan ik je mee helpen?
+  servicesotherTitle: Iets anders?
+  servicesother: Heb je een ander project waar je een front-end ontwikkelaar voor kunt gebruiken?
+  serviceslinkText: Neem contact op!
+  i_can_also: Ik kan ook
+  or: of

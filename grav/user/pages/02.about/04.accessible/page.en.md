@@ -7,6 +7,6 @@ summary:
     format: short
 ---
 
-Jouw klant staat voor mij op de eerste plaats, en dat betekent dat ik toegankelijkheid hoog in het vaandel heb staan.
+While you as my client are important, I put your customer first! This is why accessibility is of paramount importance to me.
 
 ===

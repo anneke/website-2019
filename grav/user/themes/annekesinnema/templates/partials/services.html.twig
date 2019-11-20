@@ -8,6 +8,19 @@
             {% for service in services_collection %}
                 {% include 'partials/service-item.html.twig' with {'number': loop.index} %}
             {% endfor %}
+
+            <article class="service service-6">
+                <h3 class="service__title">{{ 'servicesotherTitle'|t }}</h3>    
+                <p class="service__summary">
+                    {{ 'servicesother'|t }}
+                </p> 
+                <p>
+                    <a href="/contact" class="readmore readmore--dark"
+                        >{{ 'serviceslinkText'|t }}
+                    </a>
+                </p>
+            </article>
+
         </div>
     </section>
 {% endif %}

@@ -3,11 +3,7 @@
         <img src="{{ url('theme://images/') }}/icon-{{ value.header.icon }}.png" 
             class="value__icon" height="45" alt=""  loading="lazy" lazyload="1" />
     {% endif %}
-    {% if page.home %}
-        <h3 class="value__title">{{ value.title }}</h3>  
-    {% else %}
-        <h4 class="value__title">{{ value.title }}</h4>  
-    {% endif %}  
+    <h3 class="value__title">{{ value.title }}</h3>  
     <p class="value__summary">
         {{ value.summary|striptags }}
     </p>

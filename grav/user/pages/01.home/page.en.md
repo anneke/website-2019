@@ -1,7 +1,7 @@
 ---
 title: Home
 a11ytitle: Hi there
-visible: false
+visible: true
 ---
 
 I am a front-end developer with a passion for a great user experience.

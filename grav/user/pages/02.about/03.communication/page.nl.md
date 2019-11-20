@@ -1,13 +1,7 @@
 ---
-title: Communicatie
+title: Empathie
 icon: communicatie
 visible: false
-
-summary:
-    enabled: true
-    format: short
 ---
 
-Een goede samenwerking valt of staat met goede en heldere communicatie. 
-
-===
+Een goede developer kan vette dingen bouwen, maar een professional weet hoe belangrijk communicatie en empathie zijn.

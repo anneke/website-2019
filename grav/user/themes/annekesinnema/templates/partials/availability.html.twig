@@ -6,7 +6,7 @@
         {{ availability.content }}
         {% if page.template != 'contact' %}
             <a href="/contact" class="readmore readmore--dark"
-                ><span class="a11y">{{ availability.header.pre_cta }} </span
+                ><span class="implicit">{{ availability.header.pre_cta }} </span
                 ><span>{{ availability.header.cta }}</span>
             </a>
         {% endif %}
@@ -19,7 +19,7 @@
                 {{ availability.header.title }}
             </h2>
             <p class="availability__status availability__status--{{ availability.header.statuscode }}">
-                <span class="a11y">{{ availability.header.label }}:</span> 
+                <span class="implicit">{{ availability.header.label }}:</span> 
                 {{ availability.header.status }}
             </p>
         </header>
@@ -29,7 +29,7 @@
         {% if page.template != 'contact' %}
             <footer>
                 <a href="#callmeplease" class="readmore readmore--dark"
-                    ><span class="a11y">{{ availability.header.pre_cta }} </span
+                    ><span class="implicit">{{ availability.header.pre_cta }} </span
                     ><span>{{ availability.header.cta }}</span>
                 </a>
             </footer>
