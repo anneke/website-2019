@@ -72,7 +72,9 @@
                 } %}
             {% endblock %}
 
-            {% include 'partials/testimonials.html.twig' %}
+            {% if page.home or page.slug == 'services' or page.slug == 'about' %}
+              {% include 'partials/testimonials.html.twig' %}
+            {% endif %}
         </aside>
     </div>
 
