@@ -4,11 +4,6 @@
         {{ service.summary|striptags }}
     </p> 
     {% set content = service.content|slice(service.summary|length) %}
-    {% if content != '' %}
-        <p class="{% if truncate %}mobile-only{% endif %}">
-            {{ content|striptags }}
-        </p>
-    {% endif %}
     <p>
         <a href="{{ service.url }}" class="readmore readmore--dark"
             >{{ service.header.linkshort }}
