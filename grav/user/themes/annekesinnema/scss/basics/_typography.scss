@@ -87,6 +87,10 @@ main h2:first-child,
     margin-top: 0;
 }
 
+.value__title {
+    margin-top:#{$rhythm / 2}rem;
+}
+
 p, ul, ol, pre, table, blockquote {
     margin-top: 0;
     margin-bottom: #{$rhythm / 2}rem;
@@ -150,6 +154,7 @@ span[lang="nl"]{
 
     p:first-of-type {
         margin-top: 0;
+        margin-bottom: $rhythmrem;
     }
 }
 

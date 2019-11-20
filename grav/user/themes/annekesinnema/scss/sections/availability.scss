@@ -3,6 +3,10 @@
     border: 2px solid $pink;
     padding: 1.5rem;
 
+    > p:last-child {
+        margin-bottom: 0;
+    }
+
     footer {
         margin-top: $rhythmrem;
     }

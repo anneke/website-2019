@@ -47,6 +47,10 @@ html, body {
 
     @media screen and (min-width: $tablet-portrait) {
         padding: 0;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
     }
 }
 
@@ -63,18 +67,6 @@ html, body {
     padding: 0;
 }
 
-// .side-content--page,
-// .side-content--contact {
-//     background-color: $light-blue;
-//     padding: $rhythmrem;
-//     border-bottom-right-radius: 50% 35%;
-
-//     @media screen and (min-width: $tablet-portrait) {
-//         background-color: transparent;
-//         padding: 0;
-//     }
-// }
-
 .side-content--post,
 .side-content--post-list {
     background-color: $light-blue;
@@ -86,10 +78,6 @@ html, body {
         padding: 0;
         top: 0;
         position: inherit;
-    }
-
-    h2 {
-        margin-top: 0;
     }
 }
 
@@ -184,12 +172,12 @@ html, body {
 
     .section {
         padding: $whitespace-medium 0;
-
-        .main-content &:nth-child(2) {
-            padding-top: 0;
-        }
     }
 
+    .section-usercontent {
+        padding-top: 0;
+    }
+    
     .section-services {
         -ms-grid-row: 2;
         grid-row: 2;
@@ -414,6 +402,7 @@ html, body {
                 25fr
             [content-end values-end servicebg-end];
         grid-template-rows: auto;
+        height: 100%;
     }
 
     .site-navigation  {
@@ -447,7 +436,7 @@ html, body {
             border-bottom-left-radius: 40%;
             border-bottom-right-radius: 0;
             position: relative;
-            top: -2rem;
+            top: 0em;
         }
     }
 
@@ -518,10 +507,13 @@ html, body {
         -ms-grid-row: 1;
         grid-row: 1;
         padding: 0 $padding-left-and-right 0 0;
-        
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .side-content--post-list {
+        justify-content: flex-start;
     }
 
     .widget__grid {
