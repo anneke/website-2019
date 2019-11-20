@@ -140,6 +140,11 @@ p {
     }
 }
 
+span[lang="en"],
+span[lang="nl"]{
+    font-style: italic;
+}
+
 .section-usercontent {
     max-width: 72ch;
 
