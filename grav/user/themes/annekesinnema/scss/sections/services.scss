@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: $whitespace-small;
+    font-size: $size-h6;
 
     @media screen and (min-width: $tablet-portrait) {
         margin-bottom: 0;
