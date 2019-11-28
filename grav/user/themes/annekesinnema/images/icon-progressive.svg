@@ -1,0 +1,23 @@
+
+<svg width="71px" height="45px" viewBox="0 0 71 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile" transform="translate(-127.000000, -2819.000000)" stroke="#6F66AB">
+            <g id="Pluspunten" transform="translate(31.000000, 1748.000000)">
+                <g id="Progressive-enhancement" transform="translate(0.000000, 1071.000000)">
+                    <g id="Icon" transform="translate(96.000000, 0.000000)">
+                        <path d="M0.5,0.898087593 L0.5,43.5 L69.243995,43.5 L0.5,0.898087593 Z" id="Rectangle-9"></path>
+                        <polyline id="Path-3" points="0 43 20.8769231 26.85 28.1384615 29.7 46.2923077 17.35 53.5538462 18.3 62 8"></polyline>
+                        <path d="M2,33 L1,33" id="Line-4-Copy" stroke-linecap="square"></path>
+                        <path d="M2,44 L1,44" id="Line-4-Copy" stroke-linecap="square"></path>
+                        <path d="M2,1 L1,1" id="Line-4" stroke-linecap="square"></path>
+                        <path d="M2,11 L1,11" id="Line-4" stroke-linecap="square"></path>
+                        <path d="M2,22 L1,22" id="Line-4" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

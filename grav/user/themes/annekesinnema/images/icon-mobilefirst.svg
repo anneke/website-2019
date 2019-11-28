@@ -1,0 +1,24 @@
+
+<svg width="78px" height="46px" viewBox="0 0 78 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile" transform="translate(-113.000000, -3115.000000)" stroke="#6F66AB">
+            <g id="Pluspunten" transform="translate(31.000000, 1748.000000)">
+                <g id="Mobile-first" transform="translate(1.000000, 1368.000000)">
+                    <g id="Icon" transform="translate(82.000000, 0.000000)">
+                        <path d="M1,31 L13,31 C13.5522847,31 14,30.5522847 14,30 L14,8 C14,7.44771525 13.5522847,7 13,7 L1,7 C0.44771525,7 -6.76353751e-17,7.44771525 0,8 L0,30 C6.76353751e-17,30.5522847 0.44771525,31 1,31 Z" id="Stroke-1"></path>
+                        <path d="M5,10 L9,10" id="Stroke-3"></path>
+                        <path d="M10,19 L28.2210679,19" id="Stroke-4"></path>
+                        <polyline id="Stroke-5" points="26 16 28.8160396 19.0948067 26 22.1896133"></polyline>
+                        <path d="M21,38 L71,38 L71,2 C71,0.8954305 70.1045695,-2.02906125e-16 69,0 L23,0 C21.8954305,2.02906125e-16 21,0.8954305 21,2 L21,38 Z" id="Stroke-6"></path>
+                        <path d="M18,44 L74,44 C75.1045695,44 76,43.1045695 76,42 L76,38 L16,38 L16,42 C16,43.1045695 16.8954305,44 18,44 Z" id="Stroke-8"></path>
+                        <path d="M18,41 L23.8423779,41" id="Stroke-10"></path>
+                        <path d="M45,3 L46.8947554,3" id="Stroke-11"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
