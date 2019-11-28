@@ -29,6 +29,7 @@
                     </a>
                 </li>
             {% endfor %}
+            
             {% if config.plugins.langswitcher.enabled %}
                 {% for language in langswitcher.languages %}
                     {% set show_language = true %}
@@ -66,8 +67,8 @@
     {% for p in page.children.visible %}
         {% set current_page = (p.active or p.activeChild) ? 'current' : '' %}
         {% set current_main = (p.active) ? '#main' : '' %}
-        <li class="navigation__list-item">
-            <a href="{{ p.url }}{{ current_main }}" class="{{ current_page }}">
+        <li class="navigation__list-item {{ current_page }}">
+            <a href="{{ p.url }}{{ current_main }}">
                 {{ p.menu }}
             </a>
             {# {% if p.children.visible.count > 0 %}

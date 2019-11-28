@@ -8,8 +8,11 @@
 
 const onButton = document.querySelector('.navigation__ontoggle');
 const offButton = document.querySelector('.navigation__offtoggle');
+const mainContainer = document.querySelector('.container');
 const navContainer = document.querySelector('.site-navigation');
 const menu = document.querySelector('.mobile__navigation');
+const headerContainer = document.querySelector('.site-header');
+const headerTitle = document.querySelector('.site-header__title');
 const firstItem = document.querySelector('.navigation__list li:first-of-type a');
 
 const pageClickables = document.querySelectorAll(
@@ -27,6 +30,8 @@ function toggleMenu() {
 	onButton.setAttribute('hidden', true);
 	onButton.style.display = 'none'; 
 	navContainer.style.display = 'block'; 
+	mainContainer.style.height = (headerContainer.offsetHeight + headerTitle.offsetHeight) + 'px';
+	mainContainer.style.overflow = 'hidden';
 	firstItem.focus();
 	
 	for(var i=0; i < pageClickables.length; i++){
@@ -42,6 +47,8 @@ function toggleMenuOff() {
 	onButton.setAttribute('hidden', false);
 	onButton.style.display = 'flex';
 	navContainer.style.display = 'flex'; 
+	mainContainer.style.height = 'auto';
+	mainContainer.style.overflow = 'auto';
 
 	for(var i=0; i < pageClickables.length; i++){
 		pageClickables[i].removeAttribute('tabindex');
