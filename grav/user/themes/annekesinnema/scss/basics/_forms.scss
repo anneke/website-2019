@@ -119,6 +119,7 @@ textarea {
 
     @media screen and (min-width: $tiny-screen) {
         padding: ($rhythmrem / 2);
+        border-left: 1px solid $pink;
     }
 }
 
