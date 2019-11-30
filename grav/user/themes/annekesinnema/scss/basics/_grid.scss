@@ -106,6 +106,17 @@ html, body {
 }
 
 @media screen and (min-width: $tablet-portrait) {
+
+    .logo svg {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .value__icon {
+        height: 3rem;
+        width: auto;
+    }
+    
     .site-main {
         grid-template-rows: auto;
         display: -ms-grid;

@@ -129,9 +129,11 @@
             position: relative;
             top: .1rem;
             content: " ";
+            background-size: contain;
 
             @media (prefers-color-scheme: dark) {
                 background: $link-svg-white transparent no-repeat center center;
+                background-size: contain;
             }
         }
     }
