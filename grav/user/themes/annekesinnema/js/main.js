@@ -48,8 +48,8 @@ function toggleMenu() {
 function toggleMenuOff() {
 	menu.classList.remove('is-active');
 	onButton.setAttribute('hidden', false);
-	onButton.style.display = 'flex';
-	navContainer.style.display = 'flex'; 
+	onButton.removeAttribute('style');
+	navContainer.removeAttribute('style');
 	for (e = 0; e < mainContainer.length; ++e) {
 		mainContainer[e].removeAttribute('style');
 	}
