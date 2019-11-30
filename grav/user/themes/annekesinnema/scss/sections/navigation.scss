@@ -123,12 +123,11 @@
         &::before {
             background: $link-svg-purple transparent no-repeat center center;
             display: inline-block;
-            width: 7px;
-            height: 14px;
-            margin-right: 7px;
-            margin-left: -14px;
+            width: .85rem;
+            height: .85rem; 
+            margin-left: -.85rem;
             position: relative;
-            top: 2px;
+            top: .1rem;
             content: " ";
 
             @media (prefers-color-scheme: dark) {
