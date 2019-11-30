@@ -8,7 +8,7 @@
 
 const onButton = document.querySelector('.navigation__ontoggle');
 const offButton = document.querySelector('.navigation__offtoggle');
-const mainContainer = document.querySelector('.container');
+const mainContainer = document.querySelectorAll('html, body');
 const navContainer = document.querySelector('.site-navigation');
 const menu = document.querySelector('.mobile__navigation');
 const headerContainer = document.querySelector('.site-header');
@@ -30,8 +30,11 @@ function toggleMenu() {
 	onButton.setAttribute('hidden', true);
 	onButton.style.display = 'none'; 
 	navContainer.style.display = 'block'; 
-	mainContainer.style.height = (headerContainer.offsetHeight + headerTitle.offsetHeight) + 'px';
-	mainContainer.style.overflow = 'hidden';
+	for (e = 0; e < mainContainer.length; ++e) {
+		mainContainer[e].style.height = (headerContainer.offsetHeight + headerTitle.offsetHeight) + 'px';
+		mainContainer[e].style.overflow = 'hidden';
+		mainContainer[e].style.position = 'relative';
+	}
 	firstItem.focus();
 	
 	for(var i=0; i < pageClickables.length; i++){
@@ -47,8 +50,9 @@ function toggleMenuOff() {
 	onButton.setAttribute('hidden', false);
 	onButton.style.display = 'flex';
 	navContainer.style.display = 'flex'; 
-	mainContainer.style.height = 'auto';
-	mainContainer.style.overflow = 'auto';
+	for (e = 0; e < mainContainer.length; ++e) {
+		mainContainer[e].removeAttribute('style');
+	}
 
 	for(var i=0; i < pageClickables.length; i++){
 		pageClickables[i].removeAttribute('tabindex');
