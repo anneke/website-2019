@@ -1,7 +1,7 @@
-<blockquote class="testimonial testimonial--{{ number }}">
-    <p class="testimonial__quote">{{ testimonial.header.quote }}</p>
+<blockquote class="testimonial testimonial--{{ number }}" itemprop="review" itemscope itemtype="http://schema.org/Review">
+    <p class="testimonial__quote" itemprop="description">{{ testimonial.header.quote }}</p>
     <footer class="testimonial__footer">
-        <cite class="testimonial__source">
+        <cite class="testimonial__source" itemprop="author">
             {{ testimonial.header.cited }}<br />
             <span class="testimonial__source-company">{{ testimonial.header.citedCompany }}</span>
         </cite>

@@ -1,7 +1,7 @@
 
 {% set services_collection = page.find('/services').children.published %}
 {% if services_collection|length > 0 %}
-    <section class="section section-services">
+    <section class="section section-services" itemscope itemtype="http://schema.org/ItemList">
         <h2 class="services__title">{{ 'servicesheader'|t }}</h2>
 
         <div class="services__grid">

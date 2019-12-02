@@ -1,6 +1,6 @@
-<article class="service service-{{ number }}">
-    <h3 class="service__title">{{ service.title }}</h3>    
-    <p class="service__summary">
+<article class="service service-{{ number }}" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+    <h3 class="service__title" itemprop="name">{{ service.title }}</h3>    
+    <p class="service__summary" itemprop="description">
         {{ service.summary|striptags }}
     </p> 
     {% set content = service.content|slice(service.summary|length) %}

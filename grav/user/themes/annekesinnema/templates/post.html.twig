@@ -7,7 +7,7 @@
                         <h2 class="blog-post__title">
                             {{ page.title }}
                         </h2>
-                        <time timestamp="{{ page.date|date("d-n-Y") }}" class="blog-post__time">
+                        <time timestamp="{{ page.date|date("d-n-Y") }}" class="blog-post__time"  itemProp="datePublished">
                             {{ page.date|date("d") }}
                             {{ 'MONTHS_OF_THE_YEAR'|ta(page.date|date('n') - 1) }} 
                             {{ page.date|date("Y") }}
