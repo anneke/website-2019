@@ -2,8 +2,8 @@
 title: Blog
 a11ytitle: Blog
 
-# visible: false
-# published: false
+visible: false
+published: false
 
 sitemap:
     changefreq: monthly

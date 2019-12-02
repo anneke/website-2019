@@ -1,13 +1,13 @@
-<article class="service service-{{ number }}" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<article class="service service-{{ number }}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
     <h3 class="service__title" itemprop="name">{{ service.title }}</h3>    
     <p class="service__summary" itemprop="description">
         {{ service.summary|striptags }}
     </p> 
-    {% set content = service.content|slice(service.summary|length) %}
+    {# {% set content = service.content|slice(service.summary|length) %} #}
     <p>
-        <a href="{{ service.url }}" class="readmore readmore--dark"
-            >{{ service.header.linkshort }}
+        <a href="{{ service.url }}" class="readmore readmore--dark"  itemprop="url">{{ service.header.linkshort }}
             <span class="implicit">{{ service.header.linkdescription }}</span>
         </a>
     </p>
+    <meta itemprop="position" content="{{ number }}" />
 </article>
