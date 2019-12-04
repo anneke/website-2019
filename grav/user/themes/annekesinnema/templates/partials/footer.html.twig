@@ -14,7 +14,7 @@
         <div class="bg-sitefooter"></div>
         <section class="site-footer__header">
             {% if page.slug == 'contact' %}
-                <h2 class="site-footer__title">{{ footer.header.expandedTitle }}</h2>
+                <h2 class="site-footer__title" aria-label="Contact">{{ footer.header.expandedTitle }}</h2>
                 <dl>
                     <dt>{{ footer.header.adresLabel }}</dt>
                     <dd itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Oostveenweg 28<br />
@@ -26,25 +26,23 @@
                     <dd itemprop="vatID">op aanvraag</dd>
                 </dl>
             {% else %}
-                <h2 class="site-footer__title">{{ footer.header.title }}</h2>
+                <h2 class="site-footer__title" aria-label="Contact">{{ footer.header.title }}</h2>
                 <p class="site-footer__subtitle">{{ footer.header.subtitle }}</p>
                 <p>{{ footer.header.intro }}</p>
             {% endif %}
         </section>
 
         <section class="site-footer__contactform" id="contactform">
-            {# <h3 class="site-footer__sub-title">{{ footer.header.callbackLabel }}</h3> #}
             {% include "forms/form.html.twig" with { form: forms('callmeplease') } %}
         </section>
 
         <section class="site-footer__contact"> 
-            {# <h3 class="site-footer__sub-title">{{ footer.header.contactLabel }}</h3> #}
             <dl>
                 <dt>{{ footer.header.emailLabel }}</dt>
                 <dd><a href="mailto:{{'mail@annekesinnema.nl'|safe_email}}" itemprop="email">{{'mail@annekesinnema.nl'|safe_email}}</a></dd>
                 <dt>{{ footer.header.phoneLabel }}</dt>
                 <dd><a href="tel:0644870256" itemprop="telephone" content="0644870256">06-44870256</a></dd>
-                <dd><a href="tel:0534321728" itemprop="telephone" content="0534321728"> >053-4321728</a></dd>
+                <dd><a href="tel:0534321728" itemprop="telephone" content="0534321728">053-4321728</a></dd>
                 <dt>{{ footer.header.socialLabel }}</dt>
                 <dd><a href="https://twitter.com/asinnema" rel="me"><span class="implicit">{{ footer.header.socialA11yLabel }} </span>Twitter</a></dd>
                 <dd><a href="https://www.linkedin.com/in/annekesinnema/" rel="me"><span class="implicit">{{ footer.header.socialA11yLabel }} </span>LinkedIn</a></dd>
