@@ -1,7 +1,6 @@
 ---
-title: My availability
+title: Current status
 statuscode: available
-label: Current status
 status: Available
 pre_cta: Do you know of a nice job for me?
 cta: Contact me!

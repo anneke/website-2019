@@ -1,7 +1,6 @@
 ---
-title: Mijn beschikbaarheid
+title: Huidige status
 statuscode: available
-label: Huidige status
 status: Beschikbaar
 pre_cta: Weet je nog een leuke opdracht?
 cta: Neem contact met me op
