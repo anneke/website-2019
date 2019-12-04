@@ -7,8 +7,8 @@ html, body {
     margin: 0 auto;
     width: 100%; 
 
-    @media screen and (min-width: $desktop-large) {
-        max-width: #{'calc(100% - 20vw)'};;
+    @media screen and (min-width: $desktop-small) {
+        max-width: #{'calc(100% - 12vw)'};
     }
 }
 
@@ -567,15 +567,15 @@ html, body {
     }
 }
 
-@media screen and (min-width: $desktop) {
+@media screen and (min-width: $desktop-small) {
     .bg-services::after,
     .page--post .bg-sidecontent::after,
     .page--post-list .bg-sidecontent::after,
     .bg-sitefooter::after {
         content: ' ';
         position: absolute;
-        right: -10vw;
-        width: 10VW;
+        right: -6vw;
+        width: 6vw;
         background-color: $light-blue;
         display: block;
         top: 0;
@@ -584,7 +584,7 @@ html, body {
 
     .bg-services::after {
         right: auto;
-        left: -10vw;
+        left: -6vw;
     }
 
     .bg-sitefooter::after {

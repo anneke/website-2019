@@ -1,8 +1,9 @@
 html {
     font-size: 18px;
 
-    @media screen and (min-width: $tablet-portrait) {
-        font-size: 1.25vw;
+    @media screen and (min-width: $desktop-small) {
+        // font-size: 1.25vw;
+        font-size: #{'calc(100% + 1.25)'};
     }
 }
 
@@ -13,6 +14,7 @@ body {
     font-style: normal;
     font-weight: 400;
     color: $default-text-color;
+    -webkit-text-size-adjust: auto;
 }
 
 @supports (font-display: swap) {
