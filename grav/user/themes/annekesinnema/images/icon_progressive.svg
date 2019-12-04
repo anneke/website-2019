@@ -1,0 +1,6 @@
+<svg width="72px" height="46px" viewBox="0 0 72 46" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(1 1)" stroke="#6F66AB" stroke-width="2" fill="none" fill-rule="evenodd">
+    <polyline points="2.661 42.281 23.538 26.305 30.8 29.123 48.953 16.905 56.215 17.845 64.661 7.655"/>
+    <path d="M1.661,32.389 L0.661,32.389 M69.34,43.27 L0.661,43.27 M2.661,43.27 L2.661,0.73 L0.661,0.73 M1.661,10.623 L0.661,10.623 M1.661,21.506 L0.661,21.506" stroke-linecap="square"/>
+  </g>
+</svg>

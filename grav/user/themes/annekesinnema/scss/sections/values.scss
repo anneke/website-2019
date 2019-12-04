@@ -20,6 +20,11 @@
     }
 }
 
+.value__icon {
+    height: 2.5rem;
+    width: auto;
+}
+
 @media screen and (min-width: $tiny-screen) {
     .values__grid {
         display: -ms-grid;

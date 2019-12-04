@@ -1,6 +1,6 @@
 ---
 title: Empathie
-icon: communicatie
+icon: communication
 visible: false
 ---
 

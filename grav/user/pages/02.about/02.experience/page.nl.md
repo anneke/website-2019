@@ -1,6 +1,6 @@
 ---
 title: Jarenlange ervaring
-icon: kalender
+icon: experience
 visible: false
 ---
 
