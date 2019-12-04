@@ -1,22 +1,18 @@
 .form-input-wrapper,
 .form-textarea-wrapper {
     position: relative;
-    border: 1px solid $pink;
     border-top: 0;
 
     @media screen and (min-width: $tiny-screen) {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        padding: 0;
+        padding:  ($rhythmrem / 3) ($rhythmrem / 2);
     }
 }
 
 .input,
 label {
     background-color: white;
+    color: $dark-purple;
     display: block;
-    border: 0;
     border-radius: 0;
     -moz-appearance: none;
     width: 100%;
@@ -28,27 +24,35 @@ label {
     font-size: inherit;
     padding:  ($rhythmrem / 3) ($rhythmrem / 2);
 
-    &:not(:first-child) {
-        border-top: 1px solid $pink;
+    &:focus {
+        color: black;
     }
+}
 
-    @media screen and (min-width: $tiny-screen) {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        flex: 2 1 0;
+.form-input-wrapper:focus-within label,
+.form-textarea-wrapper:focus-within label {
+    color: black;
+}
 
-        &:not(:first-child) {
-            border-top: 0;
-            border-left: 1px solid $pink;
-        }
-    }
+.input {
+    border: 1px solid $dark-purple;
+    margin-bottom: 3px;
 
     &:focus {
-        outline-offset: initial;
-        outline-color: $purple;
-        outline-width: thick;
+        border: 1px solid $default-text-color;
+        border-bottom: 4px solid $default-text-color;
+        margin-bottom: 0;
+        outline: none;
+    }
+
+    &:hover {
         background-color: $pink;
+    }
+}
+
+@media screen and (min-width: $tiny-screen) {
+    label {
+        padding: .45rem 0;
     }
 }
 
@@ -95,17 +99,6 @@ textarea {
 .form-field--checkboxes {
     .form-input-wrapper {
         border: 0;
-
-        @media screen and (min-width: $tiny-screen) {
-            display: -ms-grid;
-            display: grid;
-            -ms-grid-columns: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: 
-            "group-label checkbox"
-            "group-label checkbox"
-            "group-label checkbox";
-        }
     }
 }
 
@@ -113,30 +106,16 @@ textarea {
     border-left: 1px solid $pink;
 }
 
-.checkbox-grouplabel {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-area: group-label;
-    align-items: flex-start;
-
-    @media screen and (min-width: $tiny-screen) {
-        padding: ($rhythmrem / 2);
-    }
-}
-
 .checkbox-label,
 .checkbox-text {
     font-size: $size-h6;
-    padding:  ($rhythmrem / 3) ($rhythmrem / 2);
+    padding: ($rhythmrem / 3) ($rhythmrem / 2);
 
     @media screen and (min-width: $tiny-screen) {
-        padding: ($rhythmrem / 4) ($rhythmrem / 2);
+        padding: ($rhythmrem / 4) 0;
     }
 }
 
-.input,
 .checkbox-label {
     &:hover,
     &:focus {

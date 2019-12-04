@@ -37,6 +37,8 @@
 
     @media screen and (min-width: $tablet-portrait) {
         margin-top: 0;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
     }
 }
 
