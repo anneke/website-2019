@@ -83,7 +83,11 @@ main h2:first-child,
 }
 
 .value__title {
-    margin-top:#{$rhythm / 2}rem;
+    margin-top: #{$rhythm / 2}rem;
+}
+
+.values__title {
+    margin-bottom: 0;
 }
 
 p, ul, ol, pre, table, blockquote {
