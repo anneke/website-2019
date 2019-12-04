@@ -47,6 +47,10 @@ dl {
 @media screen and (min-width: $tablet-landscape) {
     dl {
         margin-top: $rhythmrem;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
     }
 }
 

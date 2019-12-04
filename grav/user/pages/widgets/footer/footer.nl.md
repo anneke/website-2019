@@ -20,7 +20,7 @@ wetransfer: Stuur mij grote documenten via WeTransfer
 wetransfermessage: Bij%20vragen%20kun%20je%20me%20bereiken%20op%20telefoonnummer%20...%20.%20Mijn%20naam%20is%20...
 
 phoneLabel: Telefoon
-socialLabel: Volg mij ook op social media
+socialLabel: Social media
 socialA11yLabel: Mijn
 
 by: door

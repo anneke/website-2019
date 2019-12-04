@@ -33,30 +33,22 @@
         </section>
 
         <section class="site-footer__contactform" id="contactform">
-            <h3 class="site-footer__sub-title">{{ footer.header.callbackLabel }}</h3>
-            <p>
-                {{ footer.header.callback }}
-            </p> 
+            {# <h3 class="site-footer__sub-title">{{ footer.header.callbackLabel }}</h3> #}
             {% include "forms/form.html.twig" with { form: forms('callmeplease') } %}
         </section>
 
         <section class="site-footer__contact"> 
-            <h3 class="site-footer__sub-title">{{ footer.header.contactLabel }}</h3>
+            {# <h3 class="site-footer__sub-title">{{ footer.header.contactLabel }}</h3> #}
             <dl>
                 <dt>{{ footer.header.emailLabel }}</dt>
                 <dd><a href="mailto:{{'mail@annekesinnema.nl'|safe_email}}" itemprop="email">{{'mail@annekesinnema.nl'|safe_email}}</a></dd>
-                <dt>{{ footer.header.wetransferLabel }}</dt>
-                <dd><a href="https://www.wetransfer.com/?to=mail@annekesinnema.nl&msg={{ footer.header.wetransfermessage }}">{{ footer.header.wetransfer }}</a></dd>
                 <dt>{{ footer.header.phoneLabel }}</dt>
                 <dd><a href="tel:0644870256" itemprop="telephone" content="0644870256">06-44870256</a></dd>
                 <dd><a href="tel:0534321728" itemprop="telephone" content="0534321728"> >053-4321728</a></dd>
+                <dt>{{ footer.header.socialLabel }}</dt>
+                <dd><a href="https://twitter.com/asinnema" rel="me"><span class="implicit">{{ footer.header.socialA11yLabel }} </span>Twitter</a></dd>
+                <dd><a href="https://www.linkedin.com/in/annekesinnema/" rel="me"><span class="implicit">{{ footer.header.socialA11yLabel }} </span>LinkedIn</a></dd>
             </dl>
-
-            <h3 class="site-footer__sub-title">{{ footer.header.socialLabel }}</h3>
-            <ul>
-                <li><a href="https://twitter.com/asinnema" rel="me"><span class="implicit">{{ footer.header.socialA11yLabel }} </span>Twitter</a></li>
-                <li><a href="https://www.linkedin.com/in/annekesinnema/" rel="me"><span class="implicit">{{ footer.header.socialA11yLabel }} </span>LinkedIn</a></li>
-            </ul>
 
             {% set blogArticles = page.evaluate([{'@page.children':'/blog'}]) %}
             {% if config.plugins.feed.enabled and blogArticles|length > 1 %}

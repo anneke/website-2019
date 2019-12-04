@@ -20,7 +20,7 @@ wetransfer: Send me your large files through WeTransfer!
 wetransfermessage: Please%20contact%20me%20for%20questions%20through%20...%20My%20name%20is%20...
 
 phoneLabel: Phone
-socialLabel: Follow me on social media
+socialLabel: Social media
 socialA11yLabel: My
 
 by: by
