@@ -7,8 +7,8 @@ html, body {
     margin: 0 auto;
     width: 100%; 
 
-    @media screen and (min-width: $tablet-portrait) {
-        max-width: $max-content-width;
+    @media screen and (min-width: $desktop-large) {
+        max-width: #{'calc(100% - 20vw)'};;
     }
 }
 
@@ -399,7 +399,7 @@ html, body {
             [main-end] 
                 ($rhythmrem * 2)
             [sidebar-start] 
-                13fr
+                minmax(250px, 13fr)
             [sidebar-end];
     }
 
@@ -547,7 +547,7 @@ html, body {
             [main-end] 
                 minmax(2.77rem, 2fr) 
             [sidebar-start] 
-                11fr
+                minmax(250px, 12fr)
             [sidebar-end];
     }
 
@@ -567,32 +567,24 @@ html, body {
     }
 }
 
-@media screen and (min-width: $desktop-large) {
-    body {
-        overflow-x: hidden;
-    }
-
-    .bg-services::after {
-        content: ' ';
-        position: absolute;
-        left: -100vw;
-        width: 100VW;
-        background-color: $light-blue;
-        display: block;
-        top: 0;
-        height: 100%;
-    }
-
-    .bg-sidecontent::after,
+@media screen and (min-width: $desktop) {
+    .bg-services::after,
+    .page--post .bg-sidecontent::after,
+    .page--post-list .bg-sidecontent::after,
     .bg-sitefooter::after {
         content: ' ';
         position: absolute;
-        right: -100vw;
-        width: 100VW;
+        right: -10vw;
+        width: 10VW;
         background-color: $light-blue;
         display: block;
         top: 0;
         height: 100%;
+    }
+
+    .bg-services::after {
+        right: auto;
+        left: -10vw;
     }
 
     .bg-sitefooter::after {
