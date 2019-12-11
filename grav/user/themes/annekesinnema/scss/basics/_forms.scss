@@ -2,10 +2,7 @@
 .form-textarea-wrapper {
     position: relative;
     border-top: 0;
-
-    @media screen and (min-width: $tiny-screen) {
-        padding:  ($rhythmrem / 3) ($rhythmrem / 2);
-    }
+    padding:  ($rhythmrem / 3) ($rhythmrem / 2);
 }
 
 .input,
@@ -50,10 +47,8 @@ label {
     }
 }
 
-@media screen and (min-width: $tiny-screen) {
-    label {
-        padding: .45rem 0;
-    }
+label {
+    padding: .45rem 0;
 }
 
 textarea {
