@@ -1,17 +1,16 @@
 ---
-title: Inhuur als interim
-a11ytitle: Inhuur als interim
-menu: ik versterk teams
-linkshort: Lees meer
-linkdescription: over mijn ervaring op projecten
-paginationTitle: je team tijdelijk komen versterken
-
+title: 'Inhuur als interim'
+menu: 'ik versterk teams'
+a11ytitle: 'Inhuur als interim'
+linkshort: 'Lees meer'
+linkdescription: 'over mijn ervaring op projecten'
+paginationTitle: 'je team tijdelijk komen versterken'
 summary:
     enabled: true
     format: short
 ---
 
-Als u tijdelijk extra hulp kunt gebruiken, dan kunt u mij inhuren als front-end ontwikkelaar. Ik kom dan tijdelijk uw team specialisten versterken.
+Als je tijdelijk extra hulp kunt gebruiken, dan kun je mij inhuren als front-end ontwikkelaar. Ik kom dan tijdelijk je team specialisten versterken.
 
 ===
 
