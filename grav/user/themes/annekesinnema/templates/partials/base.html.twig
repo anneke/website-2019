@@ -4,9 +4,9 @@
 
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}" id="html">
-<head>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>{% if header.title %}{{ header.title|e('html') }} - {% endif %}{{ site.title }}</title>
-  <meta charset="utf-8">
+  
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="/manifest.json">
@@ -25,6 +25,12 @@
     {% do assets.addCss('theme://css/styles.min.css',100) %}
 
     <link rel="stylesheet" href="https://use.typekit.net/pvj3fee.css">
+    
+    <style>
+        .form-honeybear {
+            display: none;
+        }
+    </style>
   {% endblock %}
   
   {% block assets deferred %}
@@ -91,11 +97,12 @@
     
   {% block javascripts %}
       {% do assets.addJs('theme://js/main.js',100) %}
-      <script src="/upup.min.js"></script>
+      <script src="./upup.min.js"></script>
       <script>
         UpUp.start({
           'content-url': '/offline.html',
-          'assets': ['/user/themes/annekesinnema/images/logo.png',
+          'assets': [
+			'/user/themes/annekesinnema/images/logo.png',
             '/user/themes/annekesinnema/css/styles.css',
             '/user/themes/annekesinnema/images/favicon.ico',
             '/user/themes/annekesinnema/images/apple-touch-icon.png',

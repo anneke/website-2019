@@ -1,10 +1,10 @@
 ---
 title: Home
-a11ytitle: Welkom
 visible: true
+a11ytitle: Welkom
 ---
 
-Ik ben een front-end developer met die zich met hart en ziel inzet voor een fijne gebruikerservaring. 
+Ik ben een front-end developer die zich met hart en ziel inzet voor een fijne gebruikerservaring. 
 
 Dit uit zich in een specialisatie in robuuste en helder geschreven HTML en CSS, met een sterke focus op toegankelijkheid en herbruikbaarheid. (Vanilla) JavaScript is de kers op de taart! 🍰
 

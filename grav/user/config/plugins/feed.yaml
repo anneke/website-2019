@@ -1,0 +1,6 @@
+enabled: true
+limit: 10
+description: 'Blog van Anneke Sinnema'
+lang: nl
+length: 500
+enable_json_feed: true

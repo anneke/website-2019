@@ -7,25 +7,25 @@ form:
     name: callmeplease
     action: /thanks
     description: 'Snel contact opnemen'
-    classes: 
+    classes: null
     fields:
         -
             name: name
-            label: 'Naam'
+            label: Naam
             autofocus: 'off'
             autocomplete: 'on'
             type: text
-            id: data[name]
+            id: 'data[name]'
             validate:
                 required: true
-                pattern: ^[a-zA-Z]*$
+                pattern: '^[a-zA-Z]*$'
         -
             name: phone
-            label: 'Telefoonnummer'
+            label: Telefoonnummer
             autofocus: 'off'
             autocomplete: 'on'
             type: tel
-            id: data[phone]
+            id: 'data[phone]'
             validate:
                 required: true
         -
@@ -35,14 +35,14 @@ form:
             autocomplete: 'off'
             type: textarea
             rows: 3
-            id: data[about]
+            id: 'data[about]'
             validate:
                 required: true
         -
             name: when
             label: 'Heb je een voorkeur voor het moment dat ik bel?'
             type: checkboxes
-            id: data[when]
+            id: 'data[when]'
             default:
                 ochtend: false
                 middag: false
@@ -51,11 +51,17 @@ form:
                 ochtend: ' 9.00 — 12.00'
                 middag: '13.00 — 17.00'
                 avond: '19.00 — 21.00'
+        -
+            label: Captcha
+            type: captcha
+            recaptcha_not_validated: 'Captcha niet geldig!'
     buttons:
         -
             type: submit
-            value: 'Verstuur'
+            value: Verstuur
     process:
+        -
+            captcha: true
         -
             email:
                 from: mail@annekesinnema.nl
@@ -69,5 +75,6 @@ form:
                 extension: yaml
                 body: '{% include ''forms/data.txt.twig'' %}'
         -
-            message: 'Thank you for your feedback!'
+            message: Dankjewel!
 ---
+
