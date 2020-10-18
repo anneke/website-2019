@@ -7,7 +7,6 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>{% if header.title %}{{ header.title|e('html') }} - {% endif %}{{ site.title }}</title>
   
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#fff">
@@ -47,15 +46,15 @@
     {% include 'partials/header.html.twig' %}
 
     <div class="site-main">
-        <main class="main-area" role="main" id="main">
+        <main class="main-area"  id="main">
             <div class="main-content">
               {% if page.home or page.slug == 'services' %}
                 <div class="bg-services"></div>
               {% endif %}
 
-              <section class="section section-usercontent">
+              <div class="section section-usercontent">
                 {% block content %}{% endblock %}
-              </section>
+              </div>
 
               {% if not page.slug == 'contact' %}
                 {% include 'partials/availability.html.twig' with {'truncate': true} %}

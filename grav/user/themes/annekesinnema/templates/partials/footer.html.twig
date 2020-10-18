@@ -6,15 +6,15 @@
     <span hidden itemprop="knowsAbout">front-end webdevelopment</span> 
     <span hidden itemprop="knowsLanguage">nl_NL</span> 
     <span hidden itemprop="knowsLanguage">en_GB</span>
-    <span hidden itemprop="memberOf" itemtype="http://schema.org/Organization" >Fronteers</span> 
+    <span hidden itemprop="memberOf" itemscope itemtype="http://schema.org/Organization" >Fronteers</span> 
     <img src="{{ url('theme://images/logo.png') }}" width="66" height="66"  hidden itemprop="logo" alt="" /> 
     <img src="{{ url('theme://images/logo.png') }}" width="66" height="66"  hidden itemprop="image" alt="" /> 
 
     <section class="site-footer" aria-label="Footer">
         <div class="bg-sitefooter"></div>
-        <section class="site-footer__header">
+        <div class="site-footer__header">
             {% if page.slug == 'contact' %}
-                <h2 class="site-footer__title" aria-label="Contact">{{ footer.header.expandedTitle }}</h2>
+                <h2 class="site-footer__title">{{ footer.header.expandedTitle }}</h2>
                 <dl>
                     <dt>{{ footer.header.adresLabel }}</dt>
                     <dd itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Oostveenweg 28<br />
@@ -26,17 +26,13 @@
                     <dd itemprop="vatID">NL001443012B04</dd>
                 </dl>
             {% else %}
-                <h2 class="site-footer__title" aria-label="Contact">{{ footer.header.title }}</h2>
+                <h2 class="site-footer__title">{{ footer.header.title }}</h2>
                 <p class="site-footer__subtitle">{{ footer.header.subtitle }}</p>
                 <p>{{ footer.header.intro }}</p>
             {% endif %}
-        </section>
+        </div>
 
-        <section class="site-footer__contactform" id="contactform">
-            {% include "forms/form.html.twig" with { form: forms('callmeplease') } %}
-        </section>
-
-        <section class="site-footer__contact"> 
+        <div class="site-footer__contact">
             <dl>
                 <dt>{{ footer.header.emailLabel }}</dt>
                 <dd><a href="mailto:{{'mail@annekesinnema.nl'|safe_email}}" itemprop="email">{{'mail@annekesinnema.nl'|safe_email}}</a></dd>
@@ -52,7 +48,7 @@
             {% if config.plugins.feed.enabled and blogArticles|length > 1 %}
                 <a class="cta" href="{{ base_url }}{{ pages.find('/blog').rawRoute }}.rss">{{ 'SUBSCRIBE'|t }}</a>
             {% endif %}
-        </section>
+        </div>
     </section> 
 
     <section class="site-byline" aria-label="{{ 'colophon-aria'|t }}">

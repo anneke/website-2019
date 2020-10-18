@@ -793,7 +793,7 @@ html, body {
   }
 
   .site-footer__contactform,
-.site-footer__contact h3 {
+  .site-footer__contact h3 {
     display: none;
   }
 

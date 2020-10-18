@@ -82,21 +82,14 @@ html, body {
 }
 
 .site-footer__header,
-.site-footer__contactform,
 .site-footer__contact {
     padding: $rhythmrem;
 }
 
-.site-footer__contactform,
 .site-footer__contact {
     color: white;
     background: $purple;
     position: relative;
-}
-
-.site-footer__contactform {
-    padding-top: $whitespace-medium;
-    padding-bottom: 0;
 }
 
 @media screen and (max-width: 52.5em) {
@@ -316,15 +309,9 @@ html, body {
         padding-left: $padding-left-and-right;
     }
 
-    .site-footer__contactform,
     .site-footer__contact h3 {
         display: none;
     }
-
-        .site-footer form { 
-            color: black;
-            margin-left: -($whitespace-medium * 2);
-        }
 
     .site-footer__contact { 
         -ms-grid-column: 3;
@@ -458,17 +445,13 @@ html, body {
         position: relative;
         display: -ms-grid;
         display: grid; 
-        -ms-grid-columns: 14fr 1fr 12fr 1fr 14fr;
+        -ms-grid-columns: 20fr 1fr 21fr;
         grid-template-columns: 
             [header-start footer-start] 
-                14fr
-            [header-end form-start purplebg-start] 
+                20fr
+            [header-end summary-start purplebg-start] 
                 1fr
-                12fr     
-            [form-end]  
-                1fr
-            [summary-start] 
-                14fr
+                21fr
             [summary-end footer-end purplebg-end];
     }
 
@@ -489,17 +472,6 @@ html, body {
         display: block;
         position: relative;
         z-index: -1;
-    }
-
-    .site-footer__contactform {
-        -ms-grid-column: 3;
-        -ms-grid-column-span: 1;
-        display: block;
-        grid-area: form;
-        padding-top: $whitespace-medium;
-        padding-bottom: $whitespace-medium;
-        padding-left: $whitespace-medium;
-        padding-right: 0;
     }
 
     .site-footer__contact {
