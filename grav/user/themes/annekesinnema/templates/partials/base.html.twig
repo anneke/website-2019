@@ -14,9 +14,9 @@
   {% include 'partials/metadata.html.twig' %}
   <link rel="shortcut icon" href="{{ url('theme://images/favicon.ico') }}" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="theme://images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="theme://images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="theme://images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url('theme://images/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url('theme://images/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url('theme://images/favicon-16x16.png') }}">
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}'s blog" href="/rss.xml">
 
@@ -96,18 +96,17 @@
     
   {% block javascripts %}
       {% do assets.addJs('theme://js/main.js',100) %}
-      <script src="./upup.min.js"></script>
+      <script src="/upup.min.js"></script>
       <script>
         UpUp.start({
           'content-url': '/offline.html',
           'assets': [
-			'/user/themes/annekesinnema/images/logo.png',
-            '/user/themes/annekesinnema/css/styles.css',
+			      '/user/themes/annekesinnema/images/logo.png',
+            '/user/themes/annekesinnema/css/styles.min.css',
             '/user/themes/annekesinnema/images/favicon.ico',
             '/user/themes/annekesinnema/images/apple-touch-icon.png',
             '/user/themes/annekesinnema/images/favicon-32x32.png',
-            '/user/themes/annekesinnema/images/favicon-16x16.png',
-            '/user/themes/annekesinnema/images/site.webmanifest']
+            '/user/themes/annekesinnema/images/favicon-16x16.png']
         });
       </script>
   {% endblock %}
