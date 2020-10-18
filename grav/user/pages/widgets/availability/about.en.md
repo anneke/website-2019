@@ -11,4 +11,4 @@ published: true
 visible: false
 ---
 
-Right now, I'm working for Centraal Beheer. It currently looks like I won't be available until at least the end of the year. If you need help with something small, feel free to reach out!
+Right now, I'm working for [Centraal Beheer](https://www.centraalbeheer.nl) and doing work on the [CoronaMelder website](https://www.coronamelder.nl). It currently looks like I won't be available until at least the end of the year. If you need help with something small, feel free to reach out!
